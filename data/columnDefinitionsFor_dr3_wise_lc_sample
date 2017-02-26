@@ -1,0 +1,148 @@
+The FITS file that summarizes these 248 objects is at:
+    http://portal.nersc.gov/project/cosmo/temp/ameisner/dr3_wise_lc_sample.fits.gz
+ex=1 is the WISE light curve metrics that I computed for each source
+ex=2 is the DECaLS information for each source
+ex=3 is the SDSS information for each source
+-Aaron (email 25th Feb, 2017)
+
+
+## SDSS Info  	   Description				Example
+SDSSJ :		   SDSS object name			000920.76+033021.7
+RA :  		   SDSS object R.A. (J2000)		002.33654086687
+DEC : 		   SDSS object Decl.(J2000)		+003.50603303134
+Z :		   SDSS (pipeline) redshift 		0.432505905628
+MJD : 		   Modified Julian Date			55806
+FIBER : 	   Fiber number				0196
+PLATE : 	   Plate number				4297
+U_FLUX : 	   u-band flux				10.1695
+G_FLUX : 	   g-band flux				13.8142
+R_FLUX : 	   r-band flux				14.1181
+I_FLUX : 	   i-band flux				16.7872
+Z_FLUX : 	   z-band flux				21.7649
+DR :   		   Data Release number			12
+FIRST_MATCHED :	   Matched in FIRST radio survey?	0
+
+## WISE LC Metrics Description				Example
+MEAN_SNR_W1 :	   Mean Signal-to-noise, W1		38.8656
+MEAN_SNR_W2 : 	   Mean Signal-to-noise, W2		22.8657
+PEARSON_R : 	   Pearson correlation coefficient	0.999489
+N_EPOCH : 	   number of WISE epochs		4
+NBAD_W1 :	   Quality flag for epochs??		0
+NBAD_W2 :	   Quality flag for epochs??		0
+MONO_W1 : 	   a	   	    			1
+MONO_W2 :	   b					1
+BEST_FLUX_W1 : 	   c					72.078
+BEST_FLUX_W2 : 	   d					94.7315
+CHI2_W1 :    	   e					170.705
+CHI2_W2 :    	   f					88.7313
+RCHI2_W1 : 	   g					56.9016
+RCHI2_W2 : 	   h					29.5771
+FLUX_MIN_W1 : 	   i					56.8723
+FLUX_MAX_W1 : 	   j					86.1033
+FLUX_MIN_W2 : 	   k					69.1232
+FLUX_MAX_W2 : 	   l					114.478
+MAG_RANGE_W1 :	   m					0.450297
+MAG_RANGE_W2 :	   n					0.547747
+GOOD_EPOCH_MASK :  o					[1 1 1 1 0]
+RISING_W1 : 	   p					0
+FALLING_W1 : 	   q					1
+RISING_W2 :	   r					0
+FALLING_W2 : 	   s					1
+COADD_ID : 	   t					0030p030
+X_COADD : 	   u					1923.45
+Y_COADD : 	   v					1648.51
+
+##  Tractor Catalog Format
+##  tractor/<AAA>/tractor-<brick>.fits
+##  http://legacysurvey.org/dr3/catalogs/
+## Name		   	Type		Units		Description
+BRICKID		   	int32				Brick ID [1,662174]
+BRICKNAME	   	char	 			Name of brick, encoding the brick sky position, eg "1126p222" near RA=112.6, Dec=+22.2
+OBJID		   	int32	 			Catalog object number within this brick; a unique identifier hash is BRICKID,OBJID; OBJID spans [0,N-1] and is contiguously enumerated within each blob
+BRICK_PRIMARY	   	boolean	 			True if the object is within the brick boundary
+BLOB		   	int32	 			Blend family; objects with the same [BRICKID,BLOB] identifier were modeled (deblended) together;		   			contiguously numbered from 0
+NINBLOB	  	   	int16	 			Number of sources in this BLOB (blend family); isolated objects have value 1.
+TYCHO2INBLOB	   	boolean	 			Is there a Tycho-2 (very bright) star in this blob?
+TYPE		   	char[4]	 			Morphological model: "PSF"=stellar, "SIMP"="simple galaxy" = 0.45" round EXP galaxy, "DEV"=deVauc, "EXP"=exponential, "COMP"=composite. Note that in some FITS readers, a trailing space may be appended for "PSF ", "DEV " and "EXP " since the column data type is a 4-character string
+RA		   	float64		deg		Right ascension at epoch J2000
+RA_IVAR		   	float32		1/deg²		Inverse variance of RA, excluding astrometric calibration errors
+DEC		  	float64		deg		Declination at epoch J2000
+DEC_IVAR	   	float32		1/deg²		Inverse variance of DEC (no cos term!), excluding astrometric calibration errors
+BX		  	float32		pix		X position (0-indexed) of coordinates in brick image stack
+BY		   	float32		pix		Y position (0-indexed) of coordinates in brick image stack
+BX0		   	float32	pix	Initialized 	X position (0-indexed) of coordinates in brick image stack
+BY0		   	float32	pix	Initialized 	Y position (0-indexed) of coordinates in brick image stack
+LEFT_BLOB	   	boolean	 			True if an object center has been optimized to be outside the fitting pixel area
+OUT_OF_BOUNDS	  	boolean	 			True for objects whose center is on the brick; less strong of a cut than BRICK_PRIMARY
+DCHISQ		   	float32[5]	 		Difference in χ² between successively more-complex model fits: PSF, SIMPle, DEV, EXP, COMP. The difference is versus no source.
+EBV		   	float32		mag		Galactic extinction E(B-V) reddening from SFD98, used to compute DECAM_MW_TRANSMISSION and WISE_MW_TRANSMISSION
+CPU_SOURCE	   	float32		seconds		CPU time used for fitting this source
+CPU_BLOB	   	float32		seconds		CPU time used for fitting this blob of sources (all sources in this brick with the same blob number)
+BLOB_WIDTH	   	int16	 			size of this blob of pixels in brick coordinates, bounding box width
+BLOB_HEIGHT	   	int16	 			size of this blob of pixels in brick coordinates, bounding box height
+BLOB_NPIX	   	int32	 			size of this blob of pixels in brick coordinates, number of brick pixels
+BLOB_NIMAGES	   	int16	 			number of images overlapping this blob
+BLOB_TOTALPIX	   	int32	 			total number of pixels from all the images overlapping this blob
+DECAM_FLUX	   	float32[6]	nanomaggies	DECam model flux in ugrizY
+DECAM_FLUX_IVAR	   	float32[6]	1/nanomaggies²	Inverse variance oF DECAM_FLUX
+DECAM_APFLUX	   	float32[8,6]	nanomaggies	DECam aperture fluxes on the co-added images in apertures of radius [0.5,0.75,1.0,1.5,2.0,3.5,5.0,7.0] arcsec in ugrizY
+DECAM_APFLUX_RESID 	float32[8,6]	nanomaggies	DECam aperture fluxes on the co-added residual images
+DECAM_APFLUX_IVAR  	float32[8,6]	1/nanomaggies²	Inverse variance oF DECAM_APFLUX
+DECAM_MW_TRANSMISSION	float32[6]	 		Galactic transmission in ugrizY filters in linear units [0,1]
+DECAM_NOBS		uint8[6]	 		Number of images that contribute to the central pixel in each filter for this object (not profile-weighted)
+DECAM_RCHI2		float32[6]	 		Profile-weighted χ² of model fit normalized by the number of pixels
+DECAM_FRACFLUX		float32[6]	 		Profile-weight fraction of the flux from other sources divided by the total flux (typically [0,1])
+DECAM_FRACMASKED	float32[6]	 		Profile-weighted fraction of pixels masked from all observations of this object, strictly between [0,1]
+DECAM_FRACIN		float32[6]	 		Fraction of a source's flux within the blob, near unity for real sources
+DECAM_ANYMASK		int16[6]	 		Bitwise mask set if the central pixel from any image satisfy each condition
+DECAM_ALLMASK		int16[6]	 		Bitwise mask set if the central pixel from all images satisfy each condition
+DECAM_PSFSIZE		float32[6]	arcsec		Weighted average PSF FWHM per band
+WISE_FLUX		float32[4]	nanomaggies	WISE model flux in W1,W2,W3,W4
+WISE_FLUX_IVAR		float32[4]	1/nanomaggies²	Inverse variance of WISE_FLUX
+WISE_MW_TRANSMISSION	float32[4]	 		Galactic transmission in W1,W2,W3,W4 filters in linear units [0,1]
+WISE_NOBS		int16[4]	 		Number of images that contribute to the central pixel in each filter for this object (not profile-weighted)
+WISE_FRACFLUX		float32[4]	 		Profile-weight fraction of the flux from other sources divided by the total flux (typically [0,1])
+WISE_RCHI2		float32[4]	 		Profile-weighted χ² of model fit normalized by the number of pixels
+WISE_LC_FLUX		float32[5,2]	nanomaggies	analog of WISE_FLUX, for each of up to five unWISE coadd epochs; W1 and W2 only
+WISE_LC_FLUX_IVAR	float32[5,2]	1/nanomaggies²	analog of WISE_FLUX_IVAR, for each of up to five unWISE coadd epochs; W1 and W2 only
+WISE_LC_NOBS		int16[5,2]	 		analog of WISE_NOBS, for each of up to five unWISE coadd epochs; W1 and W2 only
+WISE_LC_FRACFLUX	float32[5,2]	 		analog of WISE_FRACFLUX, for each of up to five unWISE coadd epochs; W1 and W2 only
+WISE_LC_RCHI2		float32[5,2]	 		analog of WISE_RCHI2, for each of up to five unWISE coadd epochs; W1 and W2 only
+WISE_LC_MJD		float32[5,2]	 		mean MJD in W1 and W2, for up to five unWISE coadd epochs; 0 means epoch unavailable
+FRACDEV			float32	 			Fraction of model in deVauc [0,1]
+FRACDEV_IVAR		float32	 			Inverse variance of FRACDEV
+SHAPEEXP_R		float32		arcsec		Half-light radius of exponential model (>0)
+SHAPEEXP_R_IVAR		float32		1/arcsec²	Inverse variance of R_EXP
+SHAPEEXP_E1		float32	 			Ellipticity component 1
+SHAPEEXP_E1_IVAR	float32	 			Inverse variance of SHAPEEXP_E1
+SHAPEEXP_E2		float32	 			Ellipticity component 2
+SHAPEEXP_E2_IVAR	float32	 			Inverse variance of SHAPEEXP_E2
+SHAPEDEV_R		float32		arcsec		Half-light radius of deVaucouleurs model (>0)
+SHAPEDEV_R_IVAR		float32		1/arcsec²	Inverse variance of R_DEV
+SHAPEDEV_E1		float32	 			Ellipticity component 1
+SHAPEDEV_E1_IVAR	float32	 			Inverse variance of SHAPEDEV_E1
+SHAPEDEV_E2		float32	 			Ellipticity component 2
+SHAPEDEV_E2_IVAR	float32	 			Inverse variance of SHAPEDEV_E2
+DECAM_DEPTH		float32		1/nanomaggies²	For a 5σ point source detection limit, 5/(√DECAM_DEPTH)5/(DECAM_DEPTH) gives flux in nanomaggies and −2.5(log10((5/(√DECAM_DEPTH)−9)−2.5(log10⁡((5/(DECAM_DEPTH)−9) gives corresponding magnitude
+DECAM_GALDEPTH		float32		1/nanomaggies²	As for DECAM_DEPTH but for a galaxy (0.45" exp, round) detection sensitivity
+
+
+
+Yeah, I think it comes directly from the Tractor catalogs, so that the
+*Q.fits files include all columns from the Tractor catalogs for the
+relevant set of sources. I believe the sweep files lack the WISE light
+curve columns, so I don't think those could have been used to create
+the *Q.fits files.
+
+-Aaron
+
+On Sat, Feb 25, 2017 at 4:38 PM, Nicholas Ross <npross@roe.ac.uk> wrote:
+Yes, okay, sure. But, what’s the ‘original’ source here for the DECaLS information in the survey-dr3-DRxQ.fits files??
+Looking on http://legacysurvey.org/dr3/files/ suggests these survey-dr3-DRxQ.fits files have “Tractored survey photometry”.
+Thus I’m (now) presuming these are from the Tractor Catalog files, e.g. on http://legacysurvey.org/dr3/catalogs/ ??
+
+(I just want to make exactly and precisely sure I know/understand where the original DECaLS data is coming from!!)
+
+Thanks again,
+
+
