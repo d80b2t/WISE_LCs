@@ -1,22 +1,32 @@
 # CREDITS
 
-Aaron.Meisner (AMM):
+Nic Ross (NPR):
+Started this repo. Pushing on the idea of CLQs in the IR.
+Main author of the manuscript. 
+
+Aaron Meisner (AMM):
 WISE and NEO-WISE guru. Ran through the full WISE(*) dataset and selected out the objects that have the large flux changes. Details in the write-up.
 
-Nic Ross (NPR):
-Started this repo. Pushing on the idea of CLQs in the IR. General WISE-ness (ha ha...)
+David Schlegel:
+Supplied current, 20160303, version of the figures.
+These are *not* the final versions, but ``good enough for government work''....
 
 Daniel Stern (DS):
 General coordinate and pushing on the Quasar aspects in the WISE data. Initially reached out to AMM and NPR to get things going along here.
 
+Andrew Drake (AD): 
+Obtained second and third epoch spectra for W1052+1519 and W1100-0052 (along with DS).
+
 Matthew Graham (MG):
-Obtained second and third epoch spectra for W1052+1519 and W1100-0052 (along with DS). 
+Provided the CRTS light-curves.
 
 Arjun Dey (AD):
-Early communictations, coordinations and general guidance. 
+Early communictations, and group coordinations and guidance. 
 
 Hyunsung Jun (HJ), Saavik K Ford (SKF) Barry L McKernan (BLM):
-Proving current theoretical interpretation and discussion. 
+Theoretical interpretations and discussion on a short email correspondence. 
+
+
 
 
 
