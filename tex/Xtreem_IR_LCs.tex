@@ -19,23 +19,24 @@
 \shorttitle{MIR Variable Quasars}
 \shortauthors{N.~P.~Ross {\it et al.}}
 
-\title{Mid-IR Variability of Quasars:  \\
-       Typical Values and Extreme Outliers
+\title{The Mid-Infrared Variability of Quasars: 
+         Typical Values and Extreme Outliers
 }
 \author{
 Nicholas~P.~Ross\altaffilmark{1}, 
-Aaron~ Meisner\altaffilmark{2}, 
+Aaron~Meisner\altaffilmark{2}, 
 Daniel~Stern\altaffilmark{3},
 David~J.~Schlegel\altaffilmark{2},
+Andrew~Drake\altaffilmark{4}, 
 Matthew~Graham\altaffilmark{4}, 
 Arjun~Dey\altaffilmark{5},
 Roberto~J.~Assef\altaffilmark{6},
 Saavik~K.~Ford,\altaffilmark{7}, 
 Barry~L.~McKernan\altaffilmark{7},
-Mislav~Balokovic\altaffilmark{6}, 
-Murray~Brightman\altaffilmark{4}, 
-Andrew~Drake\altaffilmark{4}, 
-Peter~R.~Eisenhardt\altaffilmark{3}, 
+%Mislav~Balokovic\altaffilmark{6}, 
+%Murray~Brightman\altaffilmark{4}, 
+%Peter~R.~Eisenhardt\altaffilmark{3}, 
+for the DECaLS Consortium. 
 }
 \altaffiltext{1}{Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, United Kingdom}
 \email{npross@roe.ac.uk}
@@ -50,30 +51,31 @@ Peter~R.~Eisenhardt\altaffilmark{3},
 \date{\today}
 
 \begin{abstract}
-In this paper we present the mid-infrared, light-curves for 248 quasars that show large, $>0.5$
-mag peak-to-peak variation, in either the W1 or W2 (3.4 or 4.6 $\mu$m)
-bands. Our motivation is to quantify and understand the ubiquity and
-processes involved in luminous AGN obscuration.  The quasars are part
-of the SDSS-I/II or SDSS-III: BOSS Quasar surveys, a superset of over
-300,000 objects with at least one epoch of spectroscopy. The IR light
-curves are from the WISE, NEOWISE and NEOWISE-R missions. 
+We present the mid-infrared light-curves for 248 quasars that show
+large, $>$0.5 mag peak-to-peak, variation in either the WISE W1 or W2
+(3.4 or 4.6 $\mu$m) bands. Our motivation is to quantify and
+understand the ubiquity and processes involved in luminous AGN
+obscuration.  The quasars are part of the SDSS-I/II or SDSS-III: BOSS
+Quasar surveys, a superset of over 200,000 objects with at least one
+epoch of spectroscopy. The IR light curves are from the WISE, NEOWISE
+and NEOWISE-R missions.
 %%
 Critically we employ new DECaLS data, and find objects that were
-`traditional' blue quasars (and appear so in SDSS imaging) but turn to
-red in color in DECaLS, and are often extended.
+`traditional' blue quasars (and appear so in SDSS imaging) but turn
+red in color in DECaLS, and are often now seen as extended.
 %%
 In particular, we present the $z=0.378$ quasar SDSS
 J110057.70-005304.5 as a quasar that is tranistioning from a blue
-continuum sloped object to become a ``Changing-Look'' quasar (with the
+continuum sloped object to become a ``Changing-Look'' quasar -- with the
 prominence of the H$\beta$ and H$\gamma$ broad-emission lines being
 dramatically reduced. What makes J110057 particularly interesting,
 however, is (by selection) its associated short-term IR variablity,
 and dramatic reddening in the optical continuum during the transition
-to its CLQ state.
+to its non-broad line state.
 %%
-(TBD:: ) We explore simple models of quasar obscuration, and given the
-short observed timescales ($\approx$7 years in the rest frame) find it
-very hard to explain this behaviour.
+{\bf (TBD!!)} We explore simple models of quasar obscuration, and
+given the short observed timescales ($\approx$7 years in the rest
+frame) find it very hard to explain this behaviour.
 \end{abstract}
 
 \keywords{WISE, QSOs}
@@ -126,15 +128,24 @@ luminous AGN, would garnish major clues into the variable nature of
 the energy output of the central engine, along with key tests and
 constraints on the ``AGN unified model''.
 
-In this paper{\it Letter}, we use the data from the Wide-Field
+In this paper, we use the data from the Wide-Field
 Infrared Survey Explorer \citep[WISE; ][]{Wright10}, and in particular
 the NEOWISE-R mission \citep{Mainzer14, Meisner16}, combined with the
 Sloan Digital Sky Survey quasar catalogs \citep[DR7Q][]{Schneider10}
 and Dark Energy Camera Legacy Survey \citep[DECaLS][]{Lang16} to
 identify 105 quasars (from a sample of 105,000) with large changes,
-$|\Delta$ mag$|>0.5$, in their MIR LCs. This is the first time a
-sample of quasars with varying MIR photometry has been observed. (IS
-THIS TRUE??!?!!!)
+$|\Delta$ mag$|>0.5$, in their MIR LCs. 
+
+\citet{Kozlowski2010} and use the multi-epoch, mid-infrared Spitzer
+Deep Wide-Field Survey to investigate the variability of objects in
+8.1 deg2 of the NOAO Deep Wide Field Survey Boötes field.  These
+authors perform a difference image analysis of the four available
+epochs between 2004 and 2008, over 8.1 deg$^2$, focusing on the deeper
+3.6 and 4.5 μm bands. Out of 474,179 analyzed sources, 1.1\% meet
+their standard variability selection criteria that the two light
+curves are strongly correlated and that their joint variance exceeds
+that for all sources with the same magnitude by 2$\sigma$.
+\citet{Kozlowski2016} redo this analysis with a longer baseline.
 
 In Section 2 we describe our datasets and methods for finding the MIR
 variable quasars, including false positive checks. In Section 3 we
@@ -146,6 +157,8 @@ The (online) Appendix gives the full details or our sample.
 Because of established conventions, we report SDSS magnitudes on the
 AB zero-point system \citep{Oke83, Fukugita96}, while the WISE
 magnitudes are calibrated on the Vega system \citep{Wright10}.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -177,7 +190,7 @@ salient details here.
     
     We use the SDSS Seventh Data Release Quasar Catalog
     \citep[DR7Q;][]{Schneider10, Shen11} and the SDSS-III Twelve Data
-    Release \citep[DR12Q;][]{Paris16}. SDSS quasar targets with
+    Release \citep[DR12Q;][]{Paris2017}. SDSS quasar targets with
     $i\leq19.1$ were selected if the colors were consistent with being at
     redshift $z\lesssim3$, and $i\leq20.2$ objects were selected if
     $z\gtrsim$3, as outlined in \citet{Richards02}. BOSS quasar targets
@@ -192,48 +205,33 @@ salient details here.
     the main quasar selections; these sources appear in the catalog due
     to being targeted by the respective galaxy selections, being a
     `serendipitous' \citep{Stoughton02} or `special' \citep{DR4} target in
-    SDSS, or an `ancillary' target in BOSS \citep[][]{Dawson13, DR12, DR14}.
+    SDSS, or an `ancillary' target in BOSS \citep[][]{Dawson13, DR12, DR13}.
     
-    \subsubsection{SDSS and SDSS-III: BOSS}
+    \subsubsection{DECaLS: Dark Energy Camera Legacy Survey}
     The Dark Energy Camera Legacy Survey \citep[DECaLS; ][]{Lang16} is
     taking deep 3-band $g,r,z$ imaging over 10,000deg of the Northern Sky
     that is accessible from the Cerro Tololo International Observatory
-    site. As of writing the DECaLS is ongoing, with the latest data release being
-    the Data Release 3 (DECaLS DR3). 
+    site. As of writing the DECaLS is ongoing.
+    %% with the latest data release being    the Data Release 3 (DECaLS DR3). 
+        
+\subsection{Infrared Data}
+As noted in \citet{Mainzer14} and \citet{Meisner16}, after its initial
+launch, cryogenic mission, and a period of hibernation, the WISE
+satellite was reactivated, and recommenced surveying the sky in its
+two shorter wavebands, $W1$ and $W2$.  This W1/W2 survey is referred
+to as NEOWISE-Reactivation or NEOWISER.
     
+We directly use the data from \citet{Meisner16} which employs an
+adaptation of the unWISE \citet{Lang14} image coaddition framework.
     
-    \subsection{Infrared Data}
-    As noted in \citet{Maizner14} and \citet{Meisner16}, after its
-    initial launch, cryogenic mission, and a period of hibernation, the
-    WISE satellite was reactivated, and recommenced surveying the sky in
-    its two shorter wavebands, $W1$ and $W2$.  This W1/W2 survey is
-    referred to as NEOWISE-Reactivation or NEOWISER.
-    
-    We directly use the data from \citet{Meisner16} which employs an
-    adaptation of the unWISE \citet{Lang14} image coaddition framework.
-    
-    {\it From Aaron's email Oct 13, 2016}.
-    http://legacysurvey.org/dr3/catalogs
-    
-    But if you look at the Tractor catalog column descriptions, you will
-    see that DR3 includes sparse WISE W1/W2 light curves for every
-    optically detected source (WISE\_LC*). These WISE light-curves are
-    measured by forced-photometry of time-resolved unWISE coadds.
-    Currently, in the DECaLS footprint, there are typically four epochs,
-    sometimes five, and very rarely only three. These light curves
-    typically span a $\sim$4-5 year time baseline, $\sim$2010-2014.
-
-%% I created the time-resolved unWISE coadds that were the basis of these
-%% light curves, so let me know if you have any further questions. I
-%% would hope that the way they are packaged into the Tractor catalogs
-%% will make them very straightforward to use. The most obvious
-%% application of these light curves is indeed quasar variability,
-%% whether for DESI targeting or quasar science in its own right.
-%% Unfortunately I don't currently have time to do these science projects
-%% myself, but I hope you will find these light curves useful and keep me
-%%in the loop about your findings. Thanks.
-
-
+From the Tractor catalog column descriptions, you will
+see that DR3 includes sparse WISE W1/W2 light curves for every
+optically detected source (WISE\_LC*). These WISE light-curves are
+measured by forced-photometry of time-resolved unWISE coadds.
+Currently, in the DECaLS footprint, there are typically four epochs,
+sometimes five, and very rarely only three. These light curves
+typically span a $\sim$4-5 year time baseline, $\sim$2010-2014.
+   
 \begin{figure}
   %% trim=l b r t 
   \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
@@ -241,7 +239,8 @@ salient details here.
   \centering
   % \vspace{-16pt}
   \caption[]{
-    {\bf All from DJS's email:} The distribution of the maxima and
+    %% {\bf All from DJS's email:} 
+    The distribution of the maxima and
     minima flux in $W1$ for the $\sim$240k high-confidence quasars in the
     SDSS-III: BOSS DR12.  The red distribution is if one replaces fluxes
     with a mean flux$+$measurement error for each observation.  Note,
@@ -250,7 +249,7 @@ salient details here.
     where the $W1$ flux varies by more than a factor of 2 with a $>5$
     sigma confidence.  Some have a poor $\chi{^2}$ fits.
   }
- \label{fig:maxminflux}
+  \label{fig:maxminflux}
 \end{figure}
 The distribution of the maxima and minima flux in $W1$ for the
 $\sim$240k high-confidence quasars in the SDSS-III: BOSS DR12 is given
@@ -264,13 +263,13 @@ in Figure~\ref{fig:maxminflux}.
   % \vspace{-16pt}
   \caption[]{
     {\bf All from DJS's 2nd email:} 
-Here, ``err'' is the quadrature sum of the errors at the minimum and maximum fluxes.
-The red histogram is the expected distribution if these objects had no variability, 
-and the errors were normally-distributed for each of the epochs.
-This shows that $\sim6,000$ quasars are $>10\sigma$ detections of variability in W1.
-%Though I still haven’t done this carefully enough to reject the poor chi^2 in individual WISE fits, etc.
+    Here, ``err'' is the quadrature sum of the errors at the minimum and maximum fluxes.
+    The red histogram is the expected distribution if these objects had no variability, 
+    and the errors were normally-distributed for each of the epochs.
+    This shows that $\sim6,000$ quasars are $>10\sigma$ detections of variability in W1.
+    % Though I still haven’t done this carefully enough to reject the poor chi^2 in individual WISE fits, etc.
   }
- \label{fig:maxmin_err}
+  \label{fig:maxmin_err}
 \end{figure}
 \subsection{``False Postive Checks''}
 Figure~\ref{fig:maxmin_err} is the distribution of (max-min)/error in
@@ -278,7 +277,6 @@ the MIR fluxes.  (Should also be looking at the SDSS stars as a
 control sample (don’t have those on my laptop).  The WISE magnitude
 range for those stars will be quite different, though, since they have
 the same optical magnitude range but are fainter in WISE.)
-
 
 
 \begin{figure}
@@ -302,75 +300,41 @@ the same optical magnitude range but are fainter in WISE.)
 \end{figure*}
 
 
-
-%% 
-%%  N. B. !!  N. B. !!   N. B. !!  N. B. !! 
-%%  This is text from Aaron's email from 14th Dec, 2016
-%%
-%Hi Nic,
-%
-%I've made some WISE light curve catalogs in attempt to address your requests:
-
-%% http://portal.nersc.gov/project/cosmo/temp/ameisner/dr3_wise_lc_sample.fits.gz
-%% http://portal.nersc.gov/project/cosmo/temp/ameisner/dr3_wise_lc_metrics_all_qso.fits.gz
-%
-
-
-%The first has 248 rows, which are my preferred highly IR-variable
-%sample of objects. The second is all 200,622 quasars that have "good"
-%WISE light curves available in DR3.
-%
-%In each file, there are 3 extensions:
-%
-%ex = 0 -- my light curve summary metrics
-%ex = 1 -- DECaLS DR3 Tractor data for each object (including WISE light curves)
-%ex = 2 -- SDSS data for each object
-%
-%Let me know what you think. Hopefully tonight I'll be able to finish
-%creating an updated set of finder charts, but we'll see how far I
-%actually get on that...Thanks.
-%
-%-Aaron
-
-A link to the key properties of our sample can be
-\href{http://portal.nersc.gov/project/cosmo/temp/ameisner/qso\_pages\_v01/}
-{\tt found here}.
-
-%% 
 %%  N. B. !!  N. B. !!   N. B. !!  N. B. !! 
 %%  This is text from Aaron's email from 15th Feb, 2017, sent to Daniel, 
 %%  for the WISE J1052+1519 outline/paper
 %%
-W1 and W2 lightcurves for $\sim$200,000 SDSS spectroscopic quasars were 
-extracted from Data Release 3 (DR3) of the Dark Energy Camera Legacy Survey 
-(DECaLS). These light curves span from the beginning of the WISE mission 
-(2010 January) through the first-year of NEOWISER operations 
-(2014 December). In detail, the W1/W2 light curves are obtained by performing 
-forced photometry at the locations of DECam-detected optical sources. This 
-forced photometry is performed on time-resolved unWISE coadds, each of which 
-represents a stack with depth of coverage $\sim$12 exposures. A given sky 
-location is observed by 
-WISE for $\sim$1 day once every six months, which means that our forced 
-photometry 
-light curves typically have four coadd epochs available. Coadd epochs of a
-given object are separated by a minimum of six months and a maximum of
-four years. Our coaddition removes the possibility of probing variability on 
-$\lesssim$1 day time scales, but it allows us to push $\sim$1.4 magnitudes 
-deeper than individual exposures while removing virtually all single-exposure 
-artifacts (e.g. cosmic rays and satellites).
+W1 and W2 lightcurves for $\sim$200,000 SDSS spectroscopic quasars
+were extracted from Data Release 3 (DR3) of the Dark Energy Camera
+Legacy Survey (DECaLS). These light curves span from the beginning of
+the WISE mission (2010 January) through the first-year of NEOWISER
+operations (2014 December). In detail, the W1/W2 light curves are
+obtained by performing forced photometry at the locations of
+DECam-detected optical sources. This forced photometry is performed on
+time-resolved unWISE coadds, each of which represents a stack with
+depth of coverage $\sim$12 exposures. A given sky location is observed
+by WISE for $\sim$1 day once every six months, which means that our
+forced photometry light curves typically have four coadd epochs
+available. Coadd epochs of a given object are separated by a minimum
+of six months and a maximum of four years. Our coaddition removes the
+possibility of probing variability on $\lesssim$1 day time scales, but
+it allows us to push $\sim$1.4 magnitudes deeper than individual
+exposures while removing virtually all single-exposure artifacts
+(e.g. cosmic rays and satellites).
 
-$\sim$30,000 of the SDSS quasars with such W1/W2 lightcurves available are 
-``IR-bright'', in the sense that they are above both the W1 and W2 single 
-exposure thresholds and therefore detected at very high significance in our 
-coadds. For this ensemble of objects, the typical variation in each quasar's 
-measured (W1-W2) color is 0.06 magnitudes, which includes 
-statistical and systematic errors expected to contribute variations
-at the few hundredths of a mag level. The typical measured single-band scatter 
-is 0.07 magnitudes in each of W1 and W2. A full characterization of
-the typical mid-IR quasar variability will be presented separately 
-(Ross et al., in preparation).
+$\sim$30,000 of the SDSS quasars with such W1/W2 lightcurves available
+are ``IR-bright'', in the sense that they are above both the W1 and W2
+single exposure thresholds and therefore detected at very high
+significance in our coadds. For this ensemble of objects, the typical
+variation in each quasar's measured (W1-W2) color is 0.06 magnitudes,
+which includes statistical and systematic errors expected to
+contribute variations at the few hundredths of a mag level. The
+typical measured single-band scatter is 0.07 magnitudes in each of W1
+and W2. A full characterization of the typical mid-IR quasar
+variability will be presented separately (Ross et al., in
+preparation).
 
-We undertook a search for extreme outliers relative to these trends. 
+We undertook a search for extreme outliers relative to these trends.
 Specifically, we selected objects with the following characterisitcs.
 
 % itemize type stuff
@@ -379,7 +343,6 @@ Specifically, we selected objects with the following characterisitcs.
 \item W1 versus W2 \textit{flux} correlation coefficient $>$0.9.
 \item $>0.5$ mag peak-to-peak variation in either W1 or W2.
 \end{itemize}
-
 
 This yielded a sample of 248 sources. 31 of these are assumed to be blazars 
 due to the presence of FIRST radio counterparts. Another 22 are outside of the 
@@ -390,6 +353,18 @@ faded by 0.75 (0.9) mags in W1 (W2), and thus became 0.15 mags bluer in
 (W1-W2), making it a significant outlier in both single-band and IR color 
 variability.
 
+A link to the key properties of our sample can be
+\href{http://portal.nersc.gov/project/cosmo/temp/ameisner/qso\_pages\_v01/}
+{\tt found here} and the catalogs are here:
+\href{http://portal.nersc.gov/project/cosmo/temp/ameisner/dr3_wise_lc_sample.fits.gz}{dr3\_wise\_lc\_sample.fits.gz}
+\href{http://portal.nersc.gov/project/cosmo/temp/ameisner/dr3_wise_lc_metrics_all_qso.fits.gz}{dr3\_wise\_lc\_sample.fits.gz}.
+The first catalog has 248 rows, which are the selected highly
+IR-variable sample of objects.  The second catalog is the full
+\hbox{200 622} quasar sample quasars that have ``good'' WISE light
+curves available in DECaLS DR3. In each file, there are 3 extensions:
+ex = 0 -- WISE light curve summary metrics; ex = 1 -- DECaLS DR3
+Tractor data for each object; ex = 2 -- SDSS data for each object.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -401,7 +376,7 @@ variability.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Results}
+\section{Results: General Population}
 Figures~\ref{fig:lc_s003} and \ref{fig:finder_s003} shows what the 
 typical NEOWISER data look like for a non-typical quasar.
 %%
@@ -413,32 +388,39 @@ hendrerit sed. Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam
 eu blandit. Donec in lacinia libero.
 
-    \begin{figure*}
-      %% trim=l b r t 
-      \includegraphics[width=7.50cm, height=7.50cm, 
-      trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-      {w1w2_color_variation.png}
-      \centering
-      % \vspace{-16pt}
-      \caption[]{The the variations in $(W1-W2)$ color using
-        $\sim$37,500 data points from $\sim$9000 bright quasars.
-        Overplotted is a Gaussian distribution, centered at -3.8 mmag 
-        and with standard deviation of 0.06 mags (with a fit-by-eye ;-).}
-      \label{fig:w1w2_color_variation}
-    \end{figure*}
-    \subsection{Color Changes}
-    From Aaron's email:
-    Figure~\ref{fig:w1w2_color_variation} shows the variations in the
-    $(W1-W2)$ color, which is pretty narrow. Overplotted is a Gaussian
-    distribution, centered at -3.8 mmag and with standard deviation of
-    0.06 mags (with a fit-by-eye ;-)
-    
-    This histogram includes $\sim$37,500 data points from $\sim$9000
-    bright quasars, that is, brighter than single-exposure detection limit in both
-    W1 and W2. 
-    % Let me know what you think. I can also try splitting by FIRST versus no FIRST.
+\begin{itemize}
+    \item{221 (89\% of the sample) have falling IR light-curves.}
+    \item W1 versus W2 \textit{flux} correlation coefficient $>$0.9.
+    \item $>0.5$ mag peak-to-peak variation in either W1 or W2.
+\end{itemize}
+ 
 
-    {\it NPR: It'd be friggin *awesome* if we could actually show a
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=7.50cm, height=7.50cm, 
+  trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {w1w2_color_variation.png}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{The the variations in $(W1-W2)$ color using
+    $\sim$37,500 data points from $\sim$9000 bright quasars.
+    Overplotted is a Gaussian distribution, centered at -3.8 mmag 
+    and with standard deviation of 0.06 mags (with a fit-by-eye ;-).}
+  \label{fig:w1w2_color_variation}
+\end{figure*}
+\subsection{Color Changes}
+%% From Aaron's email:
+Figure~\ref{fig:w1w2_color_variation} shows the variations in the
+$(W1-W2)$ color, which is pretty narrow. Overplotted is a Gaussian
+distribution, centered at -3.8 mmag and with standard deviation of
+0.06 mags (with a fit-by-eye ;-)
+
+This histogram includes $\sim$37,500 data points from $\sim$9000
+bright quasars, that is, brighter than single-exposure detection limit in both
+W1 and W2. 
+% Let me know what you think. I can also try splitting by FIRST versus no FIRST.
+
+    {\it NPR: It'd be very most awesome if we could show a
       W1W2W3 RGB image of a quasar changing color!!!}
 
     \begin{figure*}
@@ -479,86 +461,88 @@ eu blandit. Donec in lacinia libero.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{SDSS J110057.71-005304.5}
+\section{Results: Individual Objects}
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=8.50cm, height=6.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../images/J110057_sdss_image_nolabels.pdf}
+  \includegraphics[width=8.50cm, height=6.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../images/J110057_decals_image_nolabels.pdf}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{The SDSS ({\it left} and DECaLS ({\it right}) image of SDSS J110057.71-005304.5 (center). } 
+\label{fig:w1100m0052_sdss}
+\end{figure*}
+
+
+\subsection{SDSS J110057.71-005304.5}
+
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=17.00cm, height=9.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/w1100m0052_sdss.jpg}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{  } 
+\label{fig:w1100m0052_sdss}
+\end{figure*}
 
 \begin{figure}
   %% trim=l b r t 
   \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {../plots/w1100m0052_sdss.jpg
--rw-r--r--@ 1 npr1  admin  218664 Mar  3 09:03 ../plots/w1100m0052_hbeta.jpg
--rw-r--r--@ 1 npr1  admin  214894 Mar  3 09:03 ../plots/w1100m0052_halpha.jpg
--rw-r--r--@ 1 npr1  admin  182067 Mar  3 09:03 ../plots/w1100m0052.jpgfig1.png}
+  {../plots/w1100m0052_hbeta.jpg}
   \centering
   % \vspace{-16pt}
-  \caption[]{
-    {\bf All from DJS's email:} The distribution of the maxima and
-    minima flux in $W1$ for the $\sim$240k high-confidence quasars in the
-    SDSS-III: BOSS DR12.  The red distribution is if one replaces fluxes
-    with a mean flux$+$measurement error for each observation.  Note,
-    since the log is being plotted, the difference between the two lines
-    shows a significant variable population.  There are $\sim$1000 quasars
-    where the $W1$ flux varies by more than a factor of 2 with a $>5$
-    sigma confidence.  Some have a poor $\chi{^2}$ fits.
-  }
- \label{fig:maxminflux}
+  \caption[]{SDSS J110057.71-005304.5 H$\beta$ zoom-in.}
+ \label{fig:w1100m0052_hbeta}
 \end{figure}
 
-\subsection{General Observational Details}
+\begin{figure}
+  %% trim=l b r t 
+  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/w1100m0052_halpha.jpg}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{SDSS J110057.71-005304.5 H$\alpha$ zoom-in.}
+ \label{fig:w1100m0052_halpha}
+\end{figure}
+
+
+\subsection{Observational Details}
 SDSS J110057.71-005304.5, hereafter J110057, was discovered by 
 the Sloan Digital Sky Survey in 2000. 
  J110057 was imaged in Run 756 (which makes up Stripe 10), 
 and satisfied a number of spectroscopic targettings flags
-(SERENDIP\_BLUE, ROSAT\_D,  ROSAT\_C,  ROSAT\_B, QSO\_SKIRT, ROSAT\_A)
+\footnote{SERENDIP\_BLUE, ROSAT\_D,  ROSAT\_C,  ROSAT\_B, QSO\_SKIRT, ROSAT\_A, 
+see \citet{EDR} and \citet{Richards02} for flag desciptions.}
 making it a quasar target. A spectrum was obtain on MJD 51908, on Plate 
 277, Fiber 212, and the spectrum of a $z=0.378\pm0.00003$ was
 
-In the DECaLS, the 
-DECaLS brick containing J110057.71-005304.5.
-
-number of exposures in g : 8\\
-number of exposures in r : 3\\
-number of exposures in z : 9 \\
-
-$56707.146 <= g_MJD <= 56727.201$
-$56367.091 <= r_MJD <= 56367.230$
-$56383.159 <= z_MJD <= 57398.350$
+In the DECaLS, the DECaLS brick containing J110057.71-005304.5.
+There are 8, 3 and 9 exposures in the $g-$, $r-$ and $z-$band 
+respectively. 
+$56707.146 \leq g_{\rm MJD} \leq  56727.201$;  
+$56367.091 \leq  r_{\rm MJD} \leq  56367.230$; 
+$56383.159 \leq  z_{\rm MJD} \leq  57398.350$. 
 
 As can be seen, the $g-$ and $r-$band observations have fairly limited
-time spans, and are separated by roughly a year. The $z$-band observations
-span almost 3 years.  The DESI imaging brick name is 1651m010. 
+time spans, and are separated by roughly a year. The $z$-band
+observations span almost 3 years.  The DESI imaging brick name is
+1651m010.
 %%  I've attached the CCDs file, which comes from:
 %%  /project/projectdirs/cosmo/data/legacysurvey/dr3.1/coadd/165/1651m010/legacysurvey-1651m010-ccds.fits
-%%  -Aaron
 
-Second epoch spectrum from BOSS. 
+Second epoch spectrum is from BOSS and has a dramatic downturn at 
+$\lesssim$4300\AA\ . 
 
 A third epoch spectrum was obtained from the Palomar 5m 
-telescoep and 
- and 600s+300s on the second.  Conditions were good.
+telescope using the DBSP instrument. 
+Two exposures of 600s+300s were taken in good conditions. 
+%%
+Feature to note include: the continuum straddling MgII
+being blue in the 2017 spectrum, as it was for the SDSS spectrum in 2000, as opposed to
+red, as it was for the BOSS spectrum in 2010.  
 
-Attached are a bunch of plots, showing both the new data and
-comparison of the new data to archival SDSS/BOSS data.  Take-aways:
-
-- W1052+1519 data is much better than the data we got in late January
-in 2-4 arcsec seeing.  We should consider this as superseding those
-data, but still telling the same story.
-
-- W1100-0052 is a bit more confounding.  The continuum straddling MgII
-is now blue, as it was for the SDSS spectrum in 2000, as opposed to
-red, as it was for the BOSS spectrum in 2010.  I'm cautiously
-optimistic that the strange BOSS continuum shape is real rather than
-instrumental, but it's still nagging at me that it might not be real.
-
-- W1100-0052 SDSS spectrum has an interesting contiuum chunk missing
-at ~4300 A, which largely fills in since then??!!!   A month ago we
-would have jumped up and down claiming a gap in the accretion disk
-caused by an SMBH binary, but newer calculations suggest such a gap is
-a much wider, shallower deviation.
-
-- bluest P200 continuum (<3800 A) for W1100-0552 has an instrumental
-fringing issue which causes the high frequency gunkiness, to use the
-technical term.  This is a known issue with the DBSP
-instrument/detector.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta
 sodales est, vel cursus risus porta non. Vivamus vel pretium
 velit. Sed fringilla suscipit felis, nec iaculis lacus convallis
@@ -587,35 +571,6 @@ gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque
 cursus, dui nisl egestas augue, non fermentum nisl est nec
 nisi. Vestibulum nec mi justo, eget dapibus velit.
 
-Cras in laoreet mauris. Vivamus nec nulla a dui commodo
-adipiscing. Proin vulputate lectus nec arcu iaculis sit amet auctor
-ligula ultricies. Phasellus condimentum gravida tincidunt. Phasellus
-et mauris ac nibh vestibulum vehicula. Morbi et augue id purus gravida
-sagittis quis in sem. Phasellus quis risus bibendum eros luctus
-auctor.
-
-Etiam mollis viverra nisi eget aliquet. Aliquam erat volutpat. Vivamus
-tristique, nisl eu malesuada semper, libero tortor convallis elit, a
-scelerisque orci nisi lacinia turpis. In lacinia ultrices
-volutpat. Proin ultrices luctus tellus, in placerat eros tincidunt
-id. Ut varius iaculis quam in consequat. Nulla nec orci est, sit amet
-pellentesque nisl. Mauris non cursus lectus. Praesent placerat leo vel
-erat gravida lacinia. Donec vehicula consectetur lectus vitae
-luctus. Praesent nisl justo, laoreet elementum facilisis vel,
-tristique ac enim. Etiam vel quam ut quam eleifend
-tincidunt. Suspendisse sit amet eros vel elit ullamcorper
-laoreet. Etiam venenatis sodales turpis, nec lacinia ligula hendrerit
-nec. Nam eu vulputate purus. Quisque facilisis congue metus, sed
-imperdiet lorem rhoncus sit amet.
-
-Proin non tempus velit. Etiam laoreet, enim nec scelerisque dictum,
-tortor massa tempor enim, id pretium justo quam ac lectus. Maecenas
-diam nibh, interdum at lobortis sit amet, dignissim et quam. Sed
-tincidunt faucibus risus, congue tempus nisl consectetur
-eget. Suspendisse venenatis turpis ut risus aliquam interdum. In at
-velit sed ligula dictum dignissim ut et dui. Curabitur ac scelerisque
-purus.
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -624,6 +579,41 @@ purus.
 %%     S E C T I O N     5      S E C T I O N     5       S E C T I O N     5       S E C T I O N     5
 %%     S E C T I O N     5      S E C T I O N     5       S E C T I O N     5       S E C T I O N     5  
 %%     S E C T I O N     5      S E C T I O N     5       S E C T I O N     5       S E C T I O N     5  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+Sed elit massa, eleifend non sodales a, commodo ut felis. Sed id
+pretium felis. Vestibulum et turpis vitae quam aliquam convallis. Sed
+id ligula eu nulla ultrices tempus. Phasellus mattis erat quis metus
+dignissim malesuada. Nulla tincidunt quam volutpat nibh facilisis
+euismod. Cras vel auctor neque. Nam quis diam risus.
+
+Nunc semper quam et leo interdum vulputate eu quis magna. Sed nec arcu
+at orci egestas convallis. Aenean quam velit, aliquam vitae viverra
+in, elementum vel elit. Nunc suscipit aliquet sapien a suscipit. Cras
+nulla ipsum, posuere eu fringilla sit amet, dapibus ultricies
+nulla. Nullam eu augue id purus mollis dignissim sed et
+libero. Phasellus eget justo sed neque pellentesque egestas nec id
+arcu. Donec facilisis pulvinar sapien et fringilla. Suspendisse
+vestibulum rhoncus sapien id laoreet. Morbi et orci vitae tortor
+imperdiet imperdiet. In hac habitasse platea dictumst. Vivamus vel
+neque id mi ultrices tristique. Integer quam libero, ornare vel
+gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque
+cursus, dui nisl egestas augue, non fermentum nisl est nec
+nisi. Vestibulum nec mi justo, eget dapibus velit.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%     S E C T I O N     6      S E C T I O N     6       S E C T I O N     6       S E C T I O N     6
+%%     S E C T I O N     6      S E C T I O N     6       S E C T I O N     6       S E C T I O N     6  
+%%     S E C T I O N     6      S E C T I O N     6       S E C T I O N     6       S E C T I O N     6 
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

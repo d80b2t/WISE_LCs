@@ -6,7 +6,6 @@ The WISE QSOs and Light Curve project(s) isn't fully on this github repo (yet).
 Files can also be found on Overleaf:
 https://www.overleaf.com/7362842xzrqrnwmxsyz#/25578795/
 
-
 ## Acknowledgement. 
 This is a write-up in progress and ``in prep.''
 If you are interested in this work, and/or need to cite it, please cite
@@ -17,7 +16,6 @@ and give the GitHub repo and latest commit number.
 If you are having  trouble with the pages coming out sideways,
 i.e. in landscape mode, disable \usepackage{lscape}
 (these a clash between the lscape package and revtex4-1...)
-
 
 
 Last updated:
