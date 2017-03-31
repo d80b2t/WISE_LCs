@@ -29,13 +29,14 @@ Daniel~Stern\altaffilmark{3},
 David~J.~Schlegel\altaffilmark{2},
 Andrew~Drake\altaffilmark{4}, 
 Matthew~Graham\altaffilmark{4}, 
-Arjun~Dey\altaffilmark{5},
-Roberto~J.~Assef\altaffilmark{6},
-Saavik~K.~Ford,\altaffilmark{7}, 
-Barry~L.~McKernan\altaffilmark{7},
-%Mislav~Balokovic\altaffilmark{6}, 
-%Murray~Brightman\altaffilmark{4}, 
-%Peter~R.~Eisenhardt\altaffilmark{3}, 
+et al.,  
+% Arjun~Dey\altaffilmark{5},
+% Roberto~J.~Assef\altaffilmark{6},
+% Saavik~K.~Ford,\altaffilmark{7}, 
+% Barry~L.~McKernan\altaffilmark{7},
+% Mislav~Balokovic\altaffilmark{6}, 
+% Murray~Brightman\altaffilmark{4}, 
+% Peter~R.~Eisenhardt\altaffilmark{3}, 
 for the DECaLS Consortium. 
 }
 \altaffiltext{1}{Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, United Kingdom}
@@ -43,9 +44,9 @@ for the DECaLS Consortium.
 \altaffiltext{2}{Lawrence Berkeley National Laboratory, 1 Cyclotron Road, Berkeley, CA 92420, U.S.A.} 
 \altaffiltext{3}{Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA}
 \altaffiltext{4}{California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA}
-\altaffiltext{5}{Steward Observatory, 933 North Cherry Avenue, Tucson, AZ 85721, U.S.A.}
-\altaffiltext{6}{Universidad Diego Portales, Av Republica 180, Santiago, Regi ́on Metropolitana, Chile}
-\altaffiltext{7}{Department of Astrophysics is located in the Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, New York, NY 10024, U.S.A}
+%\altaffiltext{5}{Steward Observatory, 933 North Cherry Avenue, Tucson, AZ 85721, U.S.A.}
+%\altaffiltext{6}{Universidad Diego Portales, Av Republica 180, Santiago, Regi ́on Metropolitana, Chile}
+%altaffiltext{7}{Department of Astrophysics is located in the Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, New York, NY 10024, U.S.A}
 
 
 \date{\today}
@@ -356,7 +357,40 @@ Tractor data for each object; ex = 2 -- SDSS data for each object.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=7.50cm, height=7.50cm, 
+  trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {w1w2_color_variation.png}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{The the variations in $(W1-W2)$ color using
+    $\sim$37,500 data points from $\sim$9000 bright quasars.
+    Overplotted is a Gaussian distribution, centered at -3.8 mmag 
+    and with standard deviation of 0.06 mags (with a fit-by-eye ;-).}
+  \label{fig:Nogf}
+\end{figure*}
+
 \section{Results: General Population}
+Starting from the $\approx$200,000 object parent quasar sample, 
+and employing the selections as described above, we generate a catalog 
+of 248 objects. 
+Some general properties include:
+\begin{itemize}
+    \item{
+        The redshift distribution of the IR-variable sample of objects
+        being at generally lower redshift than the parent sample, but
+        extending to relatively high-$z$ - see Figure~\ref{fig:Nofz}}; 
+    \item{221 (89\%) of the sample have falling IR light-curves.}
+    \item{The extremely IR variable QSOs generally have the same
+      optical colors as the parent population, see
+      Figures~\ref{fig:ugriz_colorcolor} and \ref{fig:grz_colorcolor}.}
+\end{itemize}
+
+The $N(z)$ redshift distributions are shown in Figure~\ref{fig
+with the parent sample the blue histogram and 
+the IR-variable sample the red histogram. 
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta
 sodales est, vel cursus risus porta non. Vivamus vel pretium
 velit. Sed fringilla suscipit felis, nec iaculis lacus convallis
@@ -365,13 +399,6 @@ hendrerit sed. Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam
 eu blandit. Donec in lacinia libero.
 
-\begin{itemize}
-    \item{The redshift distribution of the superset .... }
-    \item{221 (89\% of the sample) have falling IR light-curves.}
-    \item The extremely IR variable QSOs generally have the same optical colors as the parent population, 
-    see Figures~\ref{fig:ugriz_colorcolor} and \ref{fig:grz_colorcolor}. 
-\end{itemize}
- 
 
 \begin{figure*}
   %% trim=l b r t 
