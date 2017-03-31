@@ -28,7 +28,7 @@ Aaron~Meisner\altaffilmark{2},
 Daniel~Stern\altaffilmark{3},
 David~J.~Schlegel\altaffilmark{2},
 Andrew~Drake\altaffilmark{4}, 
-Matthew~Graham\altaffilmark{4}, 
+Matthew~Graham\altaffilmark{4}, \\
 et al.,  
 % Arjun~Dey\altaffilmark{5},
 % Roberto~J.~Assef\altaffilmark{6},
@@ -96,24 +96,24 @@ frame) find it very hard to explain this behaviour.
 \section{Introduction}
 The reprocessing of UV/optical photons by micron sized carbonates and
 silicates around an AGN central engine leads to the prodigious emission
-of infrared (IR) emission (\citet[See][for review on AGN infrared
-emission]{Elitzur14}; \citet[][for a review on the Unified Model of
-Active Galactic Nuclei]{Netzer15} and \citet[][]{Draine03} for a
+of infrared (IR) emission (see \citet{Elitzur14} for review on AGN infrared
+emission; \citet{Netzer15} for a review on the Unified Model of
+Active Galactic Nuclei, and \citet[][]{Draine03} for a
 review on dust).
 %% All these References will need to be fixed/heavily updated.
 
 With the energy released by the accretion of material onto a galactic
 central engine black hole being comparable to the energy released in
-nuclear fusion (REFs!!) having a full accounting of the bolometric
-output from a luminous AGN, i.e. a quasar, is a critical part of any
-contemporary galaxy and AGN model and evolutionary theory (e.g. current
-Illustrious and EAGLE refs??). Thus, identifying AGN in the IR, and in
-particular at $\sim$10$\mu$m where the AGN contribution to the SED
-peaks (REFs) is of key interest. Indeed, many studies have explored
-the utilization of mid-IR (3-30$mu$m rest) to identify and characterize
-AGN and quasars \citep{Lacy04, Stern05, Martinez-Sansigre06,
-Richards09b, Donley12, Stern12, Banerji13, Assef13, Richards15,
-Timlin16}. 
+nuclear fusion having a full accounting of the bolometric output from
+a luminous AGN, i.e. a quasar, is a critical part of any contemporary
+galaxy and AGN model and evolutionary theory
+\citep[e.g.,][]{Rosas-Guevara2016, Bower2017, McAlpine2017,
+Pillepich2017}. Thus, identifying AGN in the IR, and in particular at
+$\sim$10$\mu$m where the AGN contribution to the SED peaks (REFs) is
+of key interest. Indeed, many studies have explored the utilization of
+mid-IR (3-30$mu$m rest) to identify and characterize AGN and quasars
+\citep{Lacy04, Stern05, Martinez-Sansigre06, Richards09b, Donley12,
+Stern12, Banerji13, Assef13, Richards15, Timlin16}.
 
 Along with the raw energy output, of further critical importance to
 understanding in detail the physical processes of the AGN, and the
@@ -263,7 +263,7 @@ in Figure~\ref{fig:maxminflux}.
   \centering
   % \vspace{-16pt}
   \caption[]{
-    {\bf All from DJS's 2nd email:} 
+%    {\bf All from DJS's 2nd email:} 
     Here, ``err'' is the quadrature sum of the errors at the minimum and maximum fluxes.
     The red histogram is the expected distribution if these objects had no variability, 
     and the errors were normally-distributed for each of the epochs.
@@ -357,19 +357,19 @@ Tractor data for each object; ex = 2 -- SDSS data for each object.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure*}
+\begin{figure}
   %% trim=l b r t 
-  \includegraphics[width=7.50cm, height=7.50cm, 
-  trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {w1w2_color_variation.png}
+  \includegraphics[width=8.20cm, height=7.00cm, 
+  trim=0.0cm 0.0cm 0.1cm 0.0cm, clip]
+  {../plots/Nofz/Nofz_20170331.pdf}
   \centering
   % \vspace{-16pt}
   \caption[]{The the variations in $(W1-W2)$ color using
     $\sim$37,500 data points from $\sim$9000 bright quasars.
     Overplotted is a Gaussian distribution, centered at -3.8 mmag 
     and with standard deviation of 0.06 mags (with a fit-by-eye ;-).}
-  \label{fig:Nogf}
-\end{figure*}
+  \label{fig:Nofz}
+\end{figure}
 
 \section{Results: General Population}
 Starting from the $\approx$200,000 object parent quasar sample, 
@@ -386,10 +386,9 @@ Some general properties include:
       optical colors as the parent population, see
       Figures~\ref{fig:ugriz_colorcolor} and \ref{fig:grz_colorcolor}.}
 \end{itemize}
-
-The $N(z)$ redshift distributions are shown in Figure~\ref{fig
-with the parent sample the blue histogram and 
-the IR-variable sample the red histogram. 
+The $N(z)$ redshift distributions are shown in Figure~\ref{fig:Nofz}
+with the parent sample the blue histogram and the IR-variable sample
+the red histogram.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta
 sodales est, vel cursus risus porta non. Vivamus vel pretium
@@ -399,38 +398,33 @@ hendrerit sed. Class aptent taciti sociosqu ad litora torquent per
 conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam
 eu blandit. Donec in lacinia libero.
 
-
-\begin{figure*}
-  %% trim=l b r t 
-  \includegraphics[width=7.50cm, height=7.50cm, 
-  trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {w1w2_color_variation.png}
-  \centering
-  % \vspace{-16pt}
-  \caption[]{The the variations in $(W1-W2)$ color using
-    $\sim$37,500 data points from $\sim$9000 bright quasars.
-    Overplotted is a Gaussian distribution, centered at -3.8 mmag 
-    and with standard deviation of 0.06 mags (with a fit-by-eye ;-).}
-  \label{fig:w1w2_color_variation}
-\end{figure*}
-\subsection{Color Changes}
-%% From Aaron's email:
-Figure~\ref{fig:w1w2_color_variation} shows the variations in the
-$(W1-W2)$ color, which is pretty narrow. Overplotted is a Gaussian
-distribution, centered at -3.8 mmag and with standard deviation of
-0.06 mags (with a fit-by-eye ;-)
-
-This histogram includes $\sim$37,500 data points from $\sim$9000
-bright quasars, that is, brighter than single-exposure detection limit in both
-W1 and W2. 
-% Let me know what you think. I can also try splitting by FIRST versus no FIRST.
-
-    {\it NPR: It'd be very most awesome if we could show a
-      W1W2W3 RGB image of a quasar changing color!!!}
-
-    \begin{figure*}
+    \begin{figure}
       %% trim=l b r t 
-      \includegraphics[width=7.50cm, height=7.50cm, 
+      \includegraphics[width=7.20cm, height=7.20cm, 
+      trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+      {../plots/w1w2_color_variation.png}
+      \centering
+      % \vspace{-16pt}
+      \caption[]{The the variations in $(W1-W2)$ color using
+        $\sim$37,500 data points from $\sim$9000 bright quasars.
+        Overplotted is a Gaussian distribution, centered at -3.8 mmag 
+        and with standard deviation of 0.06 mags (with a fit-by-eye ;-).}
+      \label{fig:w1w2_color_variation}
+    \end{figure}
+    \subsection{Color Changes}
+    Figure~\ref{fig:w1w2_color_variation} shows the variations in the
+    $(W1-W2)$ color, which is pretty narrow. Overplotted is a Gaussian
+    distribution, centered at -3.8 mmag and with standard deviation of
+    0.06 mags.
+    
+    This histogram includes $\sim$37,500 data points from $\sim$9000
+    bright quasars, that is, brighter than single-exposure detection limit
+    in both W1 and W2. {\it NPR: It'd be very most awesome if we could
+      show a W1W2W3 RGB image of a quasar changing color!!!}
+    
+    \begin{figure}
+      %% trim=l b r t 
+      \includegraphics[width=7.00cm, height=7.00cm, 
       trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
       {scatter_dW1_dW2.png}
       \centering
@@ -438,9 +432,9 @@ W1 and W2.
       \caption[]{The the variations in $(W1-W2)$ color using
         $\sim$37,500 data points from $\sim$9000 bright quasars. Overplotted
         is a Gaussian distribution, centered at -3.8 mmag and with standard
-        deviation of 0.06 mags (with a fit-by-eye ;-).}
+        deviation of 0.06 mags.}
       \label{fig:scatter_dW1_dW2}
-    \end{figure*}
+    \end{figure}
     Figure~\ref{fig:scatter_dW1_dW2} has the same data as
     Fig~\ref{fig:w1w2_color_variation}, now in a scatterplot of
     $\Delta(W1)$ versus $\Delta(W2$). There is clearly some variation, and
@@ -449,12 +443,6 @@ W1 and W2.
     you could have e.g. correlated background level issues in the coadds
     that imprint onto the fluxes.)
 
-    \subsection{Extreme IR Variable Quasars vs. the general Quasar population}
-    Turpis tincidunt quam consectetur non suscipit tellus placerat. Etiam
-    sit amet justo condimentum sem scelerisque pharetra. Nullam sit amet
-    neque eget quam tempor consectetur vel vitae massa. Nunc porttitor,
-    quam in tempor pharetra, leo libero eleifend mi, ac ornare nibh eros
-    vel purus. Pellentesque lobortis enim metus.
 
     \begin{figure*}
       %% trim=l b r t 
@@ -497,6 +485,12 @@ W1 and W2.
       \label{fig:grz_colorcolor}
     \end{figure}
 
+    \subsection{Changes in color: One IR Variable population or two?}
+    Turpis tincidunt quam consectetur non suscipit tellus placerat. Etiam
+    sit amet justo condimentum sem scelerisque pharetra. Nullam sit amet
+    neque eget quam tempor consectetur vel vitae massa. Nunc porttitor,
+    quam in tempor pharetra, leo libero eleifend mi, ac ornare nibh eros
+    vel purus. Pellentesque lobortis enim metus.
 
     
 
@@ -512,7 +506,7 @@ W1 and W2.
 \begin{figure}
     \includegraphics[width=8.00cm, height=6.50cm, 
     trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-    {../plots/lc_110057p71-005304p5.png}
+    {../plots/lc/lc_110057p71-005304p5.png}
     \centering
     \caption[]{WISE infrared light-curve for J110057. }
     \label{fig:lc_J110057}
@@ -522,7 +516,7 @@ W1 and W2.
    %% trim=l b r t 
     \includegraphics[width=14.00cm, height=7.50cm, 
     trim=0.0cm 0.0cm 0.0cm 0.0cm, clip] 
-    {../plots/finder_110057p71-005304p5.png}
+    {../plots/finder/finder_110057p71-005304p5.png}
     \centering
     % \vspace{-16pt}
     \caption[]{WISE thumbnail images for J110057. }
@@ -613,7 +607,7 @@ nisi. Vestibulum nec mi justo, eget dapibus velit.
 \begin{figure*}
   %% trim=l b r t 
   \includegraphics[width=17.00cm, height=9.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {../plots/w1100m0052_sdss.jpg}
+  {../plots/spectra/w1100m0052_sdss.jpg}
   \centering
   % \vspace{-16pt}
   \caption[]{  } 
@@ -623,7 +617,7 @@ nisi. Vestibulum nec mi justo, eget dapibus velit.
 \begin{figure}
   %% trim=l b r t 
   \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {../plots/w1100m0052_hbeta.jpg}
+  {../plots/spectra/w1100m0052_hbeta.jpg}
   \centering
   % \vspace{-16pt}
   \caption[]{SDSS J110057.71-005304.5 H$\beta$ zoom-in.}
@@ -633,7 +627,7 @@ nisi. Vestibulum nec mi justo, eget dapibus velit.
 \begin{figure}
   %% trim=l b r t 
   \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {../plots/w1100m0052_halpha.jpg}
+  {../plots/spectra/w1100m0052_halpha.jpg}
   \centering
   % \vspace{-16pt}
   \caption[]{SDSS J110057.71-005304.5 H$\alpha$ zoom-in.}
@@ -768,7 +762,7 @@ SDSS, BOSS, WISE, CTIO Blanco+DECam}
 
 
 
-
+\clearpage
 \appendix
 \section{Technical Details}
 All good papers have to have an Appendix. 
@@ -783,6 +777,32 @@ All good papers have to have an Appendix.
 \end{tabular}
 \label{table:nonlin}
 \end{table}
+
+\section{Spectrophotometry for changing look QSO 3836/55302-258}
+All really good papers have more than one Appendix.
+
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=5.80cm, height=6.00cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/CalibFlux_vs_SpectroSynFlux_uband.png}
+  \includegraphics[width=5.80cm, height=6.00cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/CalibFlux_vs_SpectroSynFlux_gband.png}
+  \includegraphics[width=5.80cm, height=6.00cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/CalibFlux_vs_SpectroSynFlux_rband.png}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{The spectrophotometery checks for Changing Look QSO SDSS J110057. 
+    From left to right, the u, g and r bands. 
+    Along the x-axis is a measurement of the ``calibration flux'' photometric value 
+    which is an estimate of the flux within a 2 arcsecond aperture, and which {\it is} 
+    the PSF flux value for point obects (stars). On the $y$-axis is the spectrophotometric
+    flux values. For the SDSS $u$, $g$ and $r$-bands from left to right. 
+J110057 is the red point, and is clearly off the general trends for the 500 objects 
+on this half-plate for one the BOSS spectrographs, but is close to the trend in 
+$r$-band strongly suggesting the variations observed in the BOSS spectra are real.} 
+ \label{fig:w1100m0052_halpha}
+\end{figure*}
+
 
 
 \bibliographystyle{mn2e} 
