@@ -279,26 +279,6 @@ range for those stars will be quite different, though, since they have
 the same optical magnitude range but are fainter in WISE.)
 
 
-\begin{figure}
-    \includegraphics[width=8.00cm, height=6.50cm, 
-    trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-    {lc_s003.png}
-    \centering
-    \caption[]{qso\_lightcurves\_0.5\_1.0/lc\_s003.png}
-    \label{fig:lc_s003}
-\end{figure}
-  
-\begin{figure*}
-   %% trim=l b r t 
-    \includegraphics[width=14.00cm, height=7.50cm, 
-    trim=0.0cm 0.0cm 0.0cm 0.0cm, clip] 
-    {finder_s003.png}
-    \centering
-    % \vspace{-16pt}
-    \caption[]{qso\_finders\_0.5\_1.0/finder\_s003.png}
-    \label{fig:finder_s003}
-\end{figure*}
-
 
 %%  N. B. !!  N. B. !!   N. B. !!  N. B. !! 
 %%  This is text from Aaron's email from 15th Feb, 2017, sent to Daniel, 
@@ -377,9 +357,6 @@ Tractor data for each object; ex = 2 -- SDSS data for each object.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results: General Population}
-Figures~\ref{fig:lc_s003} and \ref{fig:finder_s003} shows what the 
-typical NEOWISER data look like for a non-typical quasar.
-%%
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta
 sodales est, vel cursus risus porta non. Vivamus vel pretium
 velit. Sed fringilla suscipit felis, nec iaculis lacus convallis
@@ -389,9 +366,10 @@ conubia nostra, per inceptos himenaeos. Etiam interdum tristique diam
 eu blandit. Donec in lacinia libero.
 
 \begin{itemize}
+    \item{The redshift distribution of the superset .... }
     \item{221 (89\% of the sample) have falling IR light-curves.}
-    \item W1 versus W2 \textit{flux} correlation coefficient $>$0.9.
-    \item $>0.5$ mag peak-to-peak variation in either W1 or W2.
+    \item The extremely IR variable QSOs generally have the same optical colors as the parent population, 
+    see Figures~\ref{fig:ugriz_colorcolor} and \ref{fig:grz_colorcolor}. 
 \end{itemize}
  
 
@@ -450,6 +428,49 @@ W1 and W2.
     neque eget quam tempor consectetur vel vitae massa. Nunc porttitor,
     quam in tempor pharetra, leo libero eleifend mi, ac ornare nibh eros
     vel purus. Pellentesque lobortis enim metus.
+
+    \begin{figure*}
+      %% trim=l b r t 
+      \includegraphics[width=5.50cm, height=5.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+      {../color_color/colorcolor_ugr_topcat.png}
+      \includegraphics[width=5.50cm, height=5.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+      {../color_color/colorcolor_gri_topcat.png}
+      \includegraphics[width=5.50cm, height=5.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+      {../color_color/colorcolor_riz_topcat.png}
+      \centering
+      % \vspace{-16pt}
+      \caption[]{The $ugriz$ color-color plots for the full 200k
+        super-sample (red points) and the 248 extreme IR variables (yellow
+        dots).}
+      \label{fig:ugriz_colorcolor}
+    \end{figure*}
+    Etiam mollis viverra nisi eget aliquet. Aliquam erat volutpat. Vivamus
+    tristique, nisl eu malesuada semper, libero tortor convallis elit, a
+    scelerisque orci nisi lacinia turpis. In lacinia ultrices
+    volutpat. Proin ultrices luctus tellus, in placerat eros tincidunt
+    id. Ut varius iaculis quam in consequat. Nulla nec orci est, sit amet
+    pellentesque nisl. Mauris non cursus lectus. Praesent placerat leo vel
+    erat gravida lacinia. Donec vehicula consectetur lectus vitae
+    luctus. Praesent nisl justo, laoreet elementum facilisis vel,
+    tristique ac enim. Etiam vel quam ut quam eleifend
+    tincidunt. Suspendisse sit amet eros vel elit ullamcorper
+    laoreet. Etiam venenatis sodales turpis, nec lacinia ligula hendrerit
+    nec. Nam eu vulputate purus. Quisque facilisis congue metus, sed
+    imperdiet lorem rhoncus sit amet.
+    
+    \begin{figure}
+      \includegraphics[width=7.00cm, height=7.00cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+      {../color_color/colormag_gr_imag_topcat.png}
+      \includegraphics[width=7.00cm, height=7.00cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+      {../color_color/colormag_grz_topcat.png}
+      \centering
+      % \vspace{-16pt}
+      \caption[]{The color-mag and $grz$ color-color plots for the full 200k super-sample (red points) 
+        and the 248 extreme IR variables (yellow).}
+      \label{fig:grz_colorcolor}
+    \end{figure}
+
+
     
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -461,7 +482,28 @@ W1 and W2.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+    \includegraphics[width=8.00cm, height=6.50cm, 
+    trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+    {../plots/lc_110057p71-005304p5.png}
+    \centering
+    \caption[]{WISE infrared light-curve for J110057. }
+    \label{fig:lc_J110057}
+\end{figure}
+  
+\begin{figure*}
+   %% trim=l b r t 
+    \includegraphics[width=14.00cm, height=7.50cm, 
+    trim=0.0cm 0.0cm 0.0cm 0.0cm, clip] 
+    {../plots/finder_110057p71-005304p5.png}
+    \centering
+    % \vspace{-16pt}
+    \caption[]{WISE thumbnail images for J110057. }
+    \label{fig:finder_J110057}
+\end{figure*}
+
 \section{Results: Individual Objects}
+
 \begin{figure*}
   %% trim=l b r t 
   \includegraphics[width=8.50cm, height=6.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
@@ -476,39 +518,10 @@ W1 and W2.
 
 
 \subsection{SDSS J110057.71-005304.5}
-
-\begin{figure*}
-  %% trim=l b r t 
-  \includegraphics[width=17.00cm, height=9.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {../plots/w1100m0052_sdss.jpg}
-  \centering
-  % \vspace{-16pt}
-  \caption[]{  } 
-\label{fig:w1100m0052_sdss}
-\end{figure*}
-
-\begin{figure}
-  %% trim=l b r t 
-  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {../plots/w1100m0052_hbeta.jpg}
-  \centering
-  % \vspace{-16pt}
-  \caption[]{SDSS J110057.71-005304.5 H$\beta$ zoom-in.}
- \label{fig:w1100m0052_hbeta}
-\end{figure}
-
-\begin{figure}
-  %% trim=l b r t 
-  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
-  {../plots/w1100m0052_halpha.jpg}
-  \centering
-  % \vspace{-16pt}
-  \caption[]{SDSS J110057.71-005304.5 H$\alpha$ zoom-in.}
- \label{fig:w1100m0052_halpha}
-\end{figure}
+Figures~\ref{fig::lc_J110057} presents the IR NEOWISER light curve for 
+J110057, and~\ref{fig:finder_J110057} the IR finding charts. 
 
 
-\subsection{Observational Details}
 SDSS J110057.71-005304.5, hereafter J110057, was discovered by 
 the Sloan Digital Sky Survey in 2000. 
  J110057 was imaged in Run 756 (which makes up Stripe 10), 
@@ -570,6 +583,35 @@ neque id mi ultrices tristique. Integer quam libero, ornare vel
 gravida in, feugiat a ante. Nam dapibus, tellus vitae pellentesque
 cursus, dui nisl egestas augue, non fermentum nisl est nec
 nisi. Vestibulum nec mi justo, eget dapibus velit.
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=17.00cm, height=9.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/w1100m0052_sdss.jpg}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{  } 
+\label{fig:w1100m0052_sdss}
+\end{figure*}
+
+\begin{figure}
+  %% trim=l b r t 
+  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/w1100m0052_hbeta.jpg}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{SDSS J110057.71-005304.5 H$\beta$ zoom-in.}
+ \label{fig:w1100m0052_hbeta}
+\end{figure}
+
+\begin{figure}
+  %% trim=l b r t 
+  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/w1100m0052_halpha.jpg}
+  \centering
+  % \vspace{-16pt}
+  \caption[]{SDSS J110057.71-005304.5 H$\alpha$ zoom-in.}
+ \label{fig:w1100m0052_halpha}
+\end{figure}
 
 
 
@@ -706,7 +748,7 @@ All good papers have to have an Appendix.
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{l l c}
+\begin{tabular}{l l l}
 \hline\hline
 \hline
 \input{columnDefinitionsFor_dr3_wise_lc_sample}
