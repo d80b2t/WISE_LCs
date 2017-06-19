@@ -1,0 +1,14 @@
+
+~/WISE_LCs/disk_theory > ll 
+-rw-r--r--@  1 npr1  admin   6111 Apr 11 12:30 mcd_gap_v2.py
+~/WISE_LCs/disk_theory > cksum mcd_gap_v2.py 
+1740977322 6111 mcd_gap_v2.py
+~/WISE_LCs/disk_theory > md5sum mcd_gap_v2.py 
+4f75a3384749c86cb39090f7cd351511  mcd_gap_v2.py
+
+was the original code from Professor K. E. Saavik Ford
+(Email on Apr 10, 2017, at 9:28 PM)
+
+
+
+

@@ -1,0 +1,552 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{mcd\_gap\_v2.0}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    Hi Nic,
+
+Conceptually, my statement comes from assuming the 'big blue bump'
+continuum comes from a simple multi-color disk model. So, for a standard
+temperature profile, you just multiply the appropriate blackbodies by
+the area of the appropriate annulus, add them up, and get an 'emergent
+spectrum'. Of course there's lots of additional complications but it
+gives you a good guide to what disk radii are generating what flux.
+
+The orbital/dynamical/free-fall timescale is just \((\Omega)^{-1}\),
+where \(\Omega\) is the Keplerian frequency at that orbit; the thermal
+timescale is \((\alpha \times \Omega)^{-1}\), where \(\alpha\) is the
+'viscosity' or technically the alpha parameter of a Shakura-Sunyaev
+disk; the viscous timescale is
+\((\alpha \times \Omega)^{-1} (H/r)^{-2}\), where \((H/r)\) is the disk
+aspect ratio.
+
+Hope that helps for now!
+
+    Hi Nic,
+
+To elaborate slightly, if you have a look at Sirko \& Goodman 2003, they
+have a semi-realistic accretion disk model (they have to artificially
+set a floor on Toomre's \(Q\) to keep parts of the disk from
+fragmenting, the argument being that we see the disks don't generally
+fragment so... something must be keeping \(Q>1\)). Their temperature
+profile is mass and accretion rate dependent, but analytic and
+proportional to \(r^{-3/4}\).
+
+I also am attaching a python program I wrote to visualize the impact of
+various perturbations to the disk on the emergent continuum. It should
+just run in python with the defaults and spit out a plot of a few
+different emergent continua (in both .eps and .png files with the plot).
+
+If you want to change parameters, they are all set by editing the
+program-\/-physical inputs and display inputs are commented (and appear
+between e.g. PHYSICAL INPUTS and END PHYSICAL INPUTS). Basically you can
+make a gap in the disk that emits zero flux, due to a presumed
+secondary, lower mass BH, and/or you can magically depress the flux
+interior to the gap by some fraction. It's quasi-realistic, but gives
+you a visual feel for how much you have to contort the disk to get
+substantial flux changes at particular wavelengths (and that's the basis
+for my prior email statements).
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c+ch}{\PYZsh{}! /usr/bin/env python}
+        \PY{c+c1}{\PYZsh{}mcd\PYZus{}gap\PYZus{}v1.py}
+        
+        \PY{c+c1}{\PYZsh{}Plot spectrum of multi\PYZhy{}color disk as function of wavelength; allow for gap}
+        \PY{c+c1}{\PYZsh{} \PYZhy{}\PYZhy{}\PYZhy{}Plot multiple spectra with gaps for different mass,}
+        \PY{c+c1}{\PYZsh{} \PYZhy{}\PYZhy{}\PYZhy{}semi\PYZhy{}major axis of secondary}
+        \PY{c+c1}{\PYZsh{} \PYZhy{}\PYZhy{}\PYZhy{}artificially depress flux interior to gap}
+        \PY{c+c1}{\PYZsh{}}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{k+kn}{from} \PY{n+nn}{pylab} \PY{k}{import} \PY{o}{*}
+        
+        \PY{k+kn}{import} \PY{n+nn}{sys}\PY{o}{,} \PY{n+nn}{os}\PY{o}{,} \PY{n+nn}{time}\PY{o}{,} \PY{n+nn}{string}\PY{o}{,} \PY{n+nn}{math}\PY{o}{,} \PY{n+nn}{subprocess}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{}\PYZsh{} SI units}
+        \PY{n}{Msun}\PY{o}{=}\PY{l+m+mf}{1.99e30} \PY{c+c1}{\PYZsh{}kg per solar mass}
+        \PY{n}{Rsun}\PY{o}{=}\PY{l+m+mf}{6.95e8} \PY{c+c1}{\PYZsh{}meters per solar radius}
+        \PY{n}{G}\PY{o}{=}\PY{l+m+mf}{6.67e\PYZhy{}11}
+        \PY{n}{c}\PY{o}{=}\PY{l+m+mf}{3e8}
+        \PY{n}{sigma\PYZus{}SB}\PY{o}{=}\PY{l+m+mf}{5.7e\PYZhy{}8} \PY{c+c1}{\PYZsh{}stefan\PYZhy{}boltzmann const}
+        \PY{n}{yr}\PY{o}{=}\PY{l+m+mf}{3.15e7} \PY{c+c1}{\PYZsh{}seconds per year}
+        \PY{n}{pc}\PY{o}{=}\PY{l+m+mf}{3.086e16} \PY{c+c1}{\PYZsh{}meters per parsec}
+        \PY{n}{AU}\PY{o}{=}\PY{l+m+mf}{1.496e11} \PY{c+c1}{\PYZsh{}meters per AU}
+        \PY{n}{h}\PY{o}{=}\PY{l+m+mf}{6.626e\PYZhy{}34} \PY{c+c1}{\PYZsh{}planck const}
+        \PY{n}{kB}\PY{o}{=}\PY{l+m+mf}{1.38e\PYZhy{}23} \PY{c+c1}{\PYZsh{}boltzmann const}
+        \PY{n}{m\PYZus{}p}\PY{o}{=}\PY{l+m+mf}{1.67e\PYZhy{}27} \PY{c+c1}{\PYZsh{}mass of proton}
+        \PY{n}{sigma\PYZus{}T}\PY{o}{=}\PY{l+m+mf}{6.65e\PYZhy{}29} \PY{c+c1}{\PYZsh{}Thomson xsec}
+        \PY{n}{PI}\PY{o}{=}\PY{l+m+mf}{3.1415926}
+\end{Verbatim}
+
+    \(B_{\lambda }(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{\frac {hc}{\lambda k_{\mathrm {B} }T}}-1}}\)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{k}{def} \PY{n+nf}{find\PYZus{}B\PYZus{}lambda}\PY{p}{(}\PY{n}{Temp}\PY{p}{,} \PY{n}{lam}\PY{p}{)}\PY{p}{:}
+            \PY{c+c1}{\PYZsh{}\PYZsh{} Planck function}
+            \PY{c+c1}{\PYZsh{}\PYZsh{} BB intensity=2hc\PYZca{}2/lam\PYZca{}5 * 1/(exp(hc/lamkT)\PYZhy{}1)}
+            \PY{n}{I}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{h}\PY{o}{*}\PY{n}{c}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{/}\PY{n+nb}{pow}\PY{p}{(}\PY{n}{lam}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{exp}\PY{p}{(}\PY{n}{h}\PY{o}{*}\PY{n}{c}\PY{o}{/}\PY{p}{(}\PY{n}{lam}\PY{o}{*}\PY{n}{kB}\PY{o}{*}\PY{n}{Temp}\PY{p}{)}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+        
+            \PY{k}{return} \PY{n}{I}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{k}{def} \PY{n+nf}{find\PYZus{}Temp}\PY{p}{(}\PY{n}{epsilon}\PY{p}{,}\PY{n}{M\PYZus{}SMBH}\PY{p}{,}\PY{n}{dotm\PYZus{}edd}\PY{p}{,}\PY{n}{radius}\PY{p}{)}\PY{p}{:}
+            \PY{c+c1}{\PYZsh{}find temp as a fn of radius}
+            \PY{c+c1}{\PYZsh{}assume sigma\PYZus{}SB T\PYZca{}4=(3/8pi) dotM Omega\PYZca{}2}
+            \PY{c+c1}{\PYZsh{}use Omega=sqrt(GM/r\PYZca{}3); put r in units r\PYZus{}g; dotM in units dotM\PYZus{}edd}
+            \PY{c+c1}{\PYZsh{}From Sirko \PYZam{} Goodman 2003}
+            \PY{n}{prefactor}\PY{o}{=}\PY{n+nb}{pow}\PY{p}{(}\PY{p}{(}\PY{p}{(}\PY{l+m+mf}{3.0}\PY{o}{/}\PY{l+m+mf}{2.0}\PY{p}{)}\PY{o}{*}\PY{p}{(}\PY{n}{c}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{*}\PY{n}{m\PYZus{}p}\PY{o}{/}\PY{p}{(}\PY{n}{epsilon}\PY{o}{*}\PY{n}{G}\PY{o}{*}\PY{n}{M\PYZus{}SMBH}\PY{o}{*}\PY{n}{Msun}\PY{o}{*}\PY{n}{sigma\PYZus{}T}\PY{o}{*}\PY{n}{sigma\PYZus{}SB}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{l+m+mf}{0.25}\PY{p}{)}
+            \PY{n}{T}\PY{o}{=}\PY{n}{prefactor}\PY{o}{*}\PY{n+nb}{pow}\PY{p}{(}\PY{n}{dotm\PYZus{}edd}\PY{p}{,} \PY{l+m+mf}{0.25}\PY{p}{)}\PY{o}{*}\PY{n+nb}{pow}\PY{p}{(}\PY{n}{radius}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.75}\PY{p}{)}
+            \PY{c+c1}{\PYZsh{}T=6000}
+        
+            \PY{k}{return} \PY{n}{T}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{k}{def} \PY{n+nf}{find\PYZus{}area}\PY{p}{(}\PY{n}{r1}\PY{p}{,}\PY{n}{r2}\PY{p}{,}\PY{n}{r\PYZus{}g}\PY{p}{)}\PY{p}{:}
+            \PY{c+c1}{\PYZsh{}find area of annulus}
+            \PY{c+c1}{\PYZsh{}2pi R deltaR}
+            \PY{n}{area}\PY{o}{=}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{PI}\PY{o}{*}\PY{n}{r1}\PY{o}{*}\PY{n}{r\PYZus{}g}\PY{o}{*}\PY{p}{(}\PY{n}{r2}\PY{o}{*}\PY{n}{r\PYZus{}g}\PY{o}{\PYZhy{}}\PY{n}{r1}\PY{o}{*}\PY{n}{r\PYZus{}g}\PY{p}{)}
+        
+            \PY{k}{return} \PY{n}{area}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{k}{def} \PY{n+nf}{find\PYZus{}gap}\PY{p}{(}\PY{n}{a\PYZus{}2nd}\PY{p}{,}\PY{n}{M\PYZus{}2nd}\PY{p}{,}\PY{n}{M\PYZus{}SMBH}\PY{p}{)}\PY{p}{:}
+            \PY{c+c1}{\PYZsh{}assume width is 2R\PYZus{}Hill}
+        
+            \PY{n}{q}\PY{o}{=}\PY{n}{M\PYZus{}2nd}\PY{o}{/}\PY{n}{M\PYZus{}SMBH}
+            \PY{n}{R\PYZus{}Hill}\PY{o}{=}\PY{n}{a\PYZus{}2nd}\PY{o}{*}\PY{n+nb}{pow}\PY{p}{(}\PY{p}{(}\PY{n}{q}\PY{o}{/}\PY{l+m+mf}{3.0}\PY{p}{)}\PY{p}{,}\PY{p}{(}\PY{l+m+mf}{1.0}\PY{o}{/}\PY{l+m+mf}{3.0}\PY{p}{)}\PY{p}{)}
+            
+            \PY{n}{gap\PYZus{}r\PYZus{}in}\PY{o}{=}\PY{n}{a\PYZus{}2nd}\PY{o}{\PYZhy{}}\PY{n}{R\PYZus{}Hill}
+            \PY{n}{gap\PYZus{}r\PYZus{}out}\PY{o}{=}\PY{n}{a\PYZus{}2nd}\PY{o}{+}\PY{n}{R\PYZus{}Hill}
+        
+            \PY{k}{return} \PY{n}{gap\PYZus{}r\PYZus{}in}\PY{p}{,}\PY{n}{gap\PYZus{}r\PYZus{}out}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{k}{if} \PY{n+nv+vm}{\PYZus{}\PYZus{}name\PYZus{}\PYZus{}} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZus{}\PYZus{}main\PYZus{}\PYZus{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}
+             \PY{c+c1}{\PYZsh{}F\PYZus{}lam=sum over all blackbodies, assuming T(r), annuli of area=2piRdeltaR}
+             \PY{c+c1}{\PYZsh{}integrating over solid angle=pi}
+             \PY{c+c1}{\PYZsh{}BB intensity=2hc\PYZca{}2/lam\PYZca{}5 * 1/(exp(hc/lamkT)\PYZhy{}1)}
+             \PY{c+c1}{\PYZsh{}log\PYZus{}lam, lam=wavelength range of interest}
+             
+             \PY{c+c1}{\PYZsh{}PHYSICAL INPUTS:}
+             \PY{c+c1}{\PYZsh{}M\PYZus{}SMBH=mass of supermassive black hole in units of solar masses}
+             \PY{c+c1}{\PYZsh{}controls temperature profile}
+             \PY{n}{M\PYZus{}SMBH}\PY{o}{=}\PY{l+m+mf}{3.0e8}
+             \PY{c+c1}{\PYZsh{}compute r\PYZus{}g for SMBH:}
+             \PY{n}{r\PYZus{}g\PYZus{}SMBH}\PY{o}{=}\PY{n}{G}\PY{o}{*}\PY{n}{M\PYZus{}SMBH}\PY{o}{*}\PY{n}{Msun}\PY{o}{/}\PY{n}{c}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}
+             \PY{c+c1}{\PYZsh{}epsilon=radiative efficiency, depends on spin of SMBH, assume 0.1}
+             \PY{n}{epsilon}\PY{o}{=}\PY{l+m+mf}{0.1}
+             \PY{c+c1}{\PYZsh{}dotm\PYZus{}edd=accretion rate in units of Eddington accretion}
+             \PY{n}{dotm\PYZus{}edd}\PY{o}{=}\PY{l+m+mf}{0.032}
+             \PY{c+c1}{\PYZsh{}inner and outer disk radii in units of r\PYZus{}g of SMBH}
+             \PY{c+c1}{\PYZsh{}(inner radius depends on spin, connect to epsilon later)}
+             \PY{n}{radius\PYZus{}in}\PY{o}{=}\PY{l+m+mf}{6.0}
+             \PY{n}{radius\PYZus{}out}\PY{o}{=}\PY{l+m+mf}{1.0e4}
+             \PY{c+c1}{\PYZsh{}a\PYZus{}2nd=semi\PYZhy{}major axis/radius of orbit of secondary around SMBH}
+             \PY{c+c1}{\PYZsh{}units of r\PYZus{}g of SMBH}
+             \PY{c+c1}{\PYZsh{}a\PYZus{}2nd=[60.0, 2.0e2, 1.0e3]}
+             \PY{n}{a\PYZus{}color\PYZus{}cycle}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{b}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+             \PY{n}{a\PYZus{}2nd}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{150.0}\PY{p}{]}
+             \PY{c+c1}{\PYZsh{}M\PYZus{}2nd=mass of secondary in solar masses}
+             \PY{n}{M\PYZus{}2nd}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{1.0e2}\PY{p}{,}\PY{l+m+mf}{3.0e1}\PY{p}{,}\PY{l+m+mf}{1.0e1}\PY{p}{]}
+             \PY{c+c1}{\PYZsh{}M\PYZus{}2nd=[4.0e6]}
+             \PY{c+c1}{\PYZsh{}What fraction of flux, compared to a standard disk, is left interior to the gap?}
+             \PY{n}{f\PYZus{}depress}\PY{o}{=}\PY{l+m+mf}{0.01}
+             \PY{c+c1}{\PYZsh{}END PHYSICAL INPUTS}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:}     \PY{c+c1}{\PYZsh{}DISPLAY INPUTS: divide display box for graphs}
+             \PY{c+c1}{\PYZsh{}params for axes}
+             \PY{c+c1}{\PYZsh{}format=left, bottom, width, height}
+             \PY{n}{rect1}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,}\PY{l+m+mf}{0.1}\PY{p}{,}\PY{l+m+mf}{0.75}\PY{p}{,}\PY{l+m+mf}{0.75}
+             
+             \PY{c+c1}{\PYZsh{}make figure}
+             \PY{n}{fig1}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{}add axes \PYZam{} label them}
+             \PY{n}{ax1}\PY{o}{=}\PY{n}{fig1}\PY{o}{.}\PY{n}{add\PYZus{}axes}\PY{p}{(}\PY{n}{rect1}\PY{p}{)}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+sa}{r}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdl{}log }\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{ (}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{lambda F\PYZus{}}\PY{l+s+s2}{\PYZob{}}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{lambda\PYZcb{} (arb }\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{ units))\PYZdl{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+sa}{r}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdl{}log }\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{ (}\PY{l+s+s2}{\PYZbs{}}\PY{l+s+s2}{lambda (m))\PYZdl{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{}Title is manual\PYZhy{}\PYZhy{}FIX!!!}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}Thermal }\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{ Continuum; }\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{ q=0.04, }\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{ 0.01, }\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{ 0.001\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+             \PY{c+c1}{\PYZsh{}set up range for x\PYZhy{}axis}
+             \PY{c+c1}{\PYZsh{}If want 100nm\PYZhy{}10um:}
+             \PY{n}{log\PYZus{}lam}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{8.0}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mf}{6.0}\PY{p}{,} \PY{l+m+mf}{0.01}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{}If want x\PYZhy{}ray to submm:}
+             \PY{c+c1}{\PYZsh{}log\PYZus{}lam=np.arange(\PYZhy{}9.0, \PYZhy{}4.0, 0.01)}
+             \PY{n}{lam}\PY{o}{=}\PY{n+nb}{pow}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{n}{log\PYZus{}lam}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{}range for y\PYZhy{}axis}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{ylim}\PY{p}{(}\PY{l+m+mf}{36.0}\PY{p}{,}\PY{l+m+mf}{38.0}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{}END DISPLAY INPUTS}
+             
+\end{Verbatim}
+
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}14}]:} (36.0, 38.0)
+\end{Verbatim}
+        
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:}     \PY{c+c1}{\PYZsh{}set up y\PYZhy{}axis variables}
+             \PY{c+c1}{\PYZsh{}divvy up disk radii}
+             \PY{n}{log\PYZus{}radius}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n}{log10}\PY{p}{(}\PY{n}{radius\PYZus{}in}\PY{p}{)}\PY{p}{,}\PY{n}{log10}\PY{p}{(}\PY{n}{radius\PYZus{}out}\PY{p}{)}\PY{p}{,}\PY{l+m+mf}{0.01}\PY{p}{)}
+             \PY{n}{radius}\PY{o}{=}\PY{n+nb}{pow}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{n}{log\PYZus{}radius}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{}make an iterable for multiple 2nd masses \PYZam{} loop}
+             \PY{n}{flux\PYZus{}iter\PYZus{}M}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+             \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{M\PYZus{}2nd}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{c+c1}{\PYZsh{}make an iterable for multiple 2nd semi\PYZhy{}major axes \PYZam{} loop}
+                 \PY{n}{flux\PYZus{}iter\PYZus{}a}\PY{o}{=}\PY{p}{[}\PY{p}{]}
+                 \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{a\PYZus{}2nd}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                     \PY{c+c1}{\PYZsh{}initialize final spectrum arrays}
+                     \PY{n}{F\PYZus{}lam\PYZus{}tot}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{lam}\PY{p}{)}\PY{p}{)}
+                     \PY{n}{F\PYZus{}lam\PYZus{}resid}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{lam}\PY{p}{)}\PY{p}{)}
+                     \PY{c+c1}{\PYZsh{}find width of gap or proto\PYZhy{}gap}
+                     \PY{n}{gap\PYZus{}r\PYZus{}in}\PY{p}{,}\PY{n}{gap\PYZus{}r\PYZus{}out}\PY{o}{=}\PY{n}{find\PYZus{}gap}\PY{p}{(}\PY{n}{a\PYZus{}2nd}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{,}\PY{n}{M\PYZus{}2nd}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{,}\PY{n}{M\PYZus{}SMBH}\PY{p}{)}
+                     \PY{c+c1}{\PYZsh{}compute temp, area, emitted spectrum at each radius; then sum}
+                     \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{radius}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                         \PY{n}{Temp}\PY{o}{=}\PY{n}{find\PYZus{}Temp}\PY{p}{(}\PY{n}{epsilon}\PY{p}{,}\PY{n}{M\PYZus{}SMBH}\PY{p}{,}\PY{n}{dotm\PYZus{}edd}\PY{p}{,}\PY{n}{radius}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
+                         \PY{n}{B\PYZus{}lambda}\PY{o}{=}\PY{n}{find\PYZus{}B\PYZus{}lambda}\PY{p}{(}\PY{n}{Temp}\PY{p}{,} \PY{n}{lam}\PY{p}{)}
+                         \PY{n}{Area}\PY{o}{=}\PY{n}{find\PYZus{}area}\PY{p}{(}\PY{n}{radius}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{radius}\PY{p}{[}\PY{n}{i}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{r\PYZus{}g\PYZus{}SMBH}\PY{p}{)}
+                         \PY{c+c1}{\PYZsh{}flux is pi*A*B\PYZus{}lambda per annulus, pi from integrating over solid angle}
+                         \PY{n}{F\PYZus{}lam\PYZus{}ann}\PY{o}{=}\PY{n}{PI}\PY{o}{*}\PY{n}{Area}\PY{o}{*}\PY{n}{B\PYZus{}lambda}
+                         \PY{c+c1}{\PYZsh{}if ((radius[i] \PYZlt{} gap\PYZus{}r\PYZus{}in) or (radius[i] \PYZgt{} gap\PYZus{}r\PYZus{}out)):}
+                         \PY{k}{if} \PY{p}{(}\PY{n}{radius}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{\PYZgt{}} \PY{n}{gap\PYZus{}r\PYZus{}out}\PY{p}{)}\PY{p}{:}
+                             \PY{c+c1}{\PYZsh{}only add to total if outside gap}
+                             \PY{n}{F\PYZus{}lam\PYZus{}tot}\PY{o}{=}\PY{n}{F\PYZus{}lam\PYZus{}tot}\PY{o}{+}\PY{n}{F\PYZus{}lam\PYZus{}ann}
+                         \PY{k}{elif} \PY{p}{(}\PY{n}{radius}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{\PYZlt{}} \PY{n}{gap\PYZus{}r\PYZus{}in}\PY{p}{)}\PY{p}{:}
+                             \PY{c+c1}{\PYZsh{}if interior to gap, cut flux}
+                             \PY{n}{F\PYZus{}lam\PYZus{}tot}\PY{o}{=}\PY{n}{F\PYZus{}lam\PYZus{}tot}\PY{o}{+}\PY{n}{f\PYZus{}depress}\PY{o}{*}\PY{n}{F\PYZus{}lam\PYZus{}ann}
+                             \PY{c+c1}{\PYZsh{}add missing frac to resid to recover unperturbed spec}
+                             \PY{n}{F\PYZus{}lam\PYZus{}resid}\PY{o}{=}\PY{n}{F\PYZus{}lam\PYZus{}resid}\PY{o}{+}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{\PYZhy{}}\PY{n}{f\PYZus{}depress}\PY{p}{)}\PY{o}{*}\PY{n}{F\PYZus{}lam\PYZus{}ann}
+                         \PY{k}{else}\PY{p}{:}
+                             \PY{c+c1}{\PYZsh{}otherwise add to residual, so we can reconstruct unperturbed disk}
+                             \PY{n}{F\PYZus{}lam\PYZus{}resid}\PY{o}{=}\PY{n}{F\PYZus{}lam\PYZus{}resid}\PY{o}{+}\PY{n}{F\PYZus{}lam\PYZus{}ann}
+                     \PY{c+c1}{\PYZsh{}take log of total spectrum for plotting, dump to iterables for plotting}
+                     \PY{n}{log\PYZus{}F\PYZus{}lam}\PY{o}{=}\PY{n}{log10}\PY{p}{(}\PY{n}{F\PYZus{}lam\PYZus{}tot}\PY{p}{)}
+                     \PY{n}{log\PYZus{}lam\PYZus{}F\PYZus{}lam}\PY{o}{=}\PY{n}{log10}\PY{p}{(}\PY{n}{F\PYZus{}lam\PYZus{}tot}\PY{o}{*}\PY{n}{lam}\PY{p}{)}
+                     \PY{n}{F\PYZus{}lam\PYZus{}all}\PY{o}{=}\PY{n}{F\PYZus{}lam\PYZus{}tot}\PY{o}{+}\PY{n}{F\PYZus{}lam\PYZus{}resid}
+                     \PY{n}{log\PYZus{}lam\PYZus{}F\PYZus{}lam\PYZus{}all}\PY{o}{=}\PY{n}{log10}\PY{p}{(}\PY{n}{F\PYZus{}lam\PYZus{}all}\PY{o}{*}\PY{n}{lam}\PY{p}{)}
+                     \PY{n}{flux\PYZus{}iter\PYZus{}a}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{log\PYZus{}lam\PYZus{}F\PYZus{}lam}\PY{p}{)}
+                 \PY{n}{flux\PYZus{}iter\PYZus{}M}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{flux\PYZus{}iter\PYZus{}a}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/Users/npr1/astroconda/lib/python3.5/site-packages/ipykernel/\_\_main\_\_.py:4: RuntimeWarning: overflow encountered in exp
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:}     \PY{c+c1}{\PYZsh{}plt.ylim(36.0,38.0)}
+             \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{M\PYZus{}2nd}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{a\PYZus{}2nd}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                     \PY{k}{if} \PY{n+nb}{len}\PY{p}{(}\PY{n}{a\PYZus{}2nd}\PY{p}{)}\PY{o}{\PYZgt{}}\PY{l+m+mi}{1}\PY{p}{:}
+                         \PY{n}{ax1}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{log\PYZus{}lam}\PY{p}{,} \PY{n}{flux\PYZus{}iter\PYZus{}M}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{n}{a\PYZus{}color\PYZus{}cycle}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{,} \PY{n}{ls}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dashed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+                     \PY{k}{else}\PY{p}{:}
+                         \PY{n}{ax1}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{log\PYZus{}lam}\PY{p}{,} \PY{n}{flux\PYZus{}iter\PYZus{}M}\PY{p}{[}\PY{n}{k}\PY{p}{]}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{black}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ls}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dashed}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+             \PY{n}{ax1}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{log\PYZus{}lam}\PY{p}{,} \PY{n}{log\PYZus{}lam\PYZus{}F\PYZus{}lam\PYZus{}all}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{black}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{ls}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{solid}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+         
+             \PY{n}{savefig}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mcd\PYZus{}gap\PYZus{}v2.eps}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{savefig}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mcd\PYZus{}gap\PYZus{}v2.png}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} 
+\end{Verbatim}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
