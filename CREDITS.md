@@ -33,7 +33,9 @@ Early communictations, and group coordinations and guidance.
 Theoretical interpretations and discussion on a short email
 correspondence.
 
-
+## Demitri Muna‏
+For supplying Python code that can read large FITS files quicky:
+https://gist.github.com/demitri/aea1522e92efae00a3dcb097533b54fc
 
 
 
