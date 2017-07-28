@@ -1,5 +1,5 @@
 
-TEXFILE=Xtreem_IR_LCs
+TEXFILE=Xtreem_IR_LCs_Nature
 default: all
 
 # just run it
