@@ -90,7 +90,7 @@ boss_specz = 22.5-2.5*(math.log10(boss_spec_z['flux_nanomaggies']))
 ## http://matplotlib.org/examples/statistics/errorbar_limits.html
 ## http://matplotlib.org/examples/color/named_colors.html
 plt.rcParams.update({'font.size': 18})
-fig, ax = plt.subplots(figsize=(12, 7))
+fig, ax = plt.subplots(figsize=(16, 7))
 
 ls = 'dotted'
 ## CRTS
@@ -101,8 +101,8 @@ ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], linestyle='das
 ## Pan-STARRS
 ax.errorbar(PS_g['MJD'], PS_g['mag'], yerr=PS_g['mag_err'], fmt='o', linestyle=ls, color='olivedrab')
 ax.errorbar(PS_r['MJD'], PS_r['mag'], yerr=PS_r['mag_err'], fmt='o', linestyle=ls, color='red')
-ax.errorbar(PS_i['MJD'], PS_i['mag'], yerr=PS_i['mag_err'], fmt='o', linestyle=ls, color='darkslategrey')
-ax.errorbar(PS_z['MJD'], PS_z['mag'], yerr=PS_z['mag_err'], fmt='o', linestyle=ls, color='teal')
+ax.errorbar(PS_i['MJD'], PS_i['mag'], yerr=PS_i['mag_err'], fmt='o', linestyle=ls, color='teal')
+ax.errorbar(PS_z['MJD'], PS_z['mag'], yerr=PS_z['mag_err'], fmt='o', linestyle=ls, color='lightgrey')
 ax.errorbar(PS_y['MJD'], PS_y['mag'], yerr=PS_y['mag_err'], fmt='o', linestyle=ls, color='darkmagenta')
 
 ## SDSS "original photometry"
@@ -150,8 +150,8 @@ plt.axvline(x=57809, linewidth=2.5, linestyle='dashed', color='slategrey')
 
 
 ## Tidy up the figure
-xmin= 50000
-ax.set_xlim((xmin, 58500))
+xmin= 49200
+ax.set_xlim((xmin, 58250))
 #ax.set_xlim((54000, 58500))
 ax.set_ylim((20.05, 16.70))
 ax.tick_params('x', direction='in')
@@ -163,14 +163,18 @@ ax.tick_params('y', direction='in')
 ax.grid(True)
 
 ## https://matplotlib.org/api/legend_api.html
-plt.legend(['SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
+plt.legend([
+    'specphot u', 'specphot g', 'specphot r', 'specphot i', 'specphot z',
+    'specphot u', 'specphot g', 'specphot r', 'specphot i', 'specphot z',
+    'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
             'CRTS', 'LINEAR',
             'PanSTARRS g', 'PanSTARRS r', 'PanSTARRS i', 'PanSTARRS z', 'PanSTARRS y',
             'SDSS u', 'SDSS g', 'SDSS r', 'SDSS i', 'SDSS z',
             #'DECaLS g', 'DECaLS r', 'DECaLS z',
-            #'ULAS Y', 'ULAS J', 'ULAS H', 'ULAS K',
+#            'ULAS Y', 'ULAS J', 'ULAS H', 'ULAS K',
             'WISE W1', 'WISE W2'],
-           loc="lower left", ncol=1, shadow=True, fancybox=True, fontsize=10, frameon=True)
+           loc="lower left", ncol=2, shadow=True, fancybox=True,
+           fontsize=10, frameon=True)
 
 plt.xlabel('MJD')
 plt.ylabel('magnitude (AB)')
