@@ -219,13 +219,13 @@ if __name__ == "__main__":
     rect1=0.1,0.1,0.75,0.75
     
     # make figure
-    fig1=plt.figure(1)
+    plt.figure(1)
+    plt.subplot(211)
     # add axes & label them
-    ax1=fig1.add_axes(rect1)
-    ax1.set_ylabel(r"$Normalized \ F_{\lambda} (arb \ units)$")
-    ax1.set_xlabel(r"$\lambda (nm)$")
+#    plt.set_ylabel(r"$Normalized \ F_{\lambda} (arb \ units)$")
+ #   plt.set_xlabel(r"$\lambda (nm)$")
     #Title is set for variable R_alt
-    ax1.set_title(r"$Thermal \ Continuum; \ R_{alt}=%.1f \ r_{g}$" % (R_alt))
+#    plt.set_title(r"$Thermal \ Continuum; \ R_{alt}=%.1f \ r_{g}$" % (R_alt))
     # choose colors for different R_alt
     R_color_cycle='r'
 
@@ -240,10 +240,12 @@ if __name__ == "__main__":
     log_lam=np.arange(log_lam_min, log_lam_max, 0.01)
     lam=pow(10,log_lam)
     #USER: choose range for y-axis
-    plt.ylim(0.0,150.0)
+    #plt.ylim(0.0,150.0)
+
     #USER: set normalization factor for y-axis display
     normfactor=4.5e42
     #normfactor=3.4e42
+
     #USER: vertical lines for bandpass (optional)
     #USER: choose 'y' to plot, set source redshift, min/max bandpass wavelength in nm
     plot_bandpass='y'
@@ -324,21 +326,22 @@ if __name__ == "__main__":
     flux_iter_R_tp = X.transpose()          
 
     flux_Ralt = flux_iter_R[0]
+    flux_Ralt_norm = (flux_Ralt/normfactor)
     
     #plot altered spectra (tempmod)
     #ax1.plot(lam/m_per_nm, flux_iter_R_tp/normfactor)
-    ax1.plot(lam/m_per_nm, flux_Ralt/normfactor)
+    plt.plot(lam/m_per_nm, flux_Ralt/normfactor)
     
     #ax1.plot(lam, (np.array(flux_iter_R)))
     #plot unaltered spectrum (tempmod)
-    ax1.plot(lam/m_per_nm, F_lam_all/normfactor, 
+    plt.plot(lam/m_per_nm, F_lam_all/normfactor, 
              color='black', ls='solid', linewidth=2, label=tempmod)
     #plot unaltered comparison temp model (tempmod2)
-    ax1.plot(lam/m_per_nm, F_lam_compare/normfactor, 
+    plt.plot(lam/m_per_nm, F_lam_compare/normfactor, 
              color='black', ls='dashed', linewidth=2, label=tempmod2)
 
     #legend
-    ax1.legend(loc='upper right')
+    plt.legend(loc='upper right')
     
     #plot bandpass lines, if selected
     if (plot_bandpass=='y'):
@@ -350,15 +353,27 @@ if __name__ == "__main__":
         plt.axvline(x=band_max_line, color='k', linestyle='--')
     #plot observed spectra
     for i in range(len(specfilenames)):
-        ax1.plot(speclam[i]*speclamunits[i]/(1.0+redshift), specflux[i]*specfluxunits[i], color=speccolors[i], ls='solid', linewidth=1)
+        plt.plot(speclam[i]*speclamunits[i]/(1.0+redshift), specflux[i]*specfluxunits[i], color=speccolors[i], ls='solid', linewidth=1)
 
     #!!!experiment
     rayscat=23.0*pow(((lam/m_per_nm)/320.0),4.0)
-    ax1.plot(lam/m_per_nm,rayscat, color='y', ls='solid', linewidth=2)
-    ax1.plot(lam/m_per_nm, (rayscat+(flux_Ralt/normfactor)), color='blue', ls='dashed', linewidth=2)
+    plt.plot(lam/m_per_nm, rayscat, color='y', ls='solid', linewidth=2)
+    plt.plot(lam/m_per_nm, (rayscat+(flux_Ralt/normfactor)), color='blue', ls='dashed', linewidth=2)
+    plt.show()
 
+    mdl = rayscat
+    #!!!experiment2
+    for j in range(len(lam/m_per_nm)):
+        if (lam[j]/m_per_nm) < 325:
+            mdl[j] = rayscat[j]
+        else:
+            mdl[j] = flux_Ralt_norm[j]
+
+    plt.subplot(212)
+    plt.plot(lam/m_per_nm, mdl, color='blue', ls='dashed', linewidth=2)
     
-    fig1.set_size_inches(18.5, 10.5, forward=True)
+    
+   # fig1.set_size_inches(18.5, 10.5, forward=True)
 
     #output to files in appropriate formats
     #USER: choose your filenames/formats
