@@ -231,7 +231,9 @@ if __name__ == "__main__":
 
     #path='w1100m0052/'
     path='/cos_pc19a_npr/programs/WISE/WISE_LCs/data/'
-    specfilenames=['sdss_1.dat', 'sdss_2.dat', 'w1100m0052_b.flam.dat', 'w1100m0052_r.flam.dat']
+    #specfilenames=['sdss_1.dat', 'sdss_2.dat', 'w1100m0052_b.flam.dat', 'w1100m0052_r.flam.dat']
+    specfilenames=['sdss_spectrum.dat', 'boss_spectrum.dat', 'w1100m0052_b.flam.dat', 'w1100m0052_r.flam.dat']
+
     #specfilenames=[] ## USER: this one!
     speclamunits= [0.1, 0.1, 0.1, 0.1]
     specfluxunits=[1.0, 1.0, 3.8e17, 3.8e17]
@@ -289,6 +291,8 @@ if __name__ == "__main__":
                 F_lam_resid=F_lam_resid+(1-f_depress)*F_lam_ann
                 #compare--just add it in for now
                 F_lam_compare=F_lam_compare+F_lam_ann_compare
+        print('i, F_lam_tot, F_lam_ann', i, F_lam_tot, F_lam_ann)
+                
         #take log of total spectrum for plotting, dump to iterables for plotting
         log_F_lam=log10(F_lam_tot)
         #log_lam_F_lam=log10(F_lam_tot*lam)
