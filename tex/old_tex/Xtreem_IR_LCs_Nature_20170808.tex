@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   NPR's Nature template...  
+%%   v1.0.0   Thu Dec  8 19:05:57 EST 2016
+%%                                                                         
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{nature}
+\input{format}
+
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{threeparttable}
+
+
+\title{A Quasar caught in the act of turning off}
+
+\author{Nicholas~P.~Ross$^{1}$ et al. 
+% Saavik~K.~Ford,$^{7}$, Barry~L.~McKernan$^{7}$,
+% Daniel~Stern$^{3}$, Aaron~Meisner$^{2}$, 
+% Matthew~Graham$^{4}$, 
+% Arjun~Dey$^{5}$ \& David~J.~Schlegel$^{2}$}
+% Andrew~Drake$^{4}$, 
+% Roberto~J.~Assef$^{{6},
+% Mislav~Balokovic$^{{6}, 
+% Murray~Brightman$^{{4}, 
+%for the DECaLS Consortium. 
+
+\begin{document}
+
+\maketitle
+
+\begin{affiliations}
+  \item Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, United Kingdom 
+%  \item Lawrence Berkeley National Laboratory, 1 Cyclotron Road, Berkeley, CA 92420, U.S.A. 
+  %\item Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA 
+  %\item California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA
+  %\item Steward Observatory, 933 North Cherry Avenue, Tucson, AZ 85721, U.S.A.
+%  \item Universidad Diego Portales, Av Republica 180, Santiago, Regi ́on Metropolitana, Chile}
+ % \item Department of Astrophysics is located in the Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, New York, NY 10024, U.S.A}
+\end{affiliations}
+
+
+\begin{abstract}
+Quasars are some of the most luminous objects in our Universe and are believed to play an important role in galaxy formation and the growth of the largest black holes. While variability has long been recognized as a characteristic feature of quasars, astronomers have only recently identified extreme quasar variability; dramatic changes in either the brightness or spectral characteristics of sources.  In particular, a new class of ``changing-look quasars’' have recently been identified where the strong UV continuum and broad hydrogen emission lines associated with "unobscured" quasars either appear or disappear on timescales of several years.  The physical processes, responsible for such changes are still debated, but fundamental changes in the quasar, such as the black hole accretion rate appear more likely than changes in obscuration, at least for quasars showing extreme mid-infrared variability.  Here we report on three epochs of spectroscopy of SDSS~J110057.70-005304.5, an extreme mid-infrared variable quasar at $z = 0.378$ whose UV continuum and broad hydrogen emission lines have dramatically faded over the past 20 years.  Uniquely, an archival spectrum of this quasar from 2010 shows an intermediate phase of the transition, when the flux below rest-frame $\sim 3400$~\AA\ has collapsed, suggestive of dramatic changes in the innermost regions of the accretion disk. This provides not only important clues to the physics of changing-look quasars, but also a prediction that the Hβ flux will increase in the next few months.
+\end{abstract}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Introduction}
+
+Shortly after their initial identification \citep{Schmidt63,
+Hazard63}, quasars were seen to vary photometrically. This placed
+strict limits on the size of the central engine power source and gave
+credence to the idea that a supermassive black hole powers AGN.
+
+If the accretion disc is in a stable steady state, we expect it to
+evolve gradually on the inward drift timescale set by viscosity, which
+is of the order 10,000 years \citep[see e.g., ][]{Netzer13,
+Lawrence16}. However, instabilities of various kinds could give much
+faster changes. The `light crossing' timescale $t_{\rm lt} = R/c$, is
+the shortest timescale set by radiation heating or reflection. This is
+of the order hours, days, and years for disc, BLR, and torus
+respectively. The `dynamical timescale', $t_{\rm dyn} = R^{3}/GM$, is
+the shortest timescale on which we are likely to see significant
+physical changes in a region, and is of the order of days, years, and
+thousands of years for disc, BLR, and torus respectively. (The
+`free-fall' timescale is roughly the same and orbital timescale is
+$2\pi$ times longer.) More realistically, perturbations may transmit
+across a region on the sound crossing timescale $t_{\rm snd} =
+R/v_{\rm snd}$. This is somewhat model dependent but is of the order
+of years for the accretion disc. This is the global time to cross the
+whole region; local hot spots could grow on the timescale it takes
+sound to cross the vertical height of the disc, which can be 1–3
+orders of magnitude faster. The ``thermal'' timescale $t_{\rm therm}$
+which is roughly the time it takes for for energy to dissipate within
+the disc, i.e. the response timescale to a spike of energy input. It
+is of the order of days for the inner disc and years for the optical
+disc. The analogous ``response'' timescale for the BLR and for the
+obscuring region is actually the light-crossing time - the local
+response time to a change in photo-ionisation or heating is very
+short, but is smeared out by the range of light travel delays.
+
+Although the observed variability of quasars has been known since
+shortly after their discovery, only recently, with the advent of
+extensive imaging surveys and the associated, repeat spectroscopy, has
+given actual evidence for these key physical mechanisms.
+
+In this article we present the $z=0.378$ quasar SDSS
+J110057.70-005304.5 that we have observed transitioning from a blue
+continuum sloped object to become a regular galaxy. However, along
+with the changes in the BELs, we see a major change to the disk
+interior to 150$R_{g}$.
+ 
+
+\begin{figure*}
+  \centering
+  %% trim=l b r t 
+  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip] {J110057_CRTS_lightcurve_v0pnt1.png}
+  \caption[]{The light curve of J110057. SDSS, DECaLS and PanSTARRS
+give the optical photometery. The WISE IR light curves are shown and
+their dramatic decrease led to the identification of J110057. The
+three spectral epochs are shown by the vertical lines.}
+  \label{fig:J110057_LC_CRTS}
+\end{figure*}
+
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {/cos_pc19a_npr/programs/WISE/WISE_LCs/plots/spectra/w1100m0052_sdss.jpg}
+  \centeringl
+  \caption[]{Three spectra of J110057. }
+  \label{fig:J110057_spectra}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}  
+%% \subsection(Results subheadings, if needed}
+Figure~\ref{fig:J110057_LC_CRTS} gives the optical light curve of
+J110057.  Figure~\ref{fig:J110057_spectra} shows the three optical
+spectra of J110057.  Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Aliquam porta sodales est, vel cursus risus porta
+non. Vivamus vel pretium velit. Sed fringilla suscipit felis, nec
+iaculis lacus convallis ac. Fusce pellentesque condimentum dolor, quis
+vehicula tortor hendrerit sed. Class aptent taciti sociosqu ad litora
+torquent per conubia nostra, per inceptos himenaeos. Etiam interdum
+tristique diam eu blandit. Donec in lacinia libero.
+
+
+Checking the data archives we found there was 
+no source within 30 arcsec in the VLA FIRST, i.e., at 21 cm radio frequencies.
+%% Catalog detection limit (including CLEAN bias) at source position is 1.11 mJy/beam
+
+None of the {\it Hubble Space Telescope}, the {\it Spitzer Space Telescope} or 
+the {\it Kepler} Mission has observed J110057 patch of sky. It is also not in 
+the HSC DR1 footprint. 
+
+There is a detection in ROSAT, using the 2nd all-sky survey (2RXS; Boller et al. 2016, A\&A, 588, 103)
+as 2RXS J110058.1-005259 with 27.00 counts (count error 6.14), count rate= 0.06$\pm$0.01
+and an exposure time of = 431.95 seconds. 
+The NED gives J110057 as $1.27\pm0.28 \times^{-12}$ erg/cm$^{2$}/s in
+the 0.1-2.4 keV range (unabsorbed flux). J110057Neither {\it Chandra} or {\it XMM-Newton}. 
+
+
+
+
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {/cos_pc19a_npr/programs/WISE/WISE_LCs/disk_theory/mcd_gap_v2.png}
+  \centering
+  \caption[]{Model spectra of J110057. }
+  \label{fig:J110057_diskmodel}
+\end{figure*}
+\section{Discussion}   %% (without subheadings)
+Using Ford et al and Sirko \& Goodman 2003, 
+Figure~\ref{fig:model} shows a model for a $M_{\rm BH}=3\times 10^{8} M_{\odot}$, 
+radiative efficiency of $\epsilon=0.1$, accretion rate in units of Eddington accretion, 
+$\dot{M}=0.032$, inner and outer disk radii in units of $r_g$ of SMBH of 
+radius$_{\rm in}$=6.0, radius$_{\rm out}$=1.0$\times 10^{4}$. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Method}
+
+
+
+
+\bibliographystyle{naturemag}
+\bibliography{sample}
+
+
+
+
+\end{document}
