@@ -7,11 +7,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{nature}
+
+\bibliographystyle{naturemag}
+
 \input{format}
 
 \usepackage{mathptmx}
 \usepackage[T1]{fontenc}
-
+%\usepackage[square,sort,comma,numbers]{natbib}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -20,16 +23,17 @@
 
 \title{A Quasar caught in the act of turning off}
 
-\author{Nicholas~P.~Ross$^{1}$ et al. 
+\author{Nicholas~P.~Ross$^{1}$ et al.}  
 % Saavik~K.~Ford,$^{7}$, Barry~L.~McKernan$^{7}$,
 % Daniel~Stern$^{3}$, Aaron~Meisner$^{2}$, 
 % Matthew~Graham$^{4}$, 
-% Arjun~Dey$^{5}$ \& David~J.~Schlegel$^{2}$}
+% Arjun~Dey$^{5}$ \& David~J.~Schlegel$^{2}$ 
 % Andrew~Drake$^{4}$, 
-% Roberto~J.~Assef$^{{6},
-% Mislav~Balokovic$^{{6}, 
-% Murray~Brightman$^{{4}, 
-%for the DECaLS Consortium. 
+% Roberto~J.~Assef$^{6},
+% Mislav~Balokovic$^{6}, 
+% Murray~Brightman$^{4}, 
+% for the DECaLS Consortium. 
+
 
 \begin{document}
 
@@ -42,14 +46,35 @@
   %\item California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA
   %\item Steward Observatory, 933 North Cherry Avenue, Tucson, AZ 85721, U.S.A.
 %  \item Universidad Diego Portales, Av Republica 180, Santiago, Regi ́on Metropolitana, Chile}
- % \item Department of Astrophysics is located in the Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, New York, NY 10024, U.S.A}
+ % \item Department of Astrophysics is located in the Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, New York, NY 10024, U.S.A
 \end{affiliations}
 
 
 \begin{abstract}
-Quasars are some of the most luminous objects in our Universe and are believed to play an important role in galaxy formation and the growth of the largest black holes. While variability has long been recognized as a characteristic feature of quasars, astronomers have only recently identified extreme quasar variability; dramatic changes in either the brightness or spectral characteristics of sources.  In particular, a new class of ``changing-look quasars’' have recently been identified where the strong UV continuum and broad hydrogen emission lines associated with "unobscured" quasars either appear or disappear on timescales of several years.  The physical processes, responsible for such changes are still debated, but fundamental changes in the quasar, such as the black hole accretion rate appear more likely than changes in obscuration, at least for quasars showing extreme mid-infrared variability.  Here we report on three epochs of spectroscopy of SDSS~J110057.70-005304.5, an extreme mid-infrared variable quasar at $z = 0.378$ whose UV continuum and broad hydrogen emission lines have dramatically faded over the past 20 years.  Uniquely, an archival spectrum of this quasar from 2010 shows an intermediate phase of the transition, when the flux below rest-frame $\sim 3400$~\AA\ has collapsed, suggestive of dramatic changes in the innermost regions of the accretion disk. This provides not only important clues to the physics of changing-look quasars, but also a prediction that the Hβ flux will increase in the next few months.
+Changing-look quasars are a new class of recently identified object in
+which the strong UV continuum and broad optical hydrogen emission
+lines associated with unobscured quasars either appear or disappear on
+timescales of years \cite{LaMassa15, Runnoe16, MacLeod16, Ruan16}. The
+physical processes responsible for this behaviour are still debated,
+but changes in the black hole accretion rate or accretion disk
+structure appear more likely than changes in
+obscuration\cite{Hutsemekers17, Sheng17}. Here we report on three
+epochs of spectroscopy of SDSS J110057.70-005304.5, a quasar whose UV
+continuum and broad hydrogen emission lines have dramatically faded
+over the past 20 years. An archival spectrum of this quasar from 2010
+shows an intermediate phase of the transition during which the flux
+below rest-frame 340nm has collapsed. This is unique compared to
+previously published examples of changing-look quasars, and is best
+explained by dramatic changes in the innermost regions of the
+accretion disk. The optical continuum has been rising again since
+mid-2016, leading to a prediction of a rise in hydrogen emission line
+flux in the next few months. If our model is confirmed, the physics of
+`changing look' quasars are governed by processes at the innermost
+stable circular orbit (ISCO) around the black hole, and the structure
+of the innermost disk. Thus, the easily identifiably and monitored
+Changing Look Quasars would then provide a new probe of the strong
+gravity regime.
 \end{abstract}
-
 
 
 
@@ -63,57 +88,66 @@ Quasars are some of the most luminous objects in our Universe and are believed t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section{Introduction}
-Shortly after their initial identification \citep{Schmidt63, Hazard63}, quasars were 
-seen to vary photometrically. This placed strict limits on the size of the 
-central engine power source and gave credence to the idea that a 
-supermassive black hole powers AGN. 
 
-From e.g., Lawerence (2016, ASPC):: 
-If the accretion disc is in a stable steady state, we expect it to
-evolve gradually on the inward drift timescale set by viscosity, which
-is of the order 10,000 years (see e.g. Netzer (2013)). However,
-instabilities of various kinds could give much faster changes. The
-`light crossing' timescale $t_{\rm lt} = R/c$, is the shortest
-timescale set by radiation heating or reflection. This is of the order hours, days, and years for disc, BLR,
-and torus respectively. The `dynamical timescale', $t_{\rm dyn} =
-R^{3}/GM$, is the shortest timescale on which we are likely to see
-significant physical changes in a region, and is of the order of days, years, and
-thousands of years for disc, BLR, and torus respectively. (The
-`free-fall' timescale is roughly the same and orbital timescale is
-$2\pi$ times longer.) More realistically, perturbations may transmit
-across a region on the sound crossing timescale $t_{\rm snd} =
-R/v_{\rm snd}$. This is somewhat model dependent but is of the order
-of years for the accretion disc. This is the global time to cross the
-whole region; local hot spots could grow on the timescale it takes
-sound to cross the vertical height of the disc, which can be 1–3
-orders of magnitude faster. The ``thermal'' timescale $t_{\rm therm}$
-which is roughly the time it takes for for energy to dissipate within
-the disc, i.e. the response timescale to a spike of energy
-input. It is of the order of days for the inner disc and years for the
-optical disc. The analogous ``response'' timescale for the BLR and for
-the obscuring region is actually the light-crossing time - the local
-response time to a change in photo-ionisation or heating is very
-short, but is smeared out by the range of light travel delays.
+The ``Changing-Look'' quasar phenomenon, where the dramatic
+disappearance, or appearance, of prominent broad optical emission
+lines is seen on year timescales, is now widely observed,
+\cite{LaMassa15, MacLeod16, Runnoe16, Ruan16, Gezari17, Rumbaugh17}.
+yet poorly understood.
+%If the disappearance of the broad emission lines observed in changing-look quasars were caused by the obscuration of the quasar core through moving dust clouds in the torus, high linear polarization typical of type 2 quasars would be expected.
+\citet{Hutsemekers17} find a polarization degree compatible with null
+polarization suggesting that the observed change of look is not due to
+a change of obscuration hiding the continuum source and the broad line
+region.  Meanwhile, \cite{Sheng17} using the mid-infrared luminosity
+during the transitions in 10 changing-look AGNs from the Wide-field
+Infrared Survey Explorer (WISE) and find that the CL behavior of their
+sample cannot be a result of the changes in obscuration.  However, it
+is clear that the CLQs are a key laboratory into understanding
+accretion physics and the nature of the AGN broad line region (BLR).
 
-Although the observed variability of quasars has been known since shortly after their 
-discovery, only recently, with the advent of extensive imaging surveys and the 
-associated, repeat spectroscopy, has given actual evidence for these 
-key physical mechanisms. 
+The famous $\alpha-$disk model \cite{SS73} for a optically thick,
+geometrically thin disk ($h / R) \ll 1$; where $h$ is the vertical
+scale height of the disk) is known to have serious short-comings
+e.g. \cite{Antonucci99, Koratkar_Blaes99, Lawrence12} AGN seem to be
+cooler than they ought to be \cite[e.g., ]{Lawrence12} with the SEDs
+of AGN showing a universal near-UV shape, reaching a maximum in $\nu
+S_{\nu}$ around 1100\AA\ , Such a peak suggests a characteristic
+temperature of T$\sim$30 000K, wheres for a thermal model, the
+characteristic temperature should be roughly T$\sim$100 000K.
+Moreover, constraints from microlensing observartions for the size of
+the optical emission region \cite[e.g., ]{Pooley07, Morgan10,
+Morgan12, Mosquera11} suggestion this region is larger than the one
+predicted by the standard Shakura-Sunyaev disk.
 
-In this article we present the $z=0.378$ quasar SDSS J110057.70-005304.5 
-that we have observed transitioning from a blue continuum sloped object to 
-become a regular galaxy. However, along with the changes in the BELs, we 
-see a major change to the disk interior to 150$R_{g}$. 
+CLQs have traditionally been discovered by looking for large, $|
+\Delta m | >1$ magnitude changes in the optical light curves (e.g. in
+the $g$-band). However, we have taken advantage of the ongoing
+Near-Earth Object WISE Reactivation mission
+(NEOWISE-R)\cite{Mainzer14, Meisner17, Meisner17b}, as well as the
+Dark Energy Camera Legacy Survey (DECaLS\footnote{{\tt
+legacysurvey.org/decamls/}}) in order to discover new CLQs. Our team
+is the first to extend this selection to the infrared using NEOWISE-R
+mission data. Indeed, we have found a sample of SDSS quasars that show
+{\it dramatic decreases in their IR flux over the course of a few
+years.}  These changes are on timescales too short to be considered
+due to changes in obscuration, so a new explanation is needed.
+
+In this article we present the $z=0.378$ quasar SDSS
+J110057.70-005304.5 that we have observed transitioning from a blue
+continuum sloped object to become a regular galaxy. However, along
+with the changes in the BELs, we see a major change to the disk
+interior to 150$R_{g}$.
  
-
 \begin{figure*}
   \centering
   %% trim=l b r t 
-  \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip] {J110057_CRTS_lightcurve_v0pnt1.png}
+  % \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip] {J110057_CRTS_lightcurve_v0pnt1.png}
+  \includegraphics[width=16.00cm, height=7.00cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/lc/J110057_lc_20171006v1.pdf}
   \caption[]{The light curve of J110057. SDSS, DECaLS and PanSTARRS
-give the optical photometery. The WISE IR light curves are shown and
-their dramatic decrease led to the identification of J110057. The
-three spectral epochs are shown by the vertical lines.}
+    give the optical photometery. The WISE IR light curves are shown and
+    their dramatic decrease led to the identification of J110057. The
+    three spectral epochs are shown by the vertical lines.}
   \label{fig:J110057_LC_CRTS}
 \end{figure*}
 
@@ -121,7 +155,7 @@ three spectral epochs are shown by the vertical lines.}
   %% trim=l b r t 
   \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
   {/cos_pc19a_npr/programs/WISE/WISE_LCs/plots/spectra/w1100m0052_sdss.jpg}
-  \centeringl
+  \centering
   \caption[]{Three spectra of J110057. }
   \label{fig:J110057_spectra}
 \end{figure*}
@@ -136,31 +170,29 @@ three spectral epochs are shown by the vertical lines.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}  
 %% \subsection(Results subheadings, if needed}
+Matching the SDSS/BOSS Data Release 12 Quasar catalog (
+\href{http://adsabs.harvard.edu/abs/2017A\%26A...597A..79P}{Paris et
+al. (2017)} to the NEOWISE-R IR data (W1 is 3.4$\mu$m, W2 is
+4.6$\mu$m) our team found $\approx$200 objects with fading light IR
+light curves. These objects were identified by a factor of 2 or more
+drop in the observed WISE W1 and W2 bands.  
+
 Figure~\ref{fig:J110057_LC_CRTS} gives the optical light curve of
 J110057.  Figure~\ref{fig:J110057_spectra} shows the three optical
-spectra of J110057.  Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Aliquam porta sodales est, vel cursus risus porta
-non. Vivamus vel pretium velit. Sed fringilla suscipit felis, nec
-iaculis lacus convallis ac. Fusce pellentesque condimentum dolor, quis
-vehicula tortor hendrerit sed. Class aptent taciti sociosqu ad litora
-torquent per conubia nostra, per inceptos himenaeos. Etiam interdum
-tristique diam eu blandit. Donec in lacinia libero.
-
+spectra of J110057. 
 
 Checking the data archives we found there was 
 no source within 30 arcsec in the VLA FIRST, i.e., at 21 cm radio frequencies.
-%% Catalog detection limit (including CLEAN bias) at source position is 1.11 mJy/beam
-
-None of the {\it Hubble Space Telescope}, the {\it Spitzer Space Telescope} or 
-the {\it Kepler} Mission has observed J110057 patch of sky. It is also not in 
-the HSC DR1 footprint. 
-
-There is a detection in ROSAT, using the 2nd all-sky survey (2RXS; Boller et al. 2016, A\&A, 588, 103)
-as 2RXS J110058.1-005259 with 27.00 counts (count error 6.14), count rate= 0.06$\pm$0.01
-and an exposure time of = 431.95 seconds. 
-The NED gives J110057 as $1.27\pm0.28 \times^{-12}$ erg/cm$^{2$}/s in
-the 0.1-2.4 keV range (unabsorbed flux). J110057Neither {\it Chandra} or {\it XMM-Newton}. 
-
+%catalog detection limit (including CLEAN bias) at source position is 1.11 mJy/beam
+None of the {\it Hubble Space Telescope}, the {\it Spitzer Space
+Telescope} or the {\it Kepler} Mission has observed J110057 patch of
+sky. It is also not in the HSC DR1 footprint.  There is a detection in
+ROSAT, using the 2nd all-sky survey (2RXS; Boller et al. 2016, A\&A,
+588, 103) as 2RXS J110058.1-005259 with 27.00 counts (count error
+6.14), count rate= 0.06$\pm$0.01 and an exposure time of = 431.95
+seconds.  The NED gives J110057 as $1.27\pm0.28 \times^{-12}$
+erg/cm$^{2}$/s in the 0.1-2.4 keV range (unabsorbed
+flux). J110057Neither {\it Chandra} or {\it XMM-Newton}.
 
 
 
@@ -173,11 +205,42 @@ the 0.1-2.4 keV range (unabsorbed flux). J110057Neither {\it Chandra} or {\it XM
   \label{fig:J110057_diskmodel}
 \end{figure*}
 \section{Discussion}   %% (without subheadings)
-Using Ford et al and Sirko \& Goodman 2003, 
-Figure~\ref{fig:model} shows a model for a $M_{\rm BH}=3\times 10^{8} M_{\odot}$, 
-radiative efficiency of $\epsilon=0.1$, accretion rate in units of Eddington accretion, 
-$\dot{M}=0.032$, inner and outer disk radii in units of $r_g$ of SMBH of 
-radius$_{\rm in}$=6.0, radius$_{\rm out}$=1.0$\times 10^{4}$. 
+Our preliminary models (Fig.~3) of emission from a multicolor disk
+imply changes from the innermost stable circular orbit (ISCO) to
+$\sim$few tens-100 $R_{\rm g}$ are required to suppress flux into the
+observed $g$-band. In particular, we suggest a physical collapse of
+the disk scale height due to a cooling front propagating outward from
+the ISCO. If the inner accretion disk is usually inflated (see
+e.g. Sirko \& Goodman 2003, Thompson et al. 2005, Hopkins \& Quataert
+2011), such a cooling front will naturally produce: 1) a collapse in
+the scale height of the disk; 2) a decrease in flux moving from UV to
+longer optical wavelengths; 3) a temporarily thicker scattering
+atmosphere, further decreasing flux at short wavelengths. {\it This
+model implies changes to the optical emission moving from shorter to
+longer wavelengths (as the radius of the cooling front increases), on
+months-to-years-long timescales.} It also predicts a longer time to
+recover the original flux (compared to the initial collapse, as a
+front will move more slowly in a thinner disk (see Fig.~2). A decrease
+in the UV flux would also be expected to cause a decrease in IR flux,
+as the heating of the IR-emitting dusty torus is reduced; however,
+there should also be a delay due to light travel time.
+
+Using Ford et al and Sirko \& Goodman 2003, Figure~\ref{fig:model}
+shows a model for a $M_{\rm BH}=3\times 10^{8} M_{\odot}$, radiative
+efficiency of $\epsilon=0.1$, accretion rate in units of Eddington
+accretion, $\dot{M}=0.032$, inner and outer disk radii in units of
+$r_g$ of SMBH of radius$_{\rm in}$=6.0, radius$_{\rm out}$=1.0$\times
+10^{4}$.
+
+\cite{Guo16} observed a similar event to J110057, with SDSS
+J231742.60 +000535.1. However, their object provided an ambiguous
+case, as the IR brightness of their source did not decline. However
+this is consistent with our model, as their cooling event is
+relatively brief.
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -187,13 +250,14 @@ radius$_{\rm in}$=6.0, radius$_{\rm out}$=1.0$\times 10^{4}$.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Method}
+%\section{Method}
 
 
 
 
 \bibliographystyle{naturemag}
-\bibliography{sample}
+\bibliography{/cos_pc19a_npr/LaTeX/tester_mnras}
+%\bibliography{sample}
 
 
 

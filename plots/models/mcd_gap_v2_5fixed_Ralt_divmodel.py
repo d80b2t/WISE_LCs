@@ -198,7 +198,7 @@ def get_spectrum(path, filename):
 #       specify for each file, keep inside sqaure brackets
 path='/cos_pc19a_npr/programs/WISE/WISE_LCs/data/'
 #specfilenames=['sdss_spectrum.dat', 'boss_spectrum.dat', 'w1100m0052_b.flam.dat', 'w1100m0052_r.flam.dat']
-specfilenames='boss_spectrum.dat'
+specfilenames='w1100m0052_r.flam.dat'
 
 speclamunits= [0.1, 0.1, 0.1, 0.1]
 specfluxunits=[1.0, 1.0, 3.8e17, 3.8e17]

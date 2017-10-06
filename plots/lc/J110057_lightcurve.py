@@ -96,69 +96,78 @@ boss_specz = 22.5-2.5*(math.log10(boss_spec_z['flux_nanomaggies']))
 ##
 ## http://matplotlib.org/examples/statistics/errorbar_limits.html
 ## http://matplotlib.org/examples/color/named_colors.html
-plt.rcParams.update({'font.size': 18})
-fig, ax = plt.subplots(figsize=(16, 7))
+plt.rcParams.update({'font.size': 12})
+fig, ax = plt.subplots(figsize=(17.0, 8.0))
 
-ls = 'dotted'
-## CRTS
-ax.errorbar(CRTS['MJD'], CRTS['mag'], yerr=CRTS['mag_err'], linestyle=ls, color='black')
-## LINEAR
-ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], linestyle='dashed', color='dimgray')
+ls = 'solid'
+lw = 1.0
+## CRTS and LINEAR
+#ax.errorbar(CRTS['MJD'],   CRTS['mag'],   yerr=CRTS['mag_err'],   linestyle=ls,       linewidth=lw*1.5, color='black')
+#ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], linestyle='dashed', linewidth=lw*1.5, color='dimgray')
+ms = 4
+ax.errorbar(CRTS['MJD'],   CRTS['mag'],   yerr=CRTS['mag_err'],   fmt='o', linewidth=lw, ms=ms, color='black')
+ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], fmt='o', linewidth=lw, ms=ms, color='dimgray')
 
 ## Pan-STARRS
-ax.errorbar(PS_g['MJD'], PS_g['mag'], yerr=PS_g['mag_err'], fmt='d', linestyle=ls, color='olivedrab')
-ax.errorbar(PS_r['MJD'], PS_r['mag'], yerr=PS_r['mag_err'], fmt='d', linestyle=ls, color='red')
-ax.errorbar(PS_i['MJD'], PS_i['mag'], yerr=PS_i['mag_err'], fmt='d', linestyle=ls, color='teal')
-ax.errorbar(PS_z['MJD'], PS_z['mag'], yerr=PS_z['mag_err'], fmt='d', linestyle=ls, color='lightgrey')
-ax.errorbar(PS_y['MJD'], PS_y['mag'], yerr=PS_y['mag_err'], fmt='d', linestyle=ls, color='darkmagenta')
+ax.errorbar(PS_g['MJD'], PS_g['mag'], yerr=PS_g['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='olivedrab')
+ax.errorbar(PS_r['MJD'], PS_r['mag'], yerr=PS_r['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='red')
+ax.errorbar(PS_i['MJD'], PS_i['mag'], yerr=PS_i['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='teal')
+ax.errorbar(PS_z['MJD'], PS_z['mag'], yerr=PS_z['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='lightgrey')
+ax.errorbar(PS_y['MJD'], PS_y['mag'], yerr=PS_y['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='darkmagenta')
 
 ## SDSS "original photometry"
-ax.errorbar(SDSS_u['MJD'], SDSS_u['mag'], yerr=SDSS_u['mag_err'], fmt='o', linestyle=ls, color='b')
-ax.errorbar(SDSS_g['MJD'], SDSS_g['mag'], yerr=SDSS_g['mag_err'], fmt='o', linestyle=ls, color='olivedrab')
-ax.errorbar(SDSS_r['MJD'], SDSS_r['mag'], yerr=SDSS_r['mag_err'], fmt='o', linestyle=ls, color='red')
-ax.errorbar(SDSS_i['MJD'], SDSS_i['mag'], yerr=SDSS_i['mag_err'], fmt='o', linestyle=ls, color='teal')
-ax.errorbar(SDSS_z['MJD'], SDSS_z['mag'], yerr=SDSS_z['mag_err'], fmt='o', linestyle=ls, color='lightgrey')
+ms = 12
+ax.errorbar(SDSS_u['MJD'], SDSS_u['mag'], yerr=SDSS_u['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='b')
+ms = 10
+ax.errorbar(SDSS_g['MJD'], SDSS_g['mag'], yerr=SDSS_g['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='olivedrab')
+ms = 12
+ax.errorbar(SDSS_r['MJD'], SDSS_r['mag'], yerr=SDSS_r['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='red')
+ax.errorbar(SDSS_i['MJD'], SDSS_i['mag'], yerr=SDSS_i['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='teal')
+ax.errorbar(SDSS_z['MJD'], SDSS_z['mag'], yerr=SDSS_z['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='lightgrey')
+
 
 ## Photometry from SDSS spectrum...
-plt.plot(sdss_spec_u['mjd'], sdss_specu, marker='s', markersize=7, color="b")
-plt.plot(sdss_spec_g['mjd'], sdss_specg, marker='s', markersize=7, color="olivedrab")
-plt.plot(sdss_spec_r['mjd'], sdss_specr, marker='s', markersize=7, color="red")
-plt.plot(sdss_spec_i['mjd'], sdss_speci, marker='s', markersize=7, color="teal")
-plt.plot(sdss_spec_z['mjd'], sdss_specz, marker='s', markersize=7, color="lightgrey")
+ms=10
+plt.plot(sdss_spec_u['mjd'], sdss_specu, marker='s', markersize=ms, color="b")
+plt.plot(sdss_spec_g['mjd'], sdss_specg, marker='s', markersize=ms, color="olivedrab")
+plt.plot(sdss_spec_r['mjd'], sdss_specr, marker='s', markersize=ms, color="red")
+plt.plot(sdss_spec_i['mjd'], sdss_speci, marker='s', markersize=ms, color="teal")
+plt.plot(sdss_spec_z['mjd'], sdss_specz, marker='s', markersize=ms, color="lightgrey")
 ## Photometry from BOSS spectrum...
-plt.plot(boss_spec_u['mjd'], boss_specu, marker='s', markersize=7, color="b")
-plt.plot(boss_spec_g['mjd'], boss_specg, marker='s', markersize=7, color="olivedrab")
-plt.plot(boss_spec_r['mjd'], boss_specr, marker='s', markersize=7, color="red")
-plt.plot(boss_spec_i['mjd'], boss_speci, marker='s', markersize=7, color="teal")
-plt.plot(boss_spec_z['mjd'], boss_specz, marker='s', markersize=7, color="lightgrey")
+plt.plot(boss_spec_u['mjd'], boss_specu, marker='s', markersize=ms, color="b")
+plt.plot(boss_spec_g['mjd'], boss_specg, marker='s', markersize=ms, color="olivedrab")
+plt.plot(boss_spec_r['mjd'], boss_specr, marker='s', markersize=ms, color="red")
+plt.plot(boss_spec_i['mjd'], boss_speci, marker='s', markersize=ms, color="teal")
+plt.plot(boss_spec_z['mjd'], boss_specz, marker='s', markersize=ms, color="lightgrey")
 
 ##DECaLS
-ax.errorbar(DECaLS_g['mjd'], DECaLS_g['aper_diam2pnt0'], yerr=DECaLS_g['err_diam2pnt0'], fmt='P', linestyle=ls, color='olivedrab')
-ax.errorbar(DECaLS_r['mjd'], DECaLS_r['aper_diam2pnt0'], yerr=DECaLS_r['err_diam2pnt0'], fmt='P', linestyle=ls, color='red')
-ax.errorbar(DECaLS_z['mjd'], DECaLS_z['aper_diam2pnt0'], yerr=DECaLS_z['err_diam2pnt0'], fmt='P', linestyle=ls, color='lightgrey')
+ms = 8
+ax.errorbar(DECaLS_g['mjd'], DECaLS_g['aper_diam2pnt0'], yerr=DECaLS_g['err_diam2pnt0'], ms=ms, fmt='P', linestyle=ls, linewidth=lw, color='olivedrab')
+ax.errorbar(DECaLS_r['mjd'], DECaLS_r['aper_diam2pnt0'], yerr=DECaLS_r['err_diam2pnt0'], ms=ms, fmt='P', linestyle=ls, linewidth=lw, color='red')
+ax.errorbar(DECaLS_z['mjd'], DECaLS_z['aper_diam2pnt0'], yerr=DECaLS_z['err_diam2pnt0'], ms=ms, fmt='P', linestyle=ls, linewidth=lw, color='lightgrey')
 
 ## UKIDSS LAS
-ax.errorbar(ULAS_Y['MJD'], ULAS_Y_AB,  yerr=ULAS_Y['YAperMag3Err'],   fmt='h', linestyle=ls, color='y', ms=10)
-ax.errorbar(ULAS_J['MJD'], ULAS_J_AB,  yerr=ULAS_J['J1_AperMag3Err'], fmt='h', linestyle=ls, color='goldenrod', ms=10)
-ax.errorbar(ULAS_H['MJD'], ULAS_H_AB,  yerr=ULAS_H['HAperMag3Err'],   fmt='h', linestyle=ls, color='darkgoldenrod', ms=10)
-ax.errorbar(ULAS_K['MJD'], ULAS_Ks_AB, yerr=ULAS_K['KAperMag3Err'],   fmt='h', linestyle=ls, color='orangered', ms=10)
+ms = 8
+#ax.errorbar(ULAS_Y['MJD'], ULAS_Y_AB,  yerr=ULAS_Y['YAperMag3Err'],   fmt='h', linestyle=ls, linewidth=lw, color='y', ms=ms)
+#ax.errorbar(ULAS_J['MJD'], ULAS_J_AB,  yerr=ULAS_J['J1_AperMag3Err'], fmt='h', linestyle=ls, linewidth=lw, color='goldenrod', ms=ms)
+#ax.errorbar(ULAS_H['MJD'], ULAS_H_AB,  yerr=ULAS_H['HAperMag3Err'],   fmt='h', linestyle=ls, linewidth=lw, color='darkgoldenrod', ms=ms)
+#ax.errorbar(ULAS_K['MJD'], ULAS_Ks_AB, yerr=ULAS_K['KAperMag3Err'],   fmt='h', linestyle=ls, linewidth=lw, color='orangered', ms=ms)
 
 ## WISE W1/W2
-ax.errorbar(WISE_W1['MJD'], WISE_W1_AB, yerr=WISE_W1['W1_unc'], fmt='o',linestyle=ls, color='indigo')
-ax.errorbar(WISE_W2['MJD'], WISE_W2_AB, yerr=WISE_W2['W2_unc'], fmt='o', linestyle=ls, color='brown')
+ms=13
+ax.errorbar(WISE_W1['MJD'], WISE_W1_AB, yerr=WISE_W1['W1_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='indigo')
+ax.errorbar(WISE_W2['MJD'], WISE_W2_AB, yerr=WISE_W2['W2_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='brown')
 
 ## Plotting the SPECTRA as vertical lines
 plt.axvline(x=51908, linewidth=2.5)
 plt.axvline(x=55302, linewidth=2.5, linestyle='dotted', color='darkgoldenrod')
 plt.axvline(x=57809, linewidth=2.5, linestyle='dashed', color='slategrey')
 
-
-
-
 ## Tidy up the figure
-xmin= 49200
-ax.set_xlim((xmin, 58250))
-#ax.set_xlim((54000, 58500))
+xmin = 49200
+xmax = 58250
+ax.set_xlim((xmin, xmax))
+#ax.set_xlim((54000, xmax))
 ax.set_ylim((20.05, 16.70))
 ax.tick_params('x', direction='in')
 ax.tick_params('y', direction='in')
@@ -166,28 +175,30 @@ ax.tick_params('y', direction='in')
 #ay.minorticks_on()
 #ax.get_xaxis().set_tick_params(which='both', direction='out')
 #ax.get_yaxis().set_tick_params(which='both', direction='out')
-ax.grid(True)
+#ax.grid(True)
 
 ## https://matplotlib.org/api/legend_api.html
 plt.legend([
-    'specphot u', 'specphot g', 'specphot r', 'specphot i', 'specphot z',
-    'specphot u', 'specphot g', 'specphot r', 'specphot i', 'specphot z',
+    'SDSS spec u', 'SDSS spec g', 'SDSS spec r', 'SDSS spec i', 'SDSS spec z',
+   'BOSS spec u', 'BOSS spec g', 'BOSS spec r', 'BOSS spec i', 'BOSS spec z',
+#   '', '', '', '', '',
+ #   '', '', '', '', '',
     'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
             'CRTS', 'LINEAR',
             'PanSTARRS g', 'PanSTARRS r', 'PanSTARRS i', 'PanSTARRS z', 'PanSTARRS y',
-            'SDSS u', 'SDSS g', 'SDSS r', 'SDSS i', 'SDSS z',
+            'SDSS u', 'SDSS g',  'SDSS r', 'SDSS i', 'SDSS z',
             'DECaLS g', 'DECaLS r', 'DECaLS z',
-            'ULAS Y', 'ULAS J', 'ULAS H', 'ULAS K',
+#            'ULAS Y', 'ULAS J', 'ULAS H', 'ULAS K',
             'WISE W1', 'WISE W2'],
            loc="lower left", ncol=2, shadow=True, fancybox=True,
-           fontsize=10, frameon=True)
+           fontsize=9, frameon=True)
 
 plt.xlabel('MJD')
 plt.ylabel('magnitude (AB)')
 plt.show()
 
-
-fig.savefig("plot.pdf")
+fig.savefig("plot.pdf",)
+fig.savefig("plot.eps",format='eps')
 plt.close(fig)
 
 #savefig('foo.png', bbox_inches='tight')

@@ -37,7 +37,14 @@ correspondence.
 For supplying Python code that can read large FITS files quicky:
 https://gist.github.com/demitri/aea1522e92efae00a3dcb097533b54fc
 
-
+## Stefan Czesla
+stefan.czesla@hs.uni-hamburg.de
+For PyAstronomy (http://pyastronomy.readthedocs.io/en/latest/) 
+If you make use of PyAstronomy and it has (hopefully) helped you in
+your work, we would be thankful if you acknowledge it by including a
+sentence like “This work made use of PyAstronomy.” in your
+acknowledgments and a link to PyAstronomy
+(https://github.com/sczesla/PyAstronomy) given, e.g., as a footnote.
 
 
 

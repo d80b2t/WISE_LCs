@@ -1,18 +1,19 @@
 
 
--- Check BOSS spectrum of J110057 w. DJS and Bailey
+-- DONE:  Check BOSS spectrum of J110057 w. DJS and Bailey
 
 -- PanSTARRS LCs for as many as possible (!!)
 
 -- DECaLS DR4 redux???
 
--- CRTS, catalina
+-- CRTS/Catalina
 
 -- "Table 1", have that thought about the m x n MJD matrix
 
---
+-- Check HSC data
+
+-- Potentially try and do some sort of "composite" of the QSOs in
+   their "low" state vs. their "high" state...
 
 
-
-Start with BRICKNAME:
 
