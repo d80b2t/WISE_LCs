@@ -161,19 +161,35 @@ boss_cut = boss[(boss['speclam']>3801.) & (boss['speclam']<9189.56)]
 flux_ratio_a = (sdss['specflux']/boss_cut['specflux'])
 
 lam_wave = sdss['speclam']
-## pwr_law = 
+## f_lam \propto -(\alpha_nu + 2)
+alpha_nu=(1/3.)
+scaling = 8000
+pwr_law_a = (lam_wave/scaling)**((alpha_nu+2.)*(-1.0))
+alpha_nu=(1/2.)
+pwr_law_b = (lam_wave/scaling)**((alpha_nu+2.)*(-1.0))
+alpha_nu=(1/4.)
+pwr_law_c = (lam_wave/scaling)**((alpha_nu+2.)*(-1.0))
+alpha_nu=(1/3.)
+pwr_law_d = (lam_wave)**((alpha_nu+2.)*(-1.0))
 
 ## https://matplotlib.org/examples/color/named_colors.html
 lw=1.4
-ax3.plot(speclam_sdss/(1+redshift), (flux_ratio_a),       color='darkslateblue', ls='solid', linewidth=lw)
-#ax3.plot(lamsdss/(1+redshift), (F_lam_all_sdss/(normfactor*5)), ls='solid',   color='b', alpha=0.5, linewidth=lw)
+dsb = 'darkslateblue' 
+ax3.plot(speclam_sdss/(1+redshift), flux_ratio_a, color=dsb, ls='solid', linewidth=lw)
+#ax3.plot(lam_wave/(1+redshift),     pwr_law_a,      color=dsb,  ls='solid',  alpha=0.75, linewidth=lw)
+#ax3.plot(lam_wave/(1+redshift),     pwr_law_b,      color=dsb,  ls='-.',  alpha=0.75, linewidth=lw)
+#ax3.plot(lam_wave/(1+redshift),     pwr_law_c,      color=dsb,  ls='dotted',  alpha=0.75, linewidth=lw)
+lw=2.4
+ax3.plot(lam_wave/(1+redshift),    (pwr_law_d*6e8),   color=dsb,  ls='dotted',  alpha=0.75, linewidth=lw)
 
-ax3.set_ylabel(r"|${\Delta}$ f$_{\lambda}$|" , fontsize=20)
-ax3.set_xlabel("Rest Frame $\lambda$ (nm)",             fontsize=22)
+ax3.set_ylabel(r"|${\Delta}$ f$_{\lambda}$|" , fontsize=24)
+ax3.set_xlabel("Rest Frame $\lambda$ (nm)",    fontsize=22)
+ax3.tick_params(axis='both', which='major', labelsize=18)
+ax3.tick_params(axis='both', which='minor', labelsize=10)
 
-ax3.legend(['SDSS/BOSS'],
-#            'Power law model'],
-            loc='upper right', fontsize=20,
+ax3.legend(['SDSS/BOSS',
+           r'f$_{\nu}\propto\nu^{1/3}$ '],
+            loc='upper right', fontsize=22,
             ncol=1, 
 #            shadow=True,
             fancybox=True
