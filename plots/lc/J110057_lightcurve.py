@@ -96,15 +96,23 @@ boss_specz = 22.5-2.5*(math.log10(boss_spec_z['flux_nanomaggies']))
 ##
 ## http://matplotlib.org/examples/statistics/errorbar_limits.html
 ## http://matplotlib.org/examples/color/named_colors.html
-plt.rcParams.update({'font.size': 12})
+plt.rcParams.update({'font.size': 14})
 fig, ax = plt.subplots(figsize=(17.0, 8.0))
+
+
+## Plotting the SPECTRA as vertical lines
+lw = 5.0
+plt.axvline(x=51908, linewidth=lw)
+plt.axvline(x=55302, linewidth=lw, linestyle='dotted', color='darkgoldenrod')
+plt.axvline(x=57809, linewidth=lw, linestyle='dashed', color='slategrey')
+#'-.'
 
 ls = 'solid'
 lw = 1.0
 ## CRTS and LINEAR
 #ax.errorbar(CRTS['MJD'],   CRTS['mag'],   yerr=CRTS['mag_err'],   linestyle=ls,       linewidth=lw*1.5, color='black')
 #ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], linestyle='dashed', linewidth=lw*1.5, color='dimgray')
-ms = 4
+ms = 5
 ax.errorbar(CRTS['MJD'],   CRTS['mag'],   yerr=CRTS['mag_err'],   fmt='o', linewidth=lw, ms=ms, color='black')
 ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], fmt='o', linewidth=lw, ms=ms, color='dimgray')
 
@@ -116,18 +124,18 @@ ax.errorbar(PS_z['MJD'], PS_z['mag'], yerr=PS_z['mag_err'], fmt='d', linestyle=l
 ax.errorbar(PS_y['MJD'], PS_y['mag'], yerr=PS_y['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='darkmagenta')
 
 ## SDSS "original photometry"
-ms = 12
+ms = 14
 ax.errorbar(SDSS_u['MJD'], SDSS_u['mag'], yerr=SDSS_u['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='b')
-ms = 10
-ax.errorbar(SDSS_g['MJD'], SDSS_g['mag'], yerr=SDSS_g['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='olivedrab')
 ms = 12
+ax.errorbar(SDSS_g['MJD'], SDSS_g['mag'], yerr=SDSS_g['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='olivedrab')
+ms = 14
 ax.errorbar(SDSS_r['MJD'], SDSS_r['mag'], yerr=SDSS_r['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='red')
 ax.errorbar(SDSS_i['MJD'], SDSS_i['mag'], yerr=SDSS_i['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='teal')
 ax.errorbar(SDSS_z['MJD'], SDSS_z['mag'], yerr=SDSS_z['mag_err'], fmt='o', ms=ms, linestyle=ls, linewidth=lw, color='lightgrey')
 
 
 ## Photometry from SDSS spectrum...
-ms=10
+ms=12
 plt.plot(sdss_spec_u['mjd'], sdss_specu, marker='s', markersize=ms, color="b")
 plt.plot(sdss_spec_g['mjd'], sdss_specg, marker='s', markersize=ms, color="olivedrab")
 plt.plot(sdss_spec_r['mjd'], sdss_specr, marker='s', markersize=ms, color="red")
@@ -141,34 +149,33 @@ plt.plot(boss_spec_i['mjd'], boss_speci, marker='s', markersize=ms, color="teal"
 plt.plot(boss_spec_z['mjd'], boss_specz, marker='s', markersize=ms, color="lightgrey")
 
 ##DECaLS
-ms = 8
+ms = 10
 ax.errorbar(DECaLS_g['mjd'], DECaLS_g['aper_diam2pnt0'], yerr=DECaLS_g['err_diam2pnt0'], ms=ms, fmt='P', linestyle=ls, linewidth=lw, color='olivedrab')
 ax.errorbar(DECaLS_r['mjd'], DECaLS_r['aper_diam2pnt0'], yerr=DECaLS_r['err_diam2pnt0'], ms=ms, fmt='P', linestyle=ls, linewidth=lw, color='red')
 ax.errorbar(DECaLS_z['mjd'], DECaLS_z['aper_diam2pnt0'], yerr=DECaLS_z['err_diam2pnt0'], ms=ms, fmt='P', linestyle=ls, linewidth=lw, color='lightgrey')
 
 ## UKIDSS LAS
-ms = 8
+ms = 10
 #ax.errorbar(ULAS_Y['MJD'], ULAS_Y_AB,  yerr=ULAS_Y['YAperMag3Err'],   fmt='h', linestyle=ls, linewidth=lw, color='y', ms=ms)
 #ax.errorbar(ULAS_J['MJD'], ULAS_J_AB,  yerr=ULAS_J['J1_AperMag3Err'], fmt='h', linestyle=ls, linewidth=lw, color='goldenrod', ms=ms)
 #ax.errorbar(ULAS_H['MJD'], ULAS_H_AB,  yerr=ULAS_H['HAperMag3Err'],   fmt='h', linestyle=ls, linewidth=lw, color='darkgoldenrod', ms=ms)
 #ax.errorbar(ULAS_K['MJD'], ULAS_Ks_AB, yerr=ULAS_K['KAperMag3Err'],   fmt='h', linestyle=ls, linewidth=lw, color='orangered', ms=ms)
 
 ## WISE W1/W2
-ms=13
+ms=16
 ax.errorbar(WISE_W1['MJD'], WISE_W1_AB, yerr=WISE_W1['W1_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='indigo')
 ax.errorbar(WISE_W2['MJD'], WISE_W2_AB, yerr=WISE_W2['W2_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='brown')
 
-## Plotting the SPECTRA as vertical lines
-plt.axvline(x=51908, linewidth=2.5)
-plt.axvline(x=55302, linewidth=2.5, linestyle='dotted', color='darkgoldenrod')
-plt.axvline(x=57809, linewidth=2.5, linestyle='dashed', color='slategrey')
 
 ## Tidy up the figure
-xmin = 49200
+xmin = 51750   ## 49200
 xmax = 58250
+ymin = 20.05   ## 49200
+ymax = 16.75
+
 ax.set_xlim((xmin, xmax))
 #ax.set_xlim((54000, xmax))
-ax.set_ylim((20.05, 16.70))
+ax.set_ylim((ymin, ymax))
 ax.tick_params('x', direction='in')
 ax.tick_params('y', direction='in')
 #ax.minorticks_on('x', direction='in')
@@ -179,19 +186,20 @@ ax.tick_params('y', direction='in')
 
 ## https://matplotlib.org/api/legend_api.html
 plt.legend([
+        'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
     'SDSS spec u', 'SDSS spec g', 'SDSS spec r', 'SDSS spec i', 'SDSS spec z',
    'BOSS spec u', 'BOSS spec g', 'BOSS spec r', 'BOSS spec i', 'BOSS spec z',
 #   '', '', '', '', '',
  #   '', '', '', '', '',
-    'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
+#    'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
             'CRTS', 'LINEAR',
             'PanSTARRS g', 'PanSTARRS r', 'PanSTARRS i', 'PanSTARRS z', 'PanSTARRS y',
             'SDSS u', 'SDSS g',  'SDSS r', 'SDSS i', 'SDSS z',
             'DECaLS g', 'DECaLS r', 'DECaLS z',
 #            'ULAS Y', 'ULAS J', 'ULAS H', 'ULAS K',
             'WISE W1', 'WISE W2'],
-           loc="lower left", ncol=2, shadow=True, fancybox=True,
-           fontsize=9, frameon=True)
+           loc="lower left", ncol=3, shadow=True, fancybox=True,
+           fontsize=14, frameon=True)
 
 plt.xlabel('MJD')
 plt.ylabel('magnitude (AB)')
