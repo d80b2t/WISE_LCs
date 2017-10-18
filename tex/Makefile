@@ -1,5 +1,6 @@
 
 TEXFILE=Xtreem_IR_LCs_Nature
+TEXFILE_TWO=Supplemental_Material
 default: all
 
 # just run it
@@ -42,4 +43,22 @@ clean:
 	${TEXFILE}.toc \
 	${TEXFILE}.log 
 #	${TEXFILE}.pdf 
+
+
+sup:
+	pdflatex  ${TEXFILE_TWO}
+	pdflatex  ${TEXFILE_TWO}
+	bibtex ${TEXFILE_TWO}
+	bibtex ${TEXFILE_TWO}
+	pdflatex  ${TEXFILE_TWO}
+	pdflatex  ${TEXFILE_TWO}
+	rm -f  ${TEXFILE_TWO}.aux
+	rm -f  ${TEXFILE_TWO}.bbl
+	rm -f  ${TEXFILE_TWO}.blg
+	rm -f  ${TEXFILE_TWO}.dvi
+	rm -f  ${TEXFILE_TWO}.log
+	rm -f  ${TEXFILE_TWO}.out
+	rm -f  ${TEXFILE_TWO}.toc
+	rm -f  ${TEXFILE_TWO}Notes.bib
+	open ${TEXFILE_TWO}.pdf
 
