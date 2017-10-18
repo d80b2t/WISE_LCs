@@ -118,16 +118,16 @@ for each object.
 %front gets established and propagates inward.
 
 Our model consists of three main parts: {\it (i)} an event that causes
-an initial change of torques at the ISCO; {\it (ii)} the propogation
+an initial change of torques at the ISCO; {\it (ii)} the propagation
 of an cooling front in the accretion disk outward from the central
 engine and an associated increase in the number density of scatterers
-and {\it (iii)} a propogation in towards the central black hole of a
+and {\it (iii)} a propagation in towards the central black hole of a
 heating front (leading to a 'recovery' in the observed spectra).
 
 For out data and observations of J11057, we have to remain agnostic to
 the events that initially causes the initial change of torques at the
 ISCO.  A change in magnetic field being the cause of non-zero torques
-is well studied, \citet[see e.g.,][]{Krolik1999, Gammie1999,
+is well studied, see e.g., \citet{Krolik1999, Gammie1999,
 Agol_Krolik2000, Reynolds_Armitage2001}.  Notably,
 \citet{Afshordi_Paczynski2003} argue that a thick disk at the ISCO
 should produce a substantial torque, while a thin one will not.
@@ -135,38 +135,47 @@ Regardless of the initial trigger, we suggest some event causes
 a change in the torque conditions at the ISCO. As such, we build 
 on the non-zero torque model from \citet{Zimmerman2005}. 
 
-%% Also:: 
-\citet{Gardner_Done2017}
-%% (see their figure 7 cartoon) for obs evidence of interior puffy structure
-\citet{Jiang_Stone_Davis2016}
+{\bf NPR NOTE:: Also:: \citet{Gardner_Done2017} 
+(see their figure 7 cartoon) for obs evidence of interior puffy structure
+and \citet{Jiang_Stone_Davis2016}. 
+}
 
 For the second part and stage of our model, we need to explain the 
 observed light-curves and optical spectra. 
+%
+J110057 changes from $\approx$17.9mag to $\approx$18.5mag in the
+observed $g$-band over $\lesssim$100 days (in the observed frame).
+This translates to a Johnson V-band flux density change from 0.262 mJy
+to 0.151 mJy.  However, given the redshift of $z=0.378$, the observed
+V-band 380-750nm corresponds to 276-544nm in the rest frame ($-6.56 <
+\log (\lambda) < -6.26$) or near-UV to red in the quasar frame. The
+source flux density drops to 58\% of the original flux in $\sim$3
+months. %How does this compare with some of the modelling in the
+previous section?
 
-J110057 changes from $\approx$17.9mag to $\approx$18.5mag in the observed $g$-band over $\lesssim$100 days 
-(in the observed frame).  This translates to a Johnson V-band flux density change from 0.262 mJy to 0.151 mJy. 
-However, given the redshift of $z=0.378$, the observed V-band 380-750nm corresponds to 276-544nm in the rest frame 
-($-6.56 < \log (\lambda) < -6.26$) or near-UV to red in the quasar frame. The source flux density drops to 58\% of the 
-original flux in $\sim$3 months. %How does this compare with some of the modelling in the previous section?
+Simply changing the boundary condition at $R_{\rm in}$ from non-zero
+torque to zero torque (e.g. collapsing a puffed-up disk inner edge,
+or, as mentioned above, the magnetic fields) leads to the difference
+in the SEDs ({\bf NPR NOTE:: Figures 6 and 7 in our notes}.  At $\log
+\lambda = −6.56$, the flux for $R_{in} = 9 r_{g}$ (dark blue in both)
+drops by $\sim0.2$ dex from $\sim38.0$ to $\sim37.8 $ or from $10.0$
+to 6$\times 10^{37}$ ergs), or to 60\% of the initial flux density,
+consistent with the values above.
 
-Simply changing the boundary condition at $R_{\rm in}$ from non-zero torque to zero torque (e.g. collapsing a puffed-up disk inner edge, or, as mentioned above, the magnetic fields) leads to the difference in the SEDs ({\bf NPR NOTE:: Figures 6 and 7 in our notes}. 
-At $\log \lambda = −6.56$, the flux for $Rin = 9rg$ (dark blue in
-both) drops by $\sim0.2$ dex from $\sim38.0$ to $\sim37.8 $ or from $10.0$ to
-6$\times 10^{37}$ ergs), or to 60\% of the initial flux density, consistent
-with the values above.  
-
-However, in the restframe spectrum, the 300nm flux seems to drop by a
-factor of $\sim$5 (given the uncertainty in the normalization). The flux at 
-$\lambda < $350 nm is dropping relative to the optical flux. In order to make the multi-color blackbody spectrum do
-this, we would need dim large regions of the inner disk simultaneously.  
-For example, if the entire inner disk at $R \leq 50 r_{g}$ changed state and became dimmer on thermal timescales at each annulus,
-we can reproduce both the change at short wavelengths and the observed V-band
-change. 
-%We can parameterize the relevant disk timescales at R ∼ 50rg as:
+However, in the restframe spectrum, the 300 nm flux seems to drop by a
+factor of $\sim$5 (given the uncertainty in the normalization). The
+flux at $\lambda < $350 nm is dropping relative to the optical
+flux. In order to make the multi-color blackbody spectrum do this, we
+would need dim large regions of the inner disk simultaneously.  For
+example, if the entire inner disk at $R \leq 50 r_{g}$ changed state
+and became dimmer on thermal timescales at each annulus, we can
+reproduce both the change at short wavelengths and the observed V-band
+change.
+We can parameterize the relevant disk timescales at $R\sim 50 r_{g}$ as:
 
 
 There are several relevant timescales associated with J110057 and our 
-model explaning the observations. These are: 
+model explaining the observations. These are: 
 
 ``Relevant disk timescales around a $M_{\rm BH} = 10^{8} M_{\odot}$ at $R\sim 25r_{g}$ are:''
 \begin{table}
@@ -239,13 +248,13 @@ being constant over time.
 
 \citet{Guo2016} discuss two scenarios to explain this behaviour: 1)
 inner accretion disk change and 2) eclipse by an optically thick
-cloud. They make the point that in prin- ciple both models could
+cloud. They make the point that in principle both models could
 explain the observation. In scenario 1) they suggest that turning off
 the disk at $< 60rg = 30 rSch$ would explain this (in the same manner
 as we discuss for J11057) but they find this implausible since
 ``quasars are not observed to flicker like this typically''.
 \citet{Guo2016} then spend more time on scenario 2). So, based on the
-inital optical spectrum (23 days before the $u$-band dip) and the
+initial optical spectrum (23 days before the $u$-band dip) and the
 Nov. X-ray spectrum (45 days after the $u$-band dip) they say that the
 dip lasts $< 65$ days. 
 
