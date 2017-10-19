@@ -29,6 +29,11 @@
 # Updates in v2_4:
 #  --read observed spectra from files and overplot!!!implementing
 #
+# Updates in v2_5:
+#  -- From NPR, have split appart the calculations and plotting
+#  -- Am acutally only doing this now for one R_alt value at a time. 
+#
+#
 ####
 #
 # Author: K. E. Saavik Ford
@@ -45,32 +50,38 @@ import matplotlib.pyplot as plt
 Msun=1.99e30        # kg per solar mass
 Rsun=6.95e8         # meters per solar radius
 G=6.67e-11          # Big G in m^3 kg^-1 s^-2
-c=3e8               # 
-sigma_SB=5.7e-8     # stefan-boltzmann const
+c=3e8               # SoL
+sigma_SB=5.7e-8     # Stefan-Boltzmann const
 yr=3.15e7           # seconds per year
 pc=3.086e16         # meters per parsec
 AU=1.496e11         # meters per AU
 h=6.626e-34         # Planck const
-kB=1.38e-23         # boltzmann const
-m_p=1.67e-27        # mass of proton
+kB=1.38e-23         # Boltzmann const
+m_p=1.67e-27        # Mass of proton
 sigma_T=6.65e-29    # Thomson xsec
 PI=3.1415926        # Yum...
 m_per_nm=1.0e-9     # meters per nanometer
 
 #BEGIN PHYSICAL INPUTS:
-M_SMBH   = 3.0e8    # mass of supermassive black hole in units of solar masses
-dotm_edd = 0.01     # accretion rate in units of Eddington accretion 
-R_alt    = 150.0    # outermost radius of altered disk; units of r_g of SMBH
-epsilon  = 0.1      # radiative efficiency, depends on spin of SMBH, assume 0.1
+M_SMBH   = 3.0e8    # Mass of supermassive black hole in units of solar masses
+dotm_edd = 0.01     # Accretion rate in units of Eddington accretion 
+R_alt    = 150.0    # Outermost radius of altered disk; units of r_g of SMBH
+eta      = 0.1      # Radiative efficiency, depends on spin of SMBH, assume 0.1
 
-#compute r_g for SMBH:
-r_g_SMBH=G*M_SMBH*Msun/c**2
+# Gravitational radius; compute r_g for SMBH:
+# r_g ∼ 1 (M/ M8) AU ;-) 
+r_g_SMBH = (G * M_SMBH * Msun) / c**2
 
+# Schwarzschild radius (s   
+# r_schw = 2.0 * r_gSMBH
+
+    
 # Choose unperturbed temperature profile model, see also 'find_Temp' for more details
 # options are:
 #   SG  = Sirko & Goodman 2003
 #   ZT  = zero-torque at ISCO model
 #   NZT = non-zero-torque at ISCO model
+#
 # If none of the above, default is ZT with warning
 tempmod='ZT'
 #plot 2nd temp mod
@@ -82,7 +93,7 @@ f_depress=0.10
 
 # USER can, but probably should not, alter the following physical variables
 #  inner and outer disk radii in units of r_g of SMBH, unperturbed disk
-#  (inner radius depends on spin, connect to epsilon later)!!!
+#  (inner radius depends on spin, connect to eta later)!!!
 radius_in  = 6.0
 radius_out = 1.0e4
 print('radius_in, radius_out', radius_in, radius_out)
@@ -109,12 +120,12 @@ def find_B_lambda(Temp, lam):
     return I
 
 
-def find_Temp(epsilon,M_SMBH,dotm_edd,radius,r_in,model):
+def find_Temp(eta,M_SMBH,dotm_edd,radius,r_in,model):
     # Find temp as a fn of radius
     # Options:
-    #  Sirko & Goodman 2003 (SG): T_SG
-    #  Zero torque at ISCO (ZT): T_ZT  *****DEFAULT
-    #  Non-zero torque at ISCO (NZT): T_NZT
+    #  T_SG:  Sirko & Goodman 2003 (SG): T_SG
+    #  T_ZT:  Zero torque at ISCO (ZT):  T_ZT  (DEFAULT)
+    #  T_NZT: Non-zero torque at ISCO (NZT): T_NZT
     #
     # Sirko & Goodman 2003 is similar to non-zero torque at the ISCO
     # but differs by factor to approximate spectral hardening
@@ -123,7 +134,7 @@ def find_Temp(epsilon,M_SMBH,dotm_edd,radius,r_in,model):
     # use
     #   Omega=sqrt(GM/r^3);
     # put r in units r_g; dotM in units dotM_edd
-    prefactor = pow(((3.0/2.0)*(c**5)* m_p / (epsilon*G*M_SMBH*Msun*sigma_T*sigma_SB)), 0.25)
+    prefactor = pow(((3.0/2.0)*(c**5)* m_p / (eta*G*M_SMBH*Msun*sigma_T*sigma_SB)), 0.25)
     T_SG=prefactor*pow(dotm_edd, 0.25)*pow(radius,-0.75)
     
     # Non-zero-torque at ISCO temp profile:
@@ -237,9 +248,9 @@ for i in range((len(radius)-1)):
     myfile.write("i is " + str(i) + "  radius " + str(radius[i]) + "    lam " + str(lam) + " \n")
 
     #std
-    Temp         = find_Temp(epsilon,M_SMBH,dotm_edd,radius[i],radius_in,tempmod)
+    Temp         = find_Temp(eta,M_SMBH,dotm_edd,radius[i],radius_in,tempmod)
     #comparison
-    Temp_compare = find_Temp(epsilon,M_SMBH,dotm_edd,radius[i],radius_in,tempmod2)
+    Temp_compare = find_Temp(eta,M_SMBH,dotm_edd,radius[i],radius_in,tempmod2)
       
     # std
     B_lambda         = find_B_lambda(Temp, lam)
