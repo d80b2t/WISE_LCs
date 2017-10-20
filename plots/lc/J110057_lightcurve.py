@@ -170,8 +170,8 @@ ax.errorbar(WISE_W2['MJD'], WISE_W2_AB, yerr=WISE_W2['W2_unc'], fmt='o', ms=ms, 
 ## Tidy up the figure
 xmin = 51750   ## 49200
 xmax = 58250
-ymin = 20.05   ## 49200
-ymax = 16.75
+ymin = 20.65   
+ymax = 16.65
 
 ax.set_xlim((xmin, xmax))
 #ax.set_xlim((54000, xmax))

@@ -7,7 +7,9 @@
 \maketitle
 
 
-\section*{Selection in SDSS-III BOSS of J110057}
+\section*{Further Observational Details}
+
+\subsection*{Selection in SDSS-III BOSS of J110057}
 SDSS J110057.71-005304.5 was discovered by the Sloan Digital Sky
 Survey in 2000.  J110057 was imaged in Run 756 and satisfied a number
 of spectroscopic targeting flags\footnote{SERENDIP\_BLUE, ROSAT\_D,
@@ -67,7 +69,7 @@ by roughly a year. The $z$-band observations span almost 3 years
 1651m010.
 
 
-\section*{Selection in NEOWISE-R of J110057}
+\subsection*{Selection in NEOWISE-R of J110057}
 %%  This is text from Aaron's email from 15th Feb, 2017, sent to Daniel, 
 %%  for the WISE J1052+1519 outline/paper
 
@@ -114,12 +116,6 @@ This yielded a sample of 248 sources. 31 of these are assumed to be blazars
 due to the presence of FIRST radio counterparts. Another 22 are outside of the 
 FIRST  footprint, leaving 195 quasars in our IR-variable sample. 
 
-% We randomly selected five of these objects for follow-up spectroscopy
-% with Palomar DBSP on the night of 30 January 2017. WISE J1052+1519,
-% one of these five, faded by 0.75 (0.9) mags in W1 (W2), and thus
-% became 0.15 mags bluer in (W1-W2), making it a significant outlier in
-% both single-band and IR color variability.
-
 A link to the key properties of our sample can be found here:
 \href{http://portal.nersc.gov/project/cosmo/temp/ameisner/qso\_pages\_v01/}
 {\tt qso\_pages\_v01} and the links to the catalogs are given here:
@@ -133,6 +129,18 @@ have ``good'' WISE light curves available in DECaLS DR3. In each file,
 there are 3 extensions: ex = 0 -- WISE light curve summary metrics; ex
 = 1 -- DECaLS DR3 Tractor data for each object; ex = 2 -- SDSS data
 for each object.
+
+\subsection*{Additional Multiwavelength data}
+Checking the data archives we found there was no source within 30
+arcsec in the VLA FIRST, i.e., at 21 cm radio frequencies.  None of
+the {\it Hubble Space Telescope}, the {\it Spitzer Space Telescope} or
+the {\it Kepler} Mission has observed J110057.  It is also not in the
+HSC DR1 footprint.  There is the detection in ROSAT (which tirggers  using the 2nd
+all-sky survey (2RXS; Boller et al. 2016, A\&A, 588, 103) as 2RXS
+J110058.1-005259 with 27.00 counts (count error 6.14) and a count rate
+= 0.06$\pm$0.01. The NED gives J110057 as $1.27\pm0.28 \times^{-12}$
+erg/cm$^{2}$/s in the 0.1-2.4 keV range (unabsorbed flux). J110057 is
+not in either {\it Chandra} or {\it XMM-Newton}.
 
 
 
@@ -166,18 +174,15 @@ on the non-zero torque model from \citet{Zimmerman2005}.
 and \citet{Jiang_Stone_Davis2016}. 
 }
 
-For the second part and stage of our model, we need to explain the 
-observed light-curves and optical spectra. 
-%
-J110057 changes from $\approx$17.9mag to $\approx$18.5mag in the
-observed $g$-band over $\lesssim$100 days (in the observed frame).
-This translates to a Johnson V-band flux density change from 0.262 mJy
-to 0.151 mJy.  However, given the redshift of $z=0.378$, the observed
-V-band 380-750nm corresponds to 276-544nm in the rest frame ($-6.56 <
-\log (\lambda) < -6.26$) or near-UV to red in the quasar frame. The
-source flux density drops to 58\% of the original flux in $\sim$3
-months. %How does this compare with some of the modelling in the
-previous section?
+For the second part and stage of our model, we need to explain the
+observed light-curves and optical spectra. J110057 changes from
+$\approx$17.9mag to $\approx$18.5mag in the observed $g$-band over
+$\lesssim$100 days (in the observed frame).  This translates to a
+Johnson V-band flux density change from 0.262 mJy to 0.151 mJy.
+However, given the redshift of $z=0.378$, the observed V-band
+380-750nm corresponds to 276-544nm in the rest frame ($-6.56 < \log
+(\lambda) < -6.26$) or near-UV to red in the quasar frame. The source
+flux density drops to 58\% of the original flux in $\sim$3 months.
 
 Simply changing the boundary condition at $R_{\rm in}$ from non-zero
 torque to zero torque (e.g. collapsing a puffed-up disk inner edge,
@@ -199,11 +204,10 @@ reproduce both the change at short wavelengths and the observed V-band
 change.
 We can parameterize the relevant disk timescales at $R\sim 50 r_{g}$ as:
 
-
 There are several relevant timescales associated with J110057 and our 
 model explaining the observations. These are: 
 
-``Relevant disk timescales around a $M_{\rm BH} = 10^{8} M_{\odot}$ at $R\sim 25r_{g}$ are:''
+%``Relevant disk timescales around a $M_{\rm BH} = 10^{8} M_{\odot}$ at $R\sim 25r_{g}$ are:''
 \begin{table}
   \centering
   \begin{tabular}{ l c c }
@@ -247,11 +251,10 @@ $\rho_{\rm cloud}$ is ;
 $\rho_{\rm medium}$ is  ;
 $R$ is the radius of the accretion disk; 
 $r_{g}$ is the Gravitational radius; 
-$V_{\rm rel}$ is
+$V_{\rm rel}$ is .
 
-``Relevant disk timescales around a $M_{\rm BH} = 10^{8} M_{\odot}$ at $R\sim 25r_{g}$ are:''
 
-\section{Comparison with Guo et al. 2016}
+\section*{Comparison with Guo et al. 2016}
 Figure~1 of Guo et al. (2016) shows a UV collapse (green curve) in
 their source (J23+) at a very similar wavelength to that in the 2010
 spectrum of our source (J110057), and with turnover in both around
@@ -270,19 +273,17 @@ catastrophe). \citet{Guo2016} also find that the IR does not
 significantly change and that the broad lines are consistent with
 being constant over time.
 
-%I don’t think we have any data from CRTS on this source going back to this time (the stuff Matthew sent goes from MJD 53500-now). Correct me if I’m wrong.
-
 \citet{Guo2016} discuss two scenarios to explain this behaviour: 1)
 inner accretion disk change and 2) eclipse by an optically thick
-cloud. They make the point that in principle both models could
-explain the observation. In scenario 1) they suggest that turning off
-the disk at $< 60rg = 30 rSch$ would explain this (in the same manner
-as we discuss for J11057) but they find this implausible since
-``quasars are not observed to flicker like this typically''.
-\citet{Guo2016} then spend more time on scenario 2). So, based on the
-initial optical spectrum (23 days before the $u$-band dip) and the
-Nov. X-ray spectrum (45 days after the $u$-band dip) they say that the
-dip lasts $< 65$ days. 
+cloud. They make the point that in principle both models could explain
+the observation. In scenario 1) they suggest that turning off the disk
+at $< 60rg = 30 rSch$ would explain this (in the same manner as we
+discuss for J11057) but they find this implausible since ``quasars are
+not observed to flicker like this typically''.  \citet{Guo2016} then
+spend more time on scenario 2). So, based on the initial optical
+spectrum (23 days before the $u$-band dip) and the Nov. X-ray spectrum
+(45 days after the $u$-band dip) they say that the dip lasts $< 65$
+days.
 
 
 
