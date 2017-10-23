@@ -77,44 +77,44 @@ W1 and W2 lightcurves for $\sim$200,000 SDSS spectroscopic quasars
 were extracted from Data Release 3 (DR3) of the Dark Energy Camera
 Legacy Survey (DECaLS). These light curves span from the beginning of
 the WISE mission (2010 January) through the first-year of NEOWISER
-operations (2014 December). In detail, the W1/W2 light curves are
-obtained by performing forced photometry at the locations of
-DECam-detected optical sources. This forced photometry is performed on
-time-resolved unWISE coadds, each of which represents a stack with
-depth of coverage $\sim$12 exposures. A given sky location is observed
-by WISE for $\sim$1 day once every six months, which means that our
-forced photometry light curves typically have four coadd epochs
-available. Coadd epochs of a given object are separated by a minimum
-of six months and a maximum of four years. Our coaddition removes the
-possibility of probing variability on $\lesssim$1 day time scales, but
-it allows us to push $\sim$1.4 magnitudes deeper than individual
-exposures while removing virtually all single-exposure artifacts
-(e.g. cosmic rays and satellites).
+operations (2014 December). The W1/W2 light curves are obtained by
+performing forced photometry at the locations of DECam-detected
+optical sources \citep{Lang2014, Meisner2017a, Meisner2017b}.
 
-$\sim$30,000 of the SDSS quasars with such W1/W2 lightcurves available
-are ``IR-bright'', in the sense that they are above both the W1 and W2
-single exposure thresholds and therefore detected at very high
-significance in our coadds. For this ensemble of objects, the typical
-variation in each quasar's measured (W1-W2) color is 0.06 magnitudes,
-which includes statistical and systematic errors expected to
-contribute variations at the few hundredths of a mag level. The
-typical measured single-band scatter is 0.07 magnitudes in each of W1
-and W2. A full characterization of the typical mid-IR quasar
-variability will be presented separately (Ross et al., in
-preparation).
+This forced photometry is performed on time-resolved unWISE coadds,
+each of which represents a stack with depth of coverage $\sim$12
+exposures. A given sky location is observed by WISE for $\sim$1 day
+once every six months, which means that the forced photometry light
+curves typically have four coadd epochs available. Coadd epochs of a
+given object are separated by a minimum of six months and a maximum of
+four years. Our coaddition removes the possibility of probing
+variability on $\lesssim$1 day time scales, but it allows us to push
+$\approx$1.4 magnitudes deeper than individual exposures while removing
+virtually all single-exposure artifacts (e.g. cosmic rays and
+satellites).
+
+Approximately $\sim$30,000 of the SDSS/BOSS quasars with such W1/W2
+lightcurves available are ``IR-bright'', in the sense that they are
+above both the W1 and W2 single exposure thresholds and therefore
+detected at very high significance in our coadds {\bf NPR NOTE:: This
+number seems low to me; NPR to double check; can also triple check
+with Aaron.}  For this ensemble of objects, the typical variation in
+each quasar's measured (W1-W2) color is 0.06 magnitudes, which
+includes statistical and systematic errors expected to contribute
+variations at the few hundredths of a mag level. The typical measured
+single-band scatter is 0.07 magnitudes in each of W1 and W2.
 
 We undertook a search for extreme outliers relative to these trends.
-Specifically, we selected objects with the following characteristics.
-
+Specifically, we selected objects with the following characteristics:
 \begin{itemize}
-\item Monotonic variation in both W1 and W2.
-\item W1 versus W2 \textit{flux} correlation coefficient $>$0.9.
-\item $>0.5$ mag peak-to-peak variation in either W1 or W2.
+    \item Monotonic variation in both W1 and W2.
+    \item W1 versus W2 flux correlation coefficient $>$0.9.
+    \item $>0.5$ mag peak-to-peak variation in either W1 or W2.
 \end{itemize}
-
-This yielded a sample of 248 sources. 31 of these are assumed to be blazars 
-due to the presence of FIRST radio counterparts. Another 22 are outside of the 
-FIRST  footprint, leaving 195 quasars in our IR-variable sample. 
+This yielded a sample of 248 sources. 31 of these are assumed to be
+blazars due to the presence of FIRST radio counterparts. Another 22
+are outside of the FIRST footprint, leaving 195 quasars in our
+IR-variable sample.
 
 A link to the key properties of our sample can be found here:
 \href{http://portal.nersc.gov/project/cosmo/temp/ameisner/qso\_pages\_v01/}
@@ -126,9 +126,11 @@ dr3\_wise\_lc\_sample.fits.gz}}.  The first catalog has 248 rows,
 which are the selected highly IR-variable sample of objects.  The
 second catalog is the full \hbox{200 622} quasar sample quasars that
 have ``good'' WISE light curves available in DECaLS DR3. In each file,
-there are 3 extensions: ex = 0 -- WISE light curve summary metrics; ex
-= 1 -- DECaLS DR3 Tractor data for each object; ex = 2 -- SDSS data
-for each object.
+there are 3 extensions: the first extention are the WISE light curve
+summary metrics; the second extension the DECaLS DR3 data for each
+object, and the third extenion, the SDSS data for each object.
+A full characterization of the typical mid-IR quasar variability will be
+presented separately.
 
 \subsection*{Additional Multiwavelength data}
 Checking the data archives we found there was no source within 30
@@ -144,7 +146,7 @@ not in either {\it Chandra} or {\it XMM-Newton}.
 
 
 
-\section*{Relevant Timescales}
+\section*{Further Model Details}
 %— Nic, Saavik, Barry to begin to sketch-up a “cartoon” to show the
 %time evolution of the a model and system here. This sound look to
 %include descriptions of the the e.g. sound speed, disk height and
@@ -204,9 +206,11 @@ reproduce both the change at short wavelengths and the observed V-band
 change.
 We can parameterize the relevant disk timescales at $R\sim 50 r_{g}$ as:
 
-There are several relevant timescales associated with J110057 and our 
-model explaining the observations. These are: 
 
+\subsection*{Relevant Timescales}
+There are several relevant timescales associated with J110057 and our
+model explaining the observations. These are given in
+Table~\ref{tab:timescales}.
 %``Relevant disk timescales around a $M_{\rm BH} = 10^{8} M_{\odot}$ at $R\sim 25r_{g}$ are:''
 \begin{table}
   \centering
@@ -217,18 +221,18 @@ model explaining the observations. These are:
 && \\
 Orbital                      & $t_{\rm orb}$          &  $6\; {\rm days}
                                                                      \left( \frac{R}{50 r_{g}}  \right)^{3/2}
-                                                                     \frac{ r_{g}}{c}$\\
+                                                                    \left( \frac{ r_{g}}{c} \right)$\\
 && \\
 Thermal                    &  $t_{\rm thermal}$    &  $6 \; {\rm months} 
                                                                         \left( \frac{\alpha}{0.03}  \right)^{-1}
                                                                         \left( \frac{R}{50 r_{g}}  \right)^{3/2}
-                                                                         \frac{ r_{g}}{c}  $ \\
+                                                                       \left(  \frac{ r_{g}}{c}\right)  $ \\
 && \\
 Front propagation   & $t_{\rm front}$             & $11 {\rm yr}
                                                                          \left( \frac{h/R}{0.05}  \right)^{-1}
                                                                          \left( \frac{\alpha}{0.03}  \right)^{-1}
                                                                         \left( \frac{R}{50 r_{g}}  \right)^{3/2}
-                                                                      \frac{ r_{g}}{c}$\\
+                                                                     \left( \frac{ r_{g}}{c}\right)$\\
 && \\
  Cloud-crushing      &  $t_{\rm cc}$             &   $100\; {\rm yr} \; 
                                                                        \left(  \frac{  \rho_{\rm cloud}/\rho_{\rm medium}}{10^6}  \right )^{1/2} 
@@ -239,19 +243,16 @@ viscous                     & $t_{\rm \nu}$             & $230 {\rm yr}
                                                                          \left( \frac{h/R}{0.05}  \right)^{-2}
                                                                          \left( \frac{\alpha}{0.03}  \right)^{-1}
                                                                         \left( \frac{R}{50 r_{g}}  \right)^{3/2}
-                                                                      \frac{ r_{g}}{c}$\\
+                                                                      \left( \frac{ r_{g}}{c} \right)$\\
 && \\
 \hline \hline
     \end{tabular}
+    \caption{Here, $\alpha$ is the viscosity of the disk; $\rho_{\rm cloud}$ is ; $\rho_{\rm medium}$ is  ;
+      $R$ is the radius of the accretion disk; $r_{g}$ is the Gravitational radius; 
+      $V_{\rm rel}$ is .}
+    \label{tab:timescales}
     \centering
   \end{table}
-where 
-$\alpha$ is the viscosity of the disk; 
-$\rho_{\rm cloud}$ is ;
-$\rho_{\rm medium}$ is  ;
-$R$ is the radius of the accretion disk; 
-$r_{g}$ is the Gravitational radius; 
-$V_{\rm rel}$ is .
 
 
 \section*{Comparison with Guo et al. 2016}
