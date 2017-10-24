@@ -97,7 +97,12 @@ boss_specz = 22.5-2.5*(math.log10(boss_spec_z['flux_nanomaggies']))
 ## http://matplotlib.org/examples/statistics/errorbar_limits.html
 ## http://matplotlib.org/examples/color/named_colors.html
 plt.rcParams.update({'font.size': 14})
-fig, ax = plt.subplots(figsize=(17.0, 8.0))
+
+# 17.0 and 8.0 for paper
+#fig, ax = plt.subplots(figsize=(17.0, 8.0))
+# 12.0 and 8.0 for job app figure
+fig, ax = plt.subplots(figsize=(12.0, 8.0))
+
 
 
 ## Plotting the SPECTRA as vertical lines
@@ -117,11 +122,12 @@ ax.errorbar(CRTS['MJD'],   CRTS['mag'],   yerr=CRTS['mag_err'],   fmt='o', linew
 ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], fmt='o', linewidth=lw, ms=ms, color='dimgray')
 
 ## Pan-STARRS
-ax.errorbar(PS_g['MJD'], PS_g['mag'], yerr=PS_g['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='olivedrab')
-ax.errorbar(PS_r['MJD'], PS_r['mag'], yerr=PS_r['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='red')
-ax.errorbar(PS_i['MJD'], PS_i['mag'], yerr=PS_i['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='teal')
-ax.errorbar(PS_z['MJD'], PS_z['mag'], yerr=PS_z['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='lightgrey')
-ax.errorbar(PS_y['MJD'], PS_y['mag'], yerr=PS_y['mag_err'], fmt='d', linestyle=ls, linewidth=lw, color='darkmagenta')
+ms=10
+ax.errorbar(PS_g['MJD'], PS_g['mag'], yerr=PS_g['mag_err'], fmt='d', linestyle=ls, ms=ms, linewidth=lw, color='olivedrab')
+ax.errorbar(PS_r['MJD'], PS_r['mag'], yerr=PS_r['mag_err'], fmt='d', linestyle=ls, ms=ms, linewidth=lw, color='red')
+ax.errorbar(PS_i['MJD'], PS_i['mag'], yerr=PS_i['mag_err'], fmt='d', linestyle=ls, ms=ms, linewidth=lw, color='teal')
+ax.errorbar(PS_z['MJD'], PS_z['mag'], yerr=PS_z['mag_err'], fmt='d', linestyle=ls, ms=ms, linewidth=lw, color='lightgrey')
+ax.errorbar(PS_y['MJD'], PS_y['mag'], yerr=PS_y['mag_err'], fmt='d', linestyle=ls, ms=ms, linewidth=lw, color='darkmagenta')
 
 ## SDSS "original photometry"
 ms = 14
@@ -136,17 +142,17 @@ ax.errorbar(SDSS_z['MJD'], SDSS_z['mag'], yerr=SDSS_z['mag_err'], fmt='o', ms=ms
 
 ## Photometry from SDSS spectrum...
 ms=12
-plt.plot(sdss_spec_u['mjd'], sdss_specu, marker='s', markersize=ms, color="b")
-plt.plot(sdss_spec_g['mjd'], sdss_specg, marker='s', markersize=ms, color="olivedrab")
-plt.plot(sdss_spec_r['mjd'], sdss_specr, marker='s', markersize=ms, color="red")
-plt.plot(sdss_spec_i['mjd'], sdss_speci, marker='s', markersize=ms, color="teal")
-plt.plot(sdss_spec_z['mjd'], sdss_specz, marker='s', markersize=ms, color="lightgrey")
+#plt.plot(sdss_spec_u['mjd'], sdss_specu, marker='s', markersize=ms, color="b")
+#plt.plot(sdss_spec_g['mjd'], sdss_specg, marker='s', markersize=ms, color="olivedrab")
+#plt.plot(sdss_spec_r['mjd'], sdss_specr, marker='s', markersize=ms, color="red")
+#plt.plot(sdss_spec_i['mjd'], sdss_speci, marker='s', markersize=ms, color="teal")
+#plt.plot(sdss_spec_z['mjd'], sdss_specz, marker='s', markersize=ms, color="lightgrey")
 ## Photometry from BOSS spectrum...
-plt.plot(boss_spec_u['mjd'], boss_specu, marker='s', markersize=ms, color="b")
-plt.plot(boss_spec_g['mjd'], boss_specg, marker='s', markersize=ms, color="olivedrab")
-plt.plot(boss_spec_r['mjd'], boss_specr, marker='s', markersize=ms, color="red")
-plt.plot(boss_spec_i['mjd'], boss_speci, marker='s', markersize=ms, color="teal")
-plt.plot(boss_spec_z['mjd'], boss_specz, marker='s', markersize=ms, color="lightgrey")
+#plt.plot(boss_spec_u['mjd'], boss_specu, marker='s', markersize=ms, color="b")
+#plt.plot(boss_spec_g['mjd'], boss_specg, marker='s', markersize=ms, color="olivedrab")
+#plt.plot(boss_spec_r['mjd'], boss_specr, marker='s', markersize=ms, color="red")
+#plt.plot(boss_spec_i['mjd'], boss_speci, marker='s', markersize=ms, color="teal")
+#plt.plot(boss_spec_z['mjd'], boss_specz, marker='s', markersize=ms, color="lightgrey")
 
 ##DECaLS
 ms = 10
@@ -168,7 +174,7 @@ ax.errorbar(WISE_W2['MJD'], WISE_W2_AB, yerr=WISE_W2['W2_unc'], fmt='o', ms=ms, 
 
 
 ## Tidy up the figure
-xmin = 51750   ## 49200
+xmin = 51100   #51259  ## 49200
 xmax = 58250
 ymin = 20.65   
 ymax = 16.65
@@ -187,8 +193,8 @@ ax.tick_params('y', direction='in')
 ## https://matplotlib.org/api/legend_api.html
 plt.legend([
         'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
-    'SDSS spec u', 'SDSS spec g', 'SDSS spec r', 'SDSS spec i', 'SDSS spec z',
-   'BOSS spec u', 'BOSS spec g', 'BOSS spec r', 'BOSS spec i', 'BOSS spec z',
+#    'SDSS spec u', 'SDSS spec g', 'SDSS spec r', 'SDSS spec i', 'SDSS spec z',
+#   'BOSS spec u', 'BOSS spec g', 'BOSS spec r', 'BOSS spec i', 'BOSS spec z',
 #   '', '', '', '', '',
  #   '', '', '', '', '',
 #    'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
@@ -199,7 +205,7 @@ plt.legend([
 #            'ULAS Y', 'ULAS J', 'ULAS H', 'ULAS K',
             'WISE W1', 'WISE W2'],
            loc="lower left", ncol=3, shadow=True, fancybox=True,
-           fontsize=14, frameon=True)
+           fontsize=11, frameon=True)
 
 plt.xlabel('MJD')
 plt.ylabel('magnitude (AB)')
