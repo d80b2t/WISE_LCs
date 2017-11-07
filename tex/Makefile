@@ -30,7 +30,26 @@ all :
 #	dvips ERQs_PaperI_rv2.dvi 
 #	ps2pdf ERQs_PaperI_rv2.ps
 #	rm -f ERQs_PaperI_rv2.ps
+
+
+	pdflatex  ${TEXFILE_TWO}
+	pdflatex  ${TEXFILE_TWO}
+	bibtex ${TEXFILE_TWO}
+	bibtex ${TEXFILE_TWO}
+	pdflatex  ${TEXFILE_TWO}
+	pdflatex  ${TEXFILE_TWO}
+	rm -f  ${TEXFILE_TWO}.aux
+	rm -f  ${TEXFILE_TWO}.bbl
+	rm -f  ${TEXFILE_TWO}.blg
+	rm -f  ${TEXFILE_TWO}.dvi
+	rm -f  ${TEXFILE_TWO}.log
+	rm -f  ${TEXFILE_TWO}.out
+	rm -f  ${TEXFILE_TWO}.toc
+	rm -f  ${TEXFILE_TWO}Notes.bib
+
 	open ${TEXFILE}.pdf
+	open ${TEXFILE_TWO}.pdf
+
 
 clean:
 	rm -f \

@@ -1,0 +1,295 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+
+\begin{document}
+\section{Narrative flow and discussion of the flux drop at short wavelengths}
+The narrative for this paper needs to involve ruling out other possibilities so any reader is forced to our working model (ie a cooling front plus opacity). First, there's the clear distinction between an obscuring cloud model and a disk change model:\\
+
+For an obscuring cloud, you need a cloud to cross your line of sight. You also need it to block most of the inner disk so that the ionizing radiation can't hit the clouds and the torus for a period of months-years in order to both explain the WISE IR drop and broadline disappearance as well as why it stays low for a long time (it doesn't simply bounce back once the 'obscuration' is over). This is very difficult on the face of it, because: 1. clouds shouldn't typically infall (they need to lose angular momentum if they're drawn from a distribution with Keplerian orbits). 2. Even if somehow they lose angular momentum in a collision with an approximately equal mass (of opposite angular momentum), they'll be destroyed (certainly no longer coherent) and 3. even if somehow they do infall, intact, the freefall which occurs on timescale 
+\begin{equation}
+t_{ff} \sim 100 \rm{yr} \left(\frac{r}{0.4\rm{pc}}\right)^{3/2}\left(\frac{M}{10^{8}M_{\odot}}\right)^{-1}
+\end{equation}
+will kill them within the cloud-crushing time (they'll be shredded by the Kelvin-Helmholz instability, e.g. see lots of the many pretty hydro simulation pictures of shredded clouds), given by
+\begin{equation}
+t_{\rm cc} \sim 100\rm{yr} \left(\frac{\rho_{cloud}/\rho_{medium}}{10^{6}}\right)^{1/2}\left(\frac{R_{\rm cloud}}{4 \times 10^{10}\rm{km}}\right) \left(\frac{v_{\rm rel}}{10^{4}\rm{km/s}}\right)^{-1}
+\end{equation}
+ so 5. at best you'll end up with a fragmented, comet-like cloud, which should pollute the inner disk (which is why Guo et al. 2016 are incorrect; this thing is \emph{gone} in 45 days in their case, any shredded cloud would take longer to dissipate; $t_{\rm cc}$ is 100yrs and at the beginning of the 'obscuration' the cloud is very much alive and obscuring in their model), but in any case 6: The dust in the cloud is \emph{well inside} the dust sublimation radius
+\begin{equation}
+R_{\rm dust} \approx 0.4\rm{pc}\left( \frac{L}{10^{45}\rm{erg/s}}\right)^{1/2}\left(\frac{T_{\rm sub}}{1500\rm{K}}\right)^{2.6}
+\end{equation}
+and so all the dust will be nuked on the 100year free-fall from the dust-sublimation region. So you can't absorb the UV spectrum with dust, since it should all have been sublimated well before it arrived at the inner disk. In any case, 7. typical extinction profiles from clouds with Hydrogen column densities of $N_{H} \sim 10^{21}-10^{22} \rm{cm}^{-2}$ (comparable to the range expected for NLR-BLR cloud densities) look like Fig. 4 from Gordon et al. (2003), i.e. not at all like the asymptotic drop off at $1/\lambda=3 (\mu m^{-1})=1/300\rm{nm}$ in Guo et al. (2016) and in our 2010 spectrum. Note that in the extinction profiles in Gordon et al. (2003), there's a local maximum near $4.5=1/\lambda (\mu m^{1})$, implying $\lambda=0.2\mu m \sim 200\rm{nm}$ in all of these cloud extinction profiles. This is the broadened Ly$\alpha$ absorption and if you could turn it into a Ly$\alpha$ forest, you might get something like the falling off a cliff at 1/(200-300nm) in our 2010 spectrum (and Guo's spectrum). So it seems that we can make a reasonable case in this paper that this \emph{cannot} be extinction due to a regular cloud.\\
+
+So now we're left with the accretion disk model. Our early 2000s spectrum is easily fit with a thin (SS-like) disk. The problem is the 2010 spectrum and the sharp fall-off at $\sim 200-300$nm, which you cannot reproduce if you simply drop the temperature of a thin disk (since the Planck functions are too wide in wavelength in the inner disk), or even if you use a gray absorber model and uniformly suppress emission at small disk radii. You somehow have to have wavelength dependent absorption combined with a lower disk emissivity.\\ 
+
+If you look in the literature for things that look like our 2010 optical/UV spectrum, the closest thing (apart from Guo+2016 !) I can find is the broadband spectrum of NGC 1097 (Nemmen et al. 2006). In that paper, (and in others modelling LINER/RIAFs) you can see disk model components that look like they would provide our fall-off at 200nm in the 2010 spectrum, which involve a thin disk component extending from $\sim 450r_{g}$ out to the outer regions of the disk, e.g. in NGC 1097 (Nemmen et al. 2006). If you look at Fig. 4 of Nemmen et al. (2006), you see the obvious MCD blackbody-like model component from the thin disk at $R>450r_{g}$ (long dashed line) which falls off a cliff at $\sim 10^{15}$Hz ($\sim 300$nm). They model the disk region interior to this as a RIAF (or ADAF), at a power ($\nu L_{\nu}$) an order of magnitude lower than the MCD in the optical, but spanning many orders of magnitude in frequency (from X-ray to far IR).\\
+
+OK so let's argue that somehow J11 has switched states from a thin disk quasar to a RIAF at small radii and the thin disk only survives at large radii. There are a couple of things we need to worry about. How does the transition happen? Let's assume it's an instability that happens on the thermal timescale of the disk. At large radii the thermal timescale is 
+\begin{equation}
+t_{\rm th} \sim 14{\rm years} \left(\frac{\alpha}{0.03}\right)^{-1}\left(\frac{R}{450r_{g}}\right)^{3/2} \frac{r_{g}}{c}
+\end{equation} 
+which is too long for this parameterization. However, one workaround is if you change $\alpha \rightarrow 0.3$ (King, Pringle \& Livio, 2007 suggest $\alpha=0.1-0.4$ typically), then you get a thermal timescale of $t_{\rm th} \sim 1.4$yrs and the front timescale is
+\begin{equation}
+t_{\rm front} \sim  10{\rm yr} \left(\frac{h/R}{0.05}\right)^{-1}\left(\frac{\alpha}{0.3}\right)^{-1}\left(\frac{R}{450r_{g}}\right)^{3/2} \frac{r_{g}}{c}
+\end{equation}
+so you might make this work if you have a very viscous disk and the effect propagates outwards on a timescale of $\leq 10$yrs from the inner disk. That would leave us with a suppressed UV-X-ray emission from the RIAF (down by a few orders of magnitude from the intensity expected from a thin disk intensity) which would explain the broadlines. Now, from e.g. Abramowicz, Quataert, Narayan+2006 (look at their Fig.4) regular ADAF spectra are basically flat in $\nu L_{\nu}$ and convective ADAFs have a rise to X-ray energies, but all at a low luminosity (roughly $\epsilon \sim 0.005$ in $L=\epsilon \dot{M} c^{2}$ which is a factor of \emph{twenty} lower than the fiducial $\epsilon \sim 0.1$ for a classic thin disk luminosity.\\
+
+So you might then simply mock this up by suppressing the flux from inner disk radii ($<400r_{g}$) in Saavik's low temperature thin disk model by a factor of $20$. The problem with this model is how you restore the thin disk spectrum in 2016. As you can see, if you want to propagate this change back inwards, most of the way to the ISCO by 2016 you need $t_{\rm front}$ to be shorter. You can only do this if $h/R$ is bigger in $t_{\rm front}$ above, say by a factor of $\sim 2$. So, 
+\textbf{Model A:} A viscous ($\alpha \sim 0.3$) thin disk (h/R $\sim 0.5$) inflates and cools to an ADAF. (ADAFs will typically have $\alpha >0.1$).You need a way of triggering the ADAF via some sort of instability and then it needs to cool back down to a thin disk. Note this is in fact the opposite of our original model in that the ions in an ADAF can be ridiculously hot. Essentially you have a super-hot inflated phase that's radiatively inefficient. In principle this is allowed and I can't quite find a way to kill this picture.\\
+
+\emph{Alternatively}, you can argue (as in our original model) that a \emph{cooling} front has propagated through a thin(-ish) disk (\'{a} la the red-pen cartoon). Then, in order to reproduce the steep fall at $\lambda \leq 200$nm in the 2010 spectrum, you need a cool phase that causes extinction at short wavelengths. Now, as a hot phase ($\sim 10^{5-6}$K) cools, it'll fragment into cooler phase clumps around $\sim 10^{4}$K (e.g. McCourt et al. 2016). The main coolants are resonance lines in O,C (see e.g. Fig. 18 in Dopita \& Sutherland 1993, which shows the cooling curves for reasonable low density astrophysical plasmas). The ionization energies for O, C are 13,11eV respectively (ie.$\sim 100$nm). So at wavelengths $<100$nm, opacity will increase dramatically in an edge. However, the gas in the disk is both pressure, turbulent and Doppler broadened, so we expect these ionization edges to kick in centered around 100nm, and then become less efficient at very short wavelengths since
+\begin{equation}
+\kappa \propto \rho T^{-1/2} \nu^{-3}
+\end{equation}
+for Kramers opacities. This implies $\kappa \propto \lambda^{3}$ at increasing wavelengths up to the ionization edge around $100$nm. But this feature will be blurred so, the ionization edges due to C,O resonance lines in the cool phase of this disk will be spread out around $50-200$nm, depressing the flux at these energies. So,\\
+
+\textbf{Model B:} A modestly fat disk (h/R $\sim 0.2$) with modest $\alpha$ cools from the ISCO and propagates outward in a cooling front, collapsing the disk. The 2010 spectrum in this model comes from a cooler disk plus increased opacity (blurred by broadening) at short wavelengths in the cooler phase. In this model, heating occurs from the outside in, in order to explain the 2016 spectrum.\\
+
+Right now, these are the only possible disk models that I can think of that can explain the 2010 and 2016 spectra and the timescales.\\
+
+
+
+
+
+
+\section{Flux drop at short wavelengths: how it happens}
+We need the flux in the 2010 spectrum to drop off a cliff at short wavelengths. Just dropping the temperature of the inner disk doesn't get you the sharp cut-off at $\lambda<300$nm. Instead, it seems that the opacity in the disk changes as the cooling front ripples out. How do we get this opacity change? Fig. 1 shows you how you do it.\\
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=9.0cm,angle=-90]{opacity.eps}
+\end{center}
+\caption[]{Relative intensity of emission from disk as a function of radius due to a cooling front. Black line=original profile, Blue=Relative temperature drop of 5\% out to $r=20$(solid) and $r=55$ (dashed). Red=Relative temperature drop of $10\%$ out to $r=55$. 
+\label{fig:rayleigh1}}
+\end{figure}
+
+I took a toy model approach: assume the original intensity comes from propagation of emission through some sort of disk atmosphere of some fiducial density. I assumed that the disk temperature profile goes as $T(r)=T_{0}r^{-3/4}$, where $T_{0}$ is the temperature at the ISCO or inner edge. I also assumed that the emergent intensity goes as
+\begin{equation}
+I_{\rm emerge}=I_{0} e^{-\kappa \rho h}
+\end{equation}
+where $I_{0}$ is the initial intensity (from the mid-plane say), $\kappa$ is the opacity of the disk 'atmosphere', and $\rho,h$ are the density and height of the 'atmosphere. Now, since we're only interested in relative change, I said let's take a simple Kramers' opacity model (appropriate to e.g. stellar atmospheres; ionized gas, it's all the same):
+\begin{equation}
+\kappa = \kappa_{0} \rho T^{-7/2}
+\end{equation}
+
+This has the same form whether the scattering is bound-free or free-free, both of which will apply here (but mostly free-free). So, for example, if I drop the temperature by say $10\%$ to $0.9T_{0}$, with everything else fixed, $\kappa$ changes by $(0.9)^{-7/2} \sim 1.45$ giving you an intensity drop to $e^{-1.45}\sim 0.23$. Fig. 1 shows the effect on the emergent intensity (assuming $I \propto AT^{4}$) as a function of radius. I assumed $h$ dropped by a factor of $2$ and $\rho$ increased by a factor of 2. Black solid line is the original intensity emitted. Blue line is the emergent intensity assuming a cooling front dropping the temperature by $5\%$ at $r<20$ and $r<55$ (dashed line). Red line assumes a cooling front dropping the temperature by $\sim 10\%$ at $r<55$ by comparison.
+
+\section{Comparison with Guo et al. 2016}
+\emph{tl;dr: Bottom line from Guo$+$16:}\\
+Guo$+$16 conclude the UV drop is the inner disk fading, or a cloud that's infalling. The latter seems to be implausible for a number of reasons. Changing look quasars seem to be driven by changes at the ISCO. Guo$+$16 didn't have any theorists, otherwise they'd have had a Nature paper...
+
+\emph{Just the facts:}\\
+Fig. 1 of Guo et al. (2016) shows a UV collapse (green curve) in their source ($J23+$) at a very similar wavelength to that in the 2010 spectrum of our source ($J11+$) with turnover in both around $\sim 350$nm. Couple of things about this: their collapse happens in 23 days--Fig. 2 of Guo et al. shows this object (J23$+$) was observed with SDSS back on MJD 52177 (normal) and then 23 days later on MJD 52200 i.e. Oct. 18 2001). There's a drop (lower mag is higher on the y-axis) of 1.2mag in u, 0.5mag in g, and r,i,z are all consistent with before. It's observed with SDSS again about a year later and (u,g,v,i,z) are all back consistent with 'normal'. More importantly, XMM-Newton spectra straddle this time period. The XMM-Newton spectra are from June 3 and Nov. 28 2001. Both spectra are consistent with \emph{no} neutral absorption in the rest-frame. So the sightline is clear on both of those dates (i.e. the Nov. spectrum is 45 days \emph{after} the UV catastrophe). They also find that the IR doesn't really change and also that the broad lines are consistent with constant over time.\\
+
+I don't think we have any data from CRTS on this source going back to this time (the stuff Matthew sent goes from MJD 53500-now). Correct me if I'm wrong.
+
+\emph{Implications: disk or eclipse}\\
+So, Guo$+$16 go on to discuss two scenarios: 1) inner accretion disk change and 2) eclipse by an optically thick cloud. They make the point that in principle both models could explain the observation. In scenario 1) they suggest that turning off the disk at $<60r_{g}=30r_{Sch}$ would do it (kind of like us, but less sophisticated ;) ) but they find this implausible because quasars aren't observed to flicker like this typically (sic). \\
+
+They spend more time on scenario 2). So, based on the inital optical spectrum (23 days before the u-band dip) and the Nov. X-ray spectrum (45 days after the u-band dip) they say that the dip lasts $<65$days. ie. $R_{\rm cloud}/v_{\rm cloud} <65$light-days. The problem there is that the presumably dusty cloud occulter has to be outside the dust sublimation radius (e.g. eqn. 1 in Nenkova 2008).
+\begin{equation}
+R_{\rm dust} \approx 0.4\rm{pc}\left( \frac{L}{10^{45}\rm{erg/s}}\right)^{1/2}\left(\frac{T_{\rm sub}}{1500\rm{K}}\right)^{2.6}
+\end{equation}
+But the problem there is that you'd need a big cloud to block out most of a disk of diameter $\sim 2 \times 60r_{g}$ for a modest length of time ($<65$days) . They use $M_{BH}=2.6 \times 10^{8}M_{\odot}$ and assume $R_{\rm cloud} \geq 120r_{g}$ to block most of the UV disk, so $R_{\rm cloud} \geq 10^{-3}$pc. They figure out the orbital timescale at $R_{\rm dust}$ is $v_{\rm cloud} \sim 1100$km/s, so the fastest orbital passage of this cloud is $t_{\rm cloud} \sim R_{\rm cloud}/v_{\rm cloud} >1$year. But we need the cloud to cross the UV disk around an order of magnitude faster than this. So then they suggest a \emph{radially infalling} cloud at higher velocities (presumably $O(10^{4}\rm{km/s})$ and much closer in, which would evaporate the dust, removing the reddening.\\
+
+This latter scenario is very hard for me to make work. First, this is a QSO with broad lines, so presumably we're looking close to face-on at this object. The odds that you'd get radial infall across our sightline seem small since there's a strong outflow and radiation pressure providing a headwind. Second, you need the gas cloud to lose all angular momentum. It's very hard to imagine clouds on Keplerian orbits colliding with an equal mass and not disrupting from the collision. Even if you can make it work, infalling clouds are destroyed in a cloud-crushing time (Klein et al. 1994)
+\begin{equation}
+t_{\rm cc} \sim \left(\frac{\rho_{cloud}}{\rho_{medium}}\right)^{1/2} \frac{R_{\rm cloud}}{v_{\rm rel}}
+\end{equation}
+where $\rho_{cloud},\rho_{medium}$ are the densities of the cloud and surrounding medium and $v_{\rm rel}$ is the relative velocity between the cloud and the intercloud medium. Parameterizing this as
+\begin{equation}
+t_{\rm cc} \sim 100\rm{yr} \left(\frac{\rho_{cloud}/\rho_{medium}}{10^{6}}\right)^{1/2}\left(\frac{R_{\rm cloud}}{4 \times 10^{10}\rm{km}}\right) \left(\frac{v_{\rm rel}}{10^{4}\rm{km/s}}\right)^{-1}
+\end{equation}
+In principle this could just about make it to the SMBH before dying if it reaches a modest terminal velocity (O($10^{4}$km/s)). However, if it's on a radial path, it shouldn't cross our sightline like this. If it's dying, there should be signatures (like absorption from the messy cloud disruption, or a tail). Like I said, this is very hard to envisage.\\
+
+So the alternative is we need a short-term change in the inner disk that becomes obvious over 23 days with no signatures of absorption, but Rayleigh scattering (due to increasing disk atmospheric density from cooling), and then recovery within a year at most. I would suspect a change at the ISCO (e.g. NZT to ZT) could give you a very rapid dimming of the UV. Cooling front propagates quickly which implies the disk is very puffed up (possibly more than in our source). A rebound at the ISCO would get the UV part of the spectrum to recover quickly. It also means a short-lived drop in the ionizing luminosity so the effect on the broad lines and distant IR producing material is minimal/washed-out. So, this is different from our source, where the heating comes radially inwards. We were lucky that we had that WISE drop to show us this was a longer-lived effect.\\
+
+
+\section{On the importance of also plotting on a linear scale}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=9.0cm,angle=0]{RayleighNo2016.eps}
+\end{center}
+\caption[cartoon]{Plot of early 2000s spectrum (teal) and 2010 spectrum (purple) for contrast. Vertical dashed lines correspond to the span of observed V-band redshifted to rest frame. Teal spectrum is pretty well fit with a non-zero torque (NZT) boundary condition (black dashed line curve), ie puffed-up disk at ISCO. Solid black curve corresponds to a change in boundary condition from NZT to ZT (thin disk at ISCO).
+By contrast, the 2010 spectrum (purple) is well fit down to 350nm with a ZT model where the flux has been suppressed to $1\%$ of normal. However, clearly at $\lambda<350$nm we still need to kill some flux. Yellow green solid line shows a $F \propto \lambda^{-4}$ (rayleigh scattering) curve normalized to the flux at $350$nm. 
+\label{fig:rayleigh1}}
+\end{figure}
+
+So, it looked on the log scale that we could nicely get a turnover in the MCD spectrum. However, if you fit the data that Dan sent around on a linear scale, as Saavik did (Fig.1) you can see that the suppression of flux from $R<50r_{g}$ at $1\%$ (dashed red line) gives you the right normalization for the 2010 spectrum but still misses the sharp cut-off. So we still need to preferentially kill off flux at higher wavelengths. Since our working model is some sort of disk cooling front propagating radially outwards, that made us think about the effect of scattering from increasing the density of scatterers (particularly Rayleigh scattering since this is $ \propto \lambda^{-4}$) as the disk atmosphere collapses.
+
+Now, have a look at the 2016 spectrum (Fig.2). It's the same as Fig. 1 except we've included the 2016 data (in that yellow-green colour). You can see that it looks like the 2010 curve down to 350nm, but the scattering screen has gone. Our hypothesis is that the atmosphere has fully collapsed by this point (the rain has ceased; this probably occurs on the freefall time in the disk).
+
+Now since the optical depth to the mid-plane is $\tau=\kappa \Sigma/2$, where $\kappa$ is the opacity and $\Sigma$ is the disk surface density and the effective disk surface temperature $T_{\rm eff}$ can be written in terms of the midplane temperature $T_{\rm mid}$ as (Sirko \& Goodman 2003; eqn. 4)
+\begin{equation}
+T^{4}_{\rm mid}= \left(\frac{3}{8} \tau +\frac{1}{2} \right)T_{\rm eff}^{4}
+\end{equation}
+and since $\kappa=n_{e}\sigma_{T} + n_{R} \sigma_{R}$ where $n_{e}$ is the electron density, $n_{R}$ is the number density of Rayleigh scatterers, $\sigma_{T}$ is the Thompson cross-section and $\sigma_{R}$ is the Rayleigh cross-section ($\propto 1/\lambda^{4}$ where $\lambda$ the incident wavelength). If $\tau \gg 1$ which we assume for an optically thick disk then, just thinking about the Rayleigh scatterers
+\begin{equation}
+T_{\rm eff} \approx \tau^{-1/4} T_{\rm mid} \propto n_{R}^{-1/4} \sigma_{R}^{-1/4} T_{\rm mid}
+\end{equation}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=9.0cm,angle=0]{RayleighYes2016.eps}
+\end{center}
+\caption[cartoon]{
+As Fig.1 except including 2016 spectrum now. Looks similar to 2010 except Rayleigh scattering no longer needed.  
+\label{fig:rayleigh2}}
+\end{figure}
+
+
+If we say that the disk cools and becomes thinner then the number density of scatterers ($n_{e},n_{R}$) must increase. This increases $\kappa$ and therefore $\tau$, so the effective surface disk temperature drops (assuming the mid-plane is basically unchanged). If $n_{R}$ increases by e.g. $10^{4}$, then the effective surface temperature drops by an order of magnitude. The intensity of scattered radiation goes as $1/\lambda^{4}$. From Fig.2 in Sirko \& Goodman (2003), you can see that the opacity can change by up to three orders of magnitude between the inner and outer disk.
+
+
+
+\section{Useful background for torques at the ISCO}
+From e.g. Zimmerman et al. (2005), we can write the maximum accretion disk temperature as
+\begin{equation}
+T_{\rm max} = f \left(\frac{3 G M \dot{M}}{8 \pi R_{in}^{3} \sigma}\right)^{1/4}
+\end{equation}
+where $M$ is the central mass, $\dot{M}$ is the accretion rate, $R_{in}$ is the innermost radius of the disk and $f$ is a parameter (O(1)) that approximates a spectral hardening modification from pure black body ($f=1$).  We can parameterize the innermost (maximum) disk temperature for a generic thin disk as
+\begin{equation}
+T_{\rm max} \approx 5.6 \times 10^{5}\rm{K}\left( \frac{M_{\rm BH}}{10^{8}M_{\odot}}\right)^{-1/4}\left(\frac{\dot{M}}{\dot{M}_{\rm Edd}} \right)^{1/4}\left( \frac{\eta}{0.1}\right)^{-1/4}\left( \frac{R_{in}}{6r_{g}}\right)^{-3/4} \left(\frac{f}{2}\right)
+\end{equation}
+where $M_{\rm BH}$ is the black hole mass, $\dot{M}$ is the accretion rate (in units of $\dot{M}_{\rm Edd}$), the Eddington accretion rate, $\eta \sim 0.1$ is the standard accretion efficiency, and $R_{in}=6r_{g}$, the ISCO for a Schwarzschild BH. For comparison, keeping all the parameters the same but changing  $M_{BH}=10M_{\odot}$ yields $T_{\rm max} \sim 3.1 \times 10^{7}$K.\\
+
+If the disk is thin, we expect there to be zero-torques at $R_{in}$, as the material plunges in free-fall at $r<R_{in}$. The resulting zero-torque temperature ($T_{ZT}$) profile is given by (Zimmermann et al. 2005)
+\begin{equation}
+T_{ZT}= T_{\rm max} \left(\frac{r}{R_{in}}\right)^{-3/4}\left[ 1- \left(\frac{r}{R_{in}}\right)^{-1/2}\right]^{1/4} 
+\end{equation}
+and is given by the red curve in Fig.~\ref{fig:torques}. However, magnetic torques (Gammie 1999; Krolik \& Agol 2000) or a puffed-up disk (Narayan et al. 1997; Ashfordi \& Paczynski 2003) can have a finite or quite large torque at the inner edge. In this case, the disk temperature profile looks like
+\begin{equation}
+T_{NZT}=T_{\rm max} \left(\frac{r}{R_{in}}\right)^{-3/4}
+\end{equation} 
+or the black curve in Fig.~\ref{fig:torques}.\\
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=6.0cm,angle=-90]{disk_torque.eps}
+\end{center}
+\caption[cartoon]{
+Comparison of the disk temperature profile using eqns.2-4, due to a change in the boundary condition at the inner edge ($R_{in}$). Red=standard zero torque at ISCO assumption. Black= non-zero torque at ISCO.  
+\label{fig:torques}}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=6.0cm,angle=-90]{medd.eps}
+\end{center}
+\caption[cartoon]{
+Comparison of the disk temperature profile using eqns.2-4, by changing the accretion rate. Black=$1.0\times$ Eddington. Red= $0.1\times$Eddington. Blue=$0.01\times$ Eddington.  
+\label{fig:medd}}
+\end{figure}
+
+
+Integrating over the temperature profiles above (Zimmermann et al. 2005) find
+\begin{equation}
+L_{\rm disk}[ZT,NZT]=[1,3]\frac{GM\dot{M}}{2R_{in}}
+\end{equation}
+or the disk is $\times 3$ more luminous due to this extra torquing at $R_{in}$.\\
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=6.0cm,angle=-90]{rin.eps}
+\end{center}
+\caption[cartoon]{
+Comparison of the disk temperature profile using eqns.2-4, by changing the location of the disk inner edge ($R_{in}$). Red=1.2$r_{g}$ (max. spin Kerr BH, prograde compared to gas). Black=$6r_{g}$ (Schwarzschild BH, zero spin). Blue=$9r_{g}$ (max. spin Kerr BH, retrograde compared to gas).
+\label{fig:rin}}
+\end{figure}
+
+Fig.~\ref{fig:medd} shows the effect of changing $\dot{M}$ in eqn.(2). Black curve in Fig.~\ref{fig:medd} is the same as the black curve in Fig.~\ref{fig:torques}, and the red and blue curves correspond to $\dot{M}=0.1,0.01\dot{M}_{\rm Edd}$ respectively.\\
+
+Fig.~\ref{fig:rin} shows the effect of changing $R_{in}$ in eqn.(2). Black curve in Fig.~\ref{fig:rin} is the same as the black curve in Fig.~\ref{fig:torques}, and the red and blue curves correspond to $R_{in}=1.2,9.0r_{g}$ respectively.\\
+
+Since from eqn.~(5), $L_{\rm disk}=3GM\dot{M}/2R_{in}$, going from $R_{in}=6r_{g} \rightarrow 1.2r_{g}$ increases disk luminosity by a factor of $\times 5$ and keeping $R_{in}$ fixed, but changing  $\dot{M}$ by an order of magnitude changes $L_{\rm disk}$ by an order of magnitude.\\
+
+\section{What can we figure out from observations?}
+From Fig.1 in Nic's draft, we assume the source went from about 17.9mag to 18.5mag in the observed V-band over at most $\sim $100 days. This translates to a Johnson V-band flux density change from 0.262mJy to 0.151mJy. However, $1+z=\lambda_{obs}/\lambda_{em}=1.378$. So the observed V-band 380-750nm corresponds to 276-544nm in the rest frame (-6.56,-6.26 in log $\lambda$) or near UV to yellow in the quasar frame. Source flux density dropped to $58\%$ of original in $\sim 3$ months. How does this compare with some of the modelling in the previous section?\\
+
+Simply changing the boundary condition at $R_{in}$ from non-zero torque to zero torque (e.g. collapsing a puffed-up disk inner edge, or, shudder, magnetic fields) leads to the difference between Fig.~\ref{fig:nzt} and Fig.~\ref{fig:zt} as seen below. At $\log \lambda= -6.56$, the flux for $R_{in}=9r_{g}$ (dark blue in both) drops by $\sim 0.2$ dex from $\sim 38.0$ to $\sim 37.8$ or from 10.0 to 6$(\times 10^{37}$ ergs), or to $60\%$ of the initial flux density, so consistent with the numbers above. \\
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=7.0cm,angle=0]{NZT_medd001_zoomout.eps}
+\end{center}
+\caption[cartoon]{
+SED assuming a non-zero torque (puffed up disk/magnetic field) boundary condition at $R_{in}$ and $\dot{M}=0.01M_{\rm Edd}$. Dashed lines are observed V-band converted to restframe wavelength. Red/Black=1.2$r_{g}$ (max. spin Kerr BH, prograde compared to gas). Green=$6r_{g}$ (Schwarzschild BH, zero spin). Blue=$9r_{g}$ (max. spin Kerr BH, retrograde compared to gas).
+\label{fig:nzt}}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=7.0cm,angle=0]{ZT_medd001_zoomout.eps}
+\end{center}
+\caption[cartoon]{
+As previous figure, but for zero torque (thin disk) at ISCO.
+\label{fig:zt}}
+\end{figure}
+
+However, in the restframe spectrum in Nic's draft, the 300nm flux seems to drop by a factor of $\sim 5$ (how sure are we about this normalization?) It certainly seems like the flux at $\lambda<350$nm is dropping relative to the optical flux 400-700nm. If the optical continuum were normalized to overlap, it looks like a factor of $2-3$ drop in relative flux at shorter wavelengths. In order to make the multi-color blackbody spectrum do this, we actually need dim large regions of the inner disk simultaneously.\\
+
+For example, if the entire inner disk at $\leq 50 r_{g}$ changed state and became dimmer on thermal timescales at each annulus, we can reproduce both the change at short $\lambda$ and the observed V-band change . We can parameterize the relevant disk timescales at $R\sim 50r_{g}$ as:
+\begin{eqnarray}
+t_{\rm orb} & \sim & 6{\rm days} \left(\frac{R}{50r_{g}}\right)^{3/2} \frac{r_{g}}{c}\\
+t_{\rm th} & \sim & 6{\rm months} \left(\frac{\alpha}{0.03}\right)^{-1}\left(\frac{R}{50r_{g}}\right)^{3/2} \frac{r_{g}}{c}\\
+t_{\rm front} & \sim & 11{\rm yr} \left(\frac{h/R}{0.05}\right)^{-1}\left(\frac{\alpha}{0.03}\right)^{-1}\left(\frac{R}{50r_{g}}\right)^{3/2} \frac{r_{g}}{c}\\
+t_{\nu} & \sim & 230{\rm yr} \left(\frac{h/R}{0.05}\right)^{-2}\left(\frac{\alpha}{0.03}\right)^{-1}\left(\frac{R}{50r_{g}}\right)^{3/2} \frac{r_{g}}{c}.
+\end{eqnarray}
+The problem with this scenario is that you need thermal changes to occur simultaneously at each annulus in order to make this effect happen quickly. If this thermal change happens e.g. at small disk radii, you then need the effect to propagate on the $t_{\rm front}$ timescale. So, e.g. at 15$r_{g}$, $t_{\rm front} \sim 2$yrs and at 50$r_{g}$, $t_{\rm front} \sim 11$yrs, but at 150$r_{g}$, $t_{\rm front} \sim 60$yrs.\\
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=7.0cm,angle=0]{NZT_medd001_rin6_fdep001.eps}
+\end{center}
+\caption[cartoon]{
+SED assuming a non-zero torque (puffed-up disk/mag. field) boundary condition at $R_{in}$ and $\dot{M}=0.01M_{\rm Edd}$. Dashed lines are observed V-band converted to restframe wavelength. Black/Red=unperturbed disk down to 6$r_{g}$. Green= dimming the disk by $1\%$ at all radii $<50r_{g}$. Blue= as green, but out to $150r_{g}$.
+\label{fig:nzt_dim}}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=7.0cm,angle=0]{ZT_medd001_rin6_fdep001.eps}
+\end{center}
+\caption[cartoon]{
+As previous Fig. but for zero-torque at ISCO (thin disk).
+\label{fig:zt_dim}}
+\end{figure}
+
+Figs.~\ref{fig:nzt_dim} and \ref{fig:zt_dim} show the effect of simultaneously dimming the flux to $1\%$ of unperturbed disk from the innermost $<50r_{g}$ (green), $<150r_{g}$ (blue). We get the strong curvature in the continuum at short wavelength when we dim out to $\sim 150r_{g}$. We get some curvature when we dim out to $\sim 50r_{g}$.\\
+Next steps: Maybe a change in $R_{in}$ \emph{and} NZT$\rightarrow$ZT at the disk edge can explain both the 300nm drop by a factor of 2-3? I would lean towards the latter right now, as easier to explain (e.g. disk retreats a little and puffs up as local accretion rate drops temporarily). So stuff still to think about.\\
+
+\section{The heartbeat in GRS1915+105}
+
+Now if we look at the 'hearbeat' state in GRS $1915+105$, we have $M_{bh}=12.4^{+2}_{-1.8}M_{\odot}$ and $d=8.6^{+2.0}_{-1.6}$kpc. The period of the oscillation is 50s. Translating this to a $M_{bh}=10^{8}M_{\odot}$, we get an equivalent light-crossing period of $50 \times 10^{7}$s or $\sim 16$years. (Interesting: I wonder if e.g. PG 1302-105 is in a heartbeat state!?)\\
+
+From Nielsen et al. 2011, their model (section 6 in their paper, Fig. 14, Table 3) for the heartbeat goes as: 
+\begin{enumerate}
+\item{a wave of excess material (from $\dot{M}$) originating between $20-30r_{g}$ and propagates radially inward and outward.}
+\item{Disk responds by increasing $R_{in}$ at constant temperature.}
+\item{Disk luminosity increases quickly. At max. $R_{in}$ drops sharply, temp. spikes, disk becomes unstable}
+\item{Disk ejects material. Collides with corona. Hard X-ray pulse.}
+\item{Disk relaxes, density wave subsides.}
+\item{Intense X-ray wind from outer disk due to X-rays}
+\item{Short lived jet}
+
+\end{enumerate}
+
+Relevant disk timescales around a $M_{bh}=10^{8}M_{\odot}$ at $R\sim 25r_{g}$ are:
+\begin{eqnarray}
+t_{\rm orb} & \sim & 2{\rm days} \left(\frac{R}{25r_{g}}\right)^{3/2} \frac{r_{g}}{c}\\
+t_{\rm th} & \sim & 2.5{\rm months} \left(\frac{\alpha}{0.03}\right)^{-1}\left(\frac{R}{25r_{g}}\right)^{3/2} \frac{r_{g}}{c}\\
+t_{\rm front} & \sim & 4{\rm yr} \left(\frac{h/R}{0.05}\right)^{-1}\left(\frac{\alpha}{0.03}\right)^{-1}\left(\frac{R}{25r_{g}}\right)^{3/2} \frac{r_{g}}{c}\\
+t_{\nu} & \sim & 82{\rm yr} \left(\frac{h/R}{0.05}\right)^{-2}\left(\frac{\alpha}{0.03}\right)^{-1}\left(\frac{R}{25r_{g}}\right)^{3/2} \frac{r_{g}}{c}.
+\end{eqnarray}
+
+\section{So is the heartbeat relevant?}
+From $t_{\nu}$ above, it seems like we'd need a slow rise (80-100years) for the first (long) part of the cycle. But that's not consistent with a $\sim 16$yr period for the oscillation that you might expect from a simple scaling of light-crossing time ($10M_{\odot} \rightarrow 10^{8}M_{\odot}$). At $10r_{g}$, $t_{\nu}$ above is 20yrs, so maybe. But why is the disk behaving like this at $10r_{g}$ (or $25r_{g}$ for that matter). 
+Could predict observables based on the sequence above from Nielsen et al. (2011).\\
+ Nielsen et al. talk about a $R_{in}$ getting closer to the BH accounting for the increase in $L_{\rm  disk}$ but they don't explore a state-change as in Fig.~\ref{fig:torques}. That should give us a different prediction  and (shorter) timescales in general. 
+
+In general, we don't have a detailed oscillation profile and haven't seen it repeat, so can't really draw a parallel. Dead end for now, unless the cycle repeats.
+
+\end{document}

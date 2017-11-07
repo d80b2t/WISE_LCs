@@ -1,0 +1,306 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+%%     NPR's  Nature template...  
+%%     v1.0.0   Thu Dec  8 19:05:57 EST 2016
+%%                                                                         
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{nature}
+%\documentclass{natureprintstyle}
+
+\input{format}
+\bibliographystyle{naturemag}
+
+\title{A new interpretation of optical and infrared variability in Quasars}
+
+\author{Nicholas~P.~Ross$^{1}$ et al.}  
+% Saavik~K.~Ford,$^{7}$, Barry~L.~McKernan$^{7}$,
+% Daniel~Stern$^{3}$, Aaron~Meisner$^{2}$, 
+% Matthew~Graham$^{4}$, 
+% Arjun~Dey$^{5}$ \& David~J.~Schlegel$^{2}$ 
+% Andrew~Drake$^{4}$, 
+% Roberto~J.~Assef$^{6},
+% Mislav~Balokovic$^{6}, 
+% Murray~Brightman$^{4}, 
+% for the DECaLS Consortium. 
+
+\begin{document}
+
+\maketitle
+
+\begin{affiliations}
+  \item Institute for Astronomy, University of Edinburgh, Royal Observatory, Blackford Hill, Edinburgh EH9 3HJ, United Kingdom 
+ % \item Department of Astrophysics is located in the Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, New York, NY 10024, U.S.A
+  %\item Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA 
+  %\item California Institute of Technology, 1200 East California Boulevard, Pasadena, CA 91125, USA
+  %\item Steward Observatory, 933 North Cherry Avenue, Tucson, AZ 85721, U.S.A.
+%  \item Universidad Diego Portales, Av Republica 180, Santiago, Regi ́on Metropolitana, Chile}
+%  \item Lawrence Berkeley National Laboratory, 1 Cyclotron Road, Berkeley, CA 92420, U.S.A. 
+\end{affiliations}
+
+
+\begin{abstract}
+Changing-look quasars are a class of recently identified objects in
+which the strong UV continuum and broad optical hydrogen emission
+lines associated with unobscured quasars either appear or disappear on
+timescales of months to years \cite{LaMassa2015, Runnoe2016,
+MacLeod2016, Ruan2016}.  The physical processes responsible for this
+behaviour are still debated, but changes in the black hole accretion
+rate or accretion disk structure appear more likely than changes in
+obscuration \cite{Hutsemekers2017, Sheng2017}.  Here we report on
+three epochs of spectroscopy of SDSS J110057.70-005304.5, a quasar at
+a redshift of $z=0.378$, whose UV continuum and broad hydrogen
+emission lines have dramatically faded over the past $\approx$20
+years. The change in this quasar was initially seen in the infrared,
+and an archival spectrum from 2010 shows an intermediate phase of the
+transition during which the flux below rest-frame 340nm has
+collapsed. This is unique compared to previously published examples of
+changing-look quasars, and is best explained by dramatic changes in
+the innermost regions of the accretion disk. The optical continuum has
+been rising again since mid-2016, leading to a prediction of a rise in
+hydrogen emission line flux in the next few months. If our model is
+confirmed, the physics of `changing look' quasars are governed by
+processes at the innermost stable circular orbit (ISCO) around the
+black hole, and the structure of the innermost disk. The easily
+identifiably and monitored Changing Look Quasars would then provide a
+new probe of the strong gravity regime.
+\end{abstract}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%   SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  SECTION 1  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Introduction}
+The ``Changing-Look'' quasar phenomenon, where the dramatic
+disappearance, or appearance, of prominent broad optical emission
+lines is seen on month-to-year timescales, is now widely observed,
+\cite{LaMassa2015, MacLeod2016, Runnoe2016, Ruan2016, Gezari2017,
+Rumbaugh2017} yet poorly understood. Changes in obscuration are
+generally disfavoured \cite{Hutsemekers2017, Sheng2017}, and it is
+clear that the CLQs are a key laboratory into understanding accretion
+physics and the nature of the AGN broad line region (BLR).
+
+For the AGN accretion disk, the famous $\alpha-$disk model \cite{SS73}
+for a optically thick, geometrically thin disk ($h / R \ll 1$, where
+$h$ is the vertical scale height of the disk) is known to have serious
+short-comings e.g.  \cite{Antonucci1999,
+Koratkar_Blaes1999,Lawrence2012}.  For example, AGN seem to be cooler
+than they ought to be \cite[e.g., ][]{Lawrence2012} with the SEDs of
+AGN showing a universal near-UV shape, reaching a maximum in $\nu
+S_{\nu}$ around 1100\AA.  Such a peak suggests a characteristic
+temperature of T$\sim$30 000K, wheres for a thermal model, the
+characteristic temperature should be roughly T$\sim$100
+000K. Moreover, constraints from microlensing observations for the
+size of the optical emission region \cite[e.g.,][]{Pooley2007,
+Morgan2010, Morgan2012, Mosquera2011} suggestion this region is larger
+than the one predicted by the standard Shakura-Sunyaev disk.
+
+CLQs have traditionally been discovered by looking for large, $|
+\Delta m | >1$ magnitude changes in the optical light curves (e.g. in
+the $g$-band). However, we have taken advantage of the ongoing
+Near-Earth Object WISE Reactivation mission \cite[NEOWISE-R;
+][]{Mainzer2014, Meisner2017a, Meisner2017b}, as well as the Dark
+Energy Camera Legacy Survey (DECaLS\footnote{{\tt
+legacysurvey.org/decamls/}}) in order to discover new CLQs. Our team
+is the first to extend this selection to the infrared using NEOWISE-R
+mission data. Indeed, we have found a sample of SDSS quasars that show
+dramatic decreases in their IR flux over the course of a few
+years. These changes are on timescales too short to be considered due
+to changes in obscuration, so a new explanation is needed.
+
+In this article we present the $z=0.378$ quasar SDSS
+J110057.70-005304.5 (hereafter J110057) that we have 
+spectral observations showing a transition in the blue-continuum 
+slope traditionally associated with the blackbody 
+ object with broad 
+hydrogen emission lines, into a 
+to become a regular
+galaxy. We present a model that invokes changes at the innermost
+stable circular orbit (ISCO) to be the triggering event for the change
+in the accretion disk, which along along with the changes in the BELs,
+explains a major change to the disk interior to 150$R_{g}$ as well as
+the IR light curves. Critically, our model makes predictions to the
+future behvaiour of J110057.
+ 
+\begin{figure*}
+  \centering
+  %% trim=l b r t 
+  % \includegraphics[width=8.00cm, height=7.50cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip] {J110057_CRTS_lightcurve_v0pnt1.png}
+  \includegraphics[width=16.00cm, height=7.00cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/lc/J110057_lc_20171020v1.pdf}
+  \caption[]{The light curve of J110057. SDSS, DECaLS and PanSTARRS
+    give the optical photometery. The WISE IR light curves are shown and
+    their dramatic decrease led to the identification of J110057. The
+    three spectral epochs are shown by the vertical lines.}
+  \label{fig:J110057_LC_CRTS}
+\end{figure*}
+
+
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=16.00cm, height=7.00cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/spectra/J110057_spectra_wBalmers.pdf}
+  \centering
+  \caption[]{
+Optical spectra of J110057 obtained on MJD 51908 (blue; SDSS), 55302,
+(red; BOSS) and 57809 (black; Palomar/DBSP).  {\it Left::} The full
+optical spectra; {\it Right (top)::} Zoom in on the H$\beta$-\oiii
+complex; {\it Right (bottom)::} Zoom in on the H$\alpha$-\nii complex.
+}
+  \label{fig:J110057_spectra}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2   SECTION 2  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}  
+We started by matching the SDSS-III BOSS Data Release 12 Quasar
+catalog \cite[DR12Q; ][]{Paris2017} to the NEOWISE-R IR data (WISE W1
+at 3.4$\mu$m, WISE W2 at 4.6$\mu$m). We found $\approx$200 objects
+with fading light IR light curves; these objects were identified by a
+factor of 2 or more change in the observed WISE W1 and W2 bands (see
+the Supplemental Material for the NEOWISER detailed selection).
+Scanning these 200 objects we also examined the change in optical
+colour using the SDSS and DECaLS imaging surveys looking for changes
+suggestive of CLQs. From this inspection, a priority list of
+$\approx70$ quasar targets was derived and we obtained new optical
+spectroscopy from the Palomar 5m telescope.  J110057 was one of these
+70 objects, but critically, had spectra from both SDSS and BOSS and
+was thus a top priority target.
+
+Figure~\ref{fig:J110057_LC_CRTS} gives the light curve of J110057.
+Along with WISE IR data, optical data from the SDSS, the Catalina
+Real-time Transient Survey \citep[CRTS;][]{Drake2009, Mahabal2011},
+LINEAR \citep{Sesar2011} and PanSTARRS \citep{Kaiser2010, Stubbs2010,
+Tonry2012, Magnier2013} is available.
+Figure~\ref{fig:J110057_spectra} shows the three optical spectra of
+J110057. Figure~\ref{fig:J110057_spectra} shows the optical spectra
+for J110057 from the SDSS, the BOSS and Palomar observations taken on
+MJD 51908, 55302, and 57809. The MJD 51908 SDSS spectrum is of a
+typical blue quasar, the blue continuum then collapses.  The
+Supplemental Material gives further observation details, the summary
+of which, outside an achival ROSAT detection, there is no further
+multiwavelength, multi-epoch data.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3  
+%%   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3  
+%%   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3   SECTION 3  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}
+  %% trim=l b r t 
+  \includegraphics[width=15.4cm, height=8.75cm, trim=0.0cm 0.0cm 0.0cm 0.0cm, clip]
+  {../plots/models/mcd_gap_v3_20171017v1.pdf}
+  \centering
+  \caption[]{The three observed spectra of J110057, with our model
+    being overplotted at each spectral epoch. For clarity, the bottom
+    panel shows the spectra with the model divided through. }
+  \label{fig:J110057_diskmodel}
+\end{figure*}
+\section{Discussion}   
+Using \cite{Sirko_Goodman2003} as our starting point, our preliminary
+model \citep{Ford2018} of emission from a multicolor disk implies
+changes in the region from the ISCO to $\sim$few tens-100 $R_{\rm g}$
+are required to suppress flux into the observed $g$-band. In
+particular, we suggest a physical collapse of the disk scale height
+due to a cooling front propagating outward from the ISCO.
+
+For J110057 we apply our model as follows. We start with an inflated
+disk, with non-zero torque at the ISCO, and $h/R\sim0.2$ inside of
+$R\sim100 R_{\rm g}$.  This is the initial state in circa 2000
+($\approx$ MJD 51900).  Around 2007, there is a switch to a zero
+torque at ISCO state. A cooling front is set-up, which propagates out
+from the ISCO at the timescale, $t_{\rm front}$. Regions behind the
+front emit flux at $\sim$0.1$L$ of what they did prior to the passage
+of the front ({\bf NPR comment;: due to drop in T?  T $\downarrow
+\times 1.78 \Rightarrow L \downarrow \times10$}), and the temperature
+decrease leads the height to drop by a factor of 2.  ({\bf NPR
+comment: just due to less kinetic energy??}).  $L_{\rm ion}$ starts
+decreasing due to the drop in ionizing photons, which in turn causes
+the Balmer lines to also decrease in flux.
+
+If the inner accretion disk is usually inflated
+\cite[e.g.,see][]{Sirko_Goodman2003, Thompson2005,
+Hopkins_Quataert2011}, such a cooling front will naturally produce: 1)
+a collapse in the scale height of the disk; 2) a decrease in flux
+moving from UV to longer optical wavelengths; 3) a temporarily thicker
+scattering atmosphere, further decreasing flux at short wavelengths.
+This model implies changes to the optical emission moving from shorter
+to longer wavelengths (as the radius of the cooling front increases),
+on months-to-years-long timescales. It also predicts a longer time to
+recover the original flux (compared to the initial collapse, as a
+front will move more slowly in a thinner disk (see Fig.~2). A decrease
+in the UV flux would also be expected to cause a decrease in IR flux,
+as the heating of the IR-emitting dusty torus is reduced; however,
+there should also be a delay due to light travel time.
+
+Since the disk starts puffed-up, the cooling front time is not long,
+and by 2010 (MJD 55300), the front has reached $R\sim50 R_{g}$. During
+that time, the collapsing disk height increases the number density of
+scatterers, which in turn causes Rayleigh scattering producing the
+blue downturn in the 2010 spectrum.  The cooling front keeps going,
+until it hits the part of the disk where it is normally thin, around
+$R=100 R_g$, arriving around 2012. This sets up another (heating)
+front, which will travel {\it back in} towards the SMBH, and
+re-inflate the disk. This `returning' front travels more slowly
+because the disk is thinner. It also means the return to normal will
+be asymmetric in time, as observed, and the $g$-band bottoms out first
+because that is coming from $R\sim100R_{g}$.
+
+Using \citet{Ford2018} and \citet{Sirko_Goodman2003},
+Figure~\ref{fig:J110057_diskmodel} shows a model for a $M_{\rm
+BH}=3\times 10^{8} M_{\odot}$, radiative efficiency of $\epsilon=0.1$,
+accretion rate in units of Eddington accretion, $\dot{M}=0.032$, inner
+and outer disk radii in units of $r_g$ of SMBH of radius$_{\rm
+in}$=6.0, radius$_{\rm out}$=1.0$\times 10^{4}$. The resulting model
+spectra can be seen in Figure~\ref{fig:J110057_diskmodel}.  We expect
+the front to return to the ISCO in about 2018. That means the H lines
+will come back a few months later, but the WISE IR flux shouldn't come
+back until about 2021.
+
+\cite{Guo2016} observed a similar event to J110057, with SDSS J231742.60
++000535.1. However, their object provided an ambiguous case, as the IR
+brightness of their source did not decline. However this is consistent
+with our model, as their cooling event is relatively brief. We discuss 
+ J231742 and the \citet{Guo2016} result further in the Supplemental Material. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4  
+%%   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4  
+%%   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4   SECTION 4  
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Method}
+
+%\bibliographystyle{naturemag}
+\bibliography{/cos_pc19a_npr/LaTeX/tester_mnras}
+%\bibliography{sample}
+
+
+
+
+\end{document}
