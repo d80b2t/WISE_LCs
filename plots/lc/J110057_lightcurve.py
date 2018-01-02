@@ -209,11 +209,13 @@ plt.legend([
 
 plt.xlabel('MJD')
 plt.ylabel('magnitude (AB)')
+##plt.show()
+
+#fig.savefig("plot.pdf",)
+#fig.savefig("plot.eps",format='eps')
+plt.savefig('J110057_lc_201712_temp.png', format='png')
+#plt.savefig('bias_with_redshift_temp.png',format='png')
 plt.show()
 
-fig.savefig("plot.pdf",)
-fig.savefig("plot.eps",format='eps')
 plt.close(fig)
 
-#savefig('foo.png', bbox_inches='tight')
-#savefig('foo.pdf', bbox_inches='tight')
