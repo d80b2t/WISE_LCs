@@ -1,0 +1,57 @@
+
+Dear Nicholas,
+
+This is a very interesting event and a very nice paper.
+
+After reading through the paper it wasn't clear to me
+what the actual cause of the cooling event was. That
+is to say, what kind of event is the actual "trigger" that
+causes the non-zero torque condition at the ISCO to change
+to a zero-torque condition? Are there and any known causes?
+Since the model seems to directly depend on this, it would
+be nice if something could be mentioned about the event's
+possible origin.
+
+One other thing that struct me was the statement that:
+"However as the change in the UV for J2317+0005 was rapid
+(indicating that the cooling event was brief) this is
+consistent with our model.".
+
+Is there more you could add to this? It wasn't obvious
+how this was consistent with your model. I think you
+are saying that events lasting weeks could also be caused
+by this, but only the longer events show the IR changes.
+Hence, even a very short event like J2317+0005 is consistent
+with the model?
+
+Also, it wasn't clear how you knew the IR brightness of J2317+0005
+"never declined". I may have simply missed where this constraint
+was mentioned. Was WISE data taken that long ago (or within months
+to years considering reprocessing time). Perhaps there was other
+IR monitoring taken near the time of the event in J2317+0005?
+
+One last thing. As regards:
+"However, even with the coverage from WISE, PanSTARRS, SDSS,
+DECaLS and CRTS, we have a relatively sparse dataset which
+cannot tightly constrain our theoretical model. In the
+immediate future, the Zwicky Transient Facility [56] and
+in the very near future the Large Synoptic Survey
+Telescope [57, 58] will open a new data space with high
+cadence, multi-band photometric monitoring."
+
+In this respect I thought I should mention that the planned
+and extensively modelled LSST cadences will not be significantly
+higher than those of currently running surveys. In fact,
+the LSST candences will be lower than CRTS-II, ZTF, ATLAS,
+and ASAS-SN (and probably PS1+PS2). Although among these I
+think only ZTF is multi-band. If you were considering the
+few planned higher cadence LSST fields, these appear to be
+very limited in area. Much like the existing PS1 MDS fields
+were.
+
+All I'm trying to say is that, although LSST may be great
+in many ways, it will be as sparse (or worse) than many
+surveys that are currently running.
+
+cheers,
+      Andrew

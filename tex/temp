@@ -1,0 +1,190 @@
+30,34c30,34
+< \author{Nicholas~P.~Ross$^{1}$ et al.  
+< %K. E. Saavik Ford$^{2,3,4}$
+< %Matthew Graham$^{5}$
+< %Barry McKernan$^{2,3,4}$
+< %Daniel Stern$^{5}$, 
+---
+> \author{Nicholas~P.~Ross$^{1}$,    
+> K. E. Saavik Ford$^{2,3,4}$,  
+> Matthew Graham$^{5}$,  
+> Barry McKernan$^{2,3,4}$,  
+> Daniel Stern$^{5,6}$, 
+51,56c51,56
+< %  \item Department of Science, BMCC, City University of New York, New York, NY 10007, USA
+<  % \item Department of Astrophysics, American Museum of Natural History, New York, NY 10024, USA
+<  % \item  Graduate Center, City University of New York, 365 5th Avenue, New York, NY 10016, USA
+< %XSXS\item Cahill Center for Astronomy and Astrophysics, California Institute of Technology, Mail Code 249/17, 1200 E California Blvd, Pasadena CA 91125, USA
+<  % \item Department of Astrophysics is located in the Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, New York, NY 10024, U.S.A
+<   %\item Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA 
+---
+>   \item Department of Science, BMCC, City University of New York, New York, NY 10007, USA
+>  \item Department of Astrophysics, American Museum of Natural History, New York, NY 10024, USA
+>  \item  Graduate Center, City University of New York, 365 5th Avenue, New York, NY 10016, USA
+> \item Cahill Center for Astronomy and Astrophysics, California Institute of Technology, Mail Code 249/17, 1200 E California Blvd, Pasadena CA 91125, USA
+> % \item Department of Astrophysics is located in the Rose Center for Earth and Space, American Museum of Natural History, Central Park West at 79th Street, New York, NY 10024, U.S.A
+>   \item Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Mail Stop 169-221, Pasadena, CA 91109, USA 
+73c73
+< \cite{Hutsemekers2017, Sheng2017}.  Here we report on three epochs of
+---
+> \cite{Hutsemekers2017, Sheng2017}.  Here we report on four epochs of
+110,128c110,126
+< to (oversimply) \cite{Lawrence} describe the basic properties of the optically thick,
+< geometrically thin accretion disks expected to orbit the supermassive
+< black holes at the nuclei of quasars.  This accretion disk--the
+< nuclear central engine--is thought
+< to be the origin of thermal continuum emission that is observed in the
+< rest-frame ultraviolet and optical. \cite{SS73} make the key assumptions that
+< plasma within the disk is optically thick and thermal,
+< and emission from the accretion disk can be treated as a superposition of
+< blackbody annuli. Given the
+< size scales and temperatures associated with supermassive black holes, 
+< a substantial fraction of
+< the bolometric luminosity should be in the 
+< form of UV photons--the so-called the ``Big Blue Bump''
+< \cite{Shields1978, Malkan_Sargent1982}. By contrast, the thermal emission seen in
+< the infrared is believed to originate from more distant molecular dust.
+< Thus, IR flux represents reprocessed 
+< emission from the disk or broad line region (BLR) modulo the
+< light-travel time to the dusty reservoir \citep[see ][for reviews]{Antonucci1993, Perlman2008,
+< Lasota2016}.
+---
+> to (oversimply \cite{Lawrence2018}) describe the basic properties of
+> the optically thick, geometrically thin accretion disks expected to
+> orbit the supermassive black holes at the nuclei of quasars.  This
+> accretion disk--the nuclear central engine--is thought to be the
+> origin of thermal continuum emission that is observed in the
+> rest-frame ultraviolet and optical. \cite{SS73} make the key
+> assumptions that plasma within the disk is optically thick and
+> thermal, and emission from the accretion disk can be treated as a
+> superposition of blackbody annuli. Given the size scales and
+> temperatures associated with supermassive black holes, a substantial
+> fraction of the bolometric luminosity should be in the form of UV
+> photons--the so-called the ``Big Blue Bump'' \cite{Shields1978,
+> Malkan_Sargent1982}. By contrast, the thermal emission seen in the
+> infrared is believed to originate from more distant molecular dust.
+> Thus, IR flux represents reprocessed emission from the disk or broad
+> line region (BLR) modulo the light-travel time to the dusty reservoir
+> \citep[see ][for reviews]{Antonucci1993, Perlman2008, Lasota2016}.
+131,138c129,134
+< hole, substantial
+< angular momentum must be lost. 
+< A kinematic viscosity of the
+< plasma seems the likely mechanism that transports angular momentum
+< outward.  This viscosity is likely due to magnetorotational
+< instability \citep[MRI; ][]{Balbus_Hawley1991} with additional
+< contributions to turbulence from the effects of embedded objects in
+< the disk e.g., \cite{McKernan2014}.  However, as e.g.,
+---
+> hole, substantial angular momentum must be lost.  A kinematic
+> viscosity of the plasma seems the likely mechanism that transports
+> angular momentum outward.  This viscosity is likely due to
+> magnetorotational instability \citep[MRI; ][]{Balbus_Hawley1991} with
+> additional contributions to turbulence from the effects of embedded
+> objects in the disk e.g., \cite{McKernan2014}.  However, as e.g.,
+149,154c145,150
+< predictions of global changes from local perturbations \cite{King2012}.
+< Nevertheless, in this paper, we utilize the mathematically simple
+< $\alpha$-disk model as a framework and departure point for 
+< our own disk models. However, we introduce a new model which does
+< allow changes across the accretion disk and, crucially, makes predictions which can be
+< observed in the SED.
+---
+> predictions of global changes from local perturbations
+> \cite{King2012}.  Nevertheless, in this paper, we utilize the
+> mathematically simple $\alpha$-disk model as a framework and departure
+> point for our own disk models. However, we introduce a new model which
+> does allow changes across the accretion disk and, crucially, makes
+> predictions which can be observed in the SED.
+163,164c159
+< discover new changing-look quasars. 
+< While previous efforts have used
+---
+> discover new changing-look quasars.  While previous efforts have used
+170,175c165,170
+< few years. Importantly, our IR light curves enable us to set
+< limits on SED changes due to obscuration. In addition, since the IR emission from AGN
+< is reprocessed disk emission, and because disk bolometric luminosity is
+< overwhelmingly dominated by the highest temperature, innermost regions
+< of the disk, our selection strategy is able to identify CLQs
+< with dramatic changes in their innermost disks. 
+---
+> few years. Importantly, our IR light curves enable us to set limits on
+> SED changes due to obscuration. In addition, since the IR emission
+> from AGN is reprocessed disk emission, and because disk bolometric
+> luminosity is overwhelmingly dominated by the highest temperature,
+> innermost regions of the disk, our selection strategy is able to
+> identify CLQs with dramatic changes in their innermost disks.
+179,191c174,185
+< quasar we identified as interesting due to its IR light
+< curve. We have spectral observations for J1100-0053 showing a
+< transition in the blue-continuum into a `dim state' where the
+< rest-frame UV flux is suppressed, and then returning to a
+< blue-continuum sloped quasar.  We present a model that invokes changes
+< at the ISCO to be the triggering event for substantial changes in the
+< wider accretion
+< disk, including major structural changes out to 150$r_{g}$ (where
+< $r_{\rm g}$ is the gravitational radius; $r_{\rm g}=\frac{GM}{c^2}$).
+< Such a model explains changes in the broad emission lines,
+< as well as the optical and IR light curves. Critically, our model makes
+< predictions to the future behaviour of J1100-0053 on the time scales
+< of months to $\sim$few years.
+---
+> quasar we identified as interesting due to its IR light curve. We have
+> spectral observations for J1100-0053 showing a transition in the
+> blue-continuum into a `dim state' where the rest-frame UV flux is
+> suppressed, and then returning to a blue-continuum sloped quasar.  We
+> present a model that invokes changes at the ISCO to be the triggering
+> event for substantial changes in the wider accretion disk, including
+> major structural changes out to 150$r_{g}$ (where $r_{\rm g}$ is the
+> gravitational radius; $r_{\rm g}=\frac{GM}{c^2}$).  Such a model
+> explains changes in the broad emission lines, as well as the optical
+> and IR light curves. Critically, our model makes predictions to the
+> future behaviour of J1100-0053 on the time scales of months to
+> $\sim$few years.
+207c201
+<   \caption[]{Optical spectra of J1100-0053 obtained on MJD 51908 (blue; SDSS), 55302 (red; BOSS) and 57809 (black; Palomar).  Spectra have been renormalized to maintain a constant \oiii luminosity. Over the past two decades, the UV continuum and broad lines have changed significantly for this quasar.  In particular, the 2nd-epoch BOSS spectrum from 2010 shows the rare occurrence of a temporary collapse of the UV continuum.  Smooth lines show three simple thermal accretion disk models of the continuum.  The solid blue line shows an inflated disk with non-zero torque at the ISCO \cite[e.g.,][]{Sirko_Goodman2003}, while the dashed blue line shows the same model, but with zero torque at the ISCO \cite[i.e., a simple $\alpha$-disk model,][]{SS73}.  Torque at the ISCO heats the inner disk, causing it to puff up and become more UV luminous.  The dotted red line shows a modified zero-torque model where the thermal disk emission interior to $80 r_{\rm g}$ is suppressed by a factor of 10. }
+---
+>   \caption[]{Optical spectra of J1100-0053 obtained on MJD 51908 (blue; SDSS), 55302 (red; BOSS), 57809 (black; Palomar) and 58132 (green; Palomar). Spectra have been renormalized to maintain a constant \oiii luminosity. Over the past two decades, the UV continuum and broad lines have changed significantly for this quasar.  In particular, the 2nd-epoch BOSS spectrum from 2010 shows the rare occurrence of a temporary collapse of the UV continuum.  Smooth lines show three simple thermal accretion disk models of the continuum.  The solid blue line shows an inflated disk with non-zero torque at the ISCO \cite[e.g.,][]{Sirko_Goodman2003}, while the dashed blue line shows the same model, but with zero torque at the ISCO \cite[i.e., a simple $\alpha$-disk model,][]{SS73}.  Torque at the ISCO heats the inner disk, causing it to puff up and become more UV luminous.  The dotted red line shows a modified zero-torque model where the thermal disk emission interior to $80 r_{\rm g}$ is suppressed by a factor of 10. }
+231c225
+< changing-look quasars candidates.  From this inspection, a list of
+---
+> changing-look quasar candidates.  From this inspection, a list of
+233,234c227,229
+< from SDSS and BOSS, J1100-0053 was an early target and we obtained a
+< third epoch of optical spectroscopy from the Palomar 5m telescope.
+---
+> from SDSS and BOSS, J1100-0053 was an early target. We obtained a
+> third and fourth epoch of optical spectroscopy from the Palomar 5m
+> telescope.
+243,252c238,248
+< available. Figure~\ref{fig:J110057_spectra} shows the three optical
+< spectra of J1100-0053 from the SDSS, BOSS and Palomar observations,
+< taken on MJD 51908 (UT 2000 December 30), 55302 (UT 2010 April 16) and
+< 57809 (UT 2017 February 25), respectively.  The first-epoch SDSS
+< spectrum shows a typical blue quasar, but the blue continuum
+< collapses in the second epoch BOSS spectrum taken 10 years later. The
+< blue continuum then returns in the third epoch spectrum taken another
+< 7 years later, albeit at a diminished level relative to the initial
+< spectrum. The Supplemental Material gives further observational
+< details.
+---
+> available. Figure~\ref{fig:J110057_spectra} shows the four optical
+> spectra of J1100-0053 from the SDSS, BOSS and Palomar ($\times$2)
+> observations, taken on MJD 51908 (UT 2000 December 30), 55302 (UT 2010
+> April 16), 57809 (UT 2017 February 25) and 58132 (UT 2018 January 14),
+> respectively.  The first-epoch SDSS spectrum shows a typical blue
+> quasar, but the blue continuum collapses in the second epoch BOSS
+> spectrum taken 10 years later. The blue continuum then returns in the
+> third epoch spectrum taken another 7 years later, albeit at a
+> diminished level relative to the initial spectrum. The fourth epoch
+> spectrum is very similar to the third epoch specturm.  The
+> Supplemental Material gives further observational details.
+268c264
+< three separate spectral stages is currently unique. As such,
+---
+> four separate spectral stages is currently unique. As such,
+270c266
+< accretion disk model must predict and explain \cite{Lawrence}.
+---
+> accretion disk model must predict and explain \cite{Lawrence2018}.

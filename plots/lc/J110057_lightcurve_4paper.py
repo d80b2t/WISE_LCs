@@ -6,8 +6,9 @@ http://space.mit.edu/home/turnerm/python.html
 import math
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import colors as mcolors
+#import image
 
+from matplotlib import colors as mcolors
 from astropy.io import ascii
 
 path = '/cos_pc19a_npr/data/J110057/photometry/'
@@ -20,6 +21,28 @@ path = '/cos_pc19a_npr/data/J110057/photometry/'
 CRTS = ascii.read(path+'CRTS_LC.dat')
 ## LINEAR
 LINEAR = ascii.read(path+'LINEAR_full.dat')
+
+## SSA - SuperCOSMOS Science Archive
+## For the Declination of your object, the plates scanned by SuperCOSMOS were UK-J, POSSI-e, UK-R, UK-I
+
+UK_J    = ascii.read(path+'SSA_UK-J.dat')
+POSSI_e = ascii.read(path+'SSA_POSS_Red1.dat')
+UK_R    = ascii.read(path+'SSA_UK-R_Red2.dat')
+UK_I    = ascii.read(path+'SSA_UK-I.dat')
+
+UK_J_mjd  =  UK_J['mjd']
+POSS_mjd  =  POSSI_e['mjd']         ## 1955, April
+UK_R_mjd  =  UK_R['mjd']
+UK_I_mjd  =  UK_I['mjd']
+
+## sCorMag's in Vega. 
+## https://www.astro.umd.edu/~ssm/ASTR620/mags.html
+## assume:
+##   UK-J ~ g;  POSSI_e and UK_R ~ r and UK_I ~ i
+SSA_B_AB  =  UK_J['sCorMagB']     - 0.103
+SSA_R1_AB =  POSSI_e['sCorMagR1'] + 0.146
+SSA_R2_AB =  UK_R['sCorMagR2']    + 0.146
+SSA_I_AB  =  UK_I['sCorMagI']     + 0.366
 
 ## Pan-STARRS
 PS_g = ascii.read(path+'PanSTARRS_LC_g.dat')
@@ -62,9 +85,14 @@ ULAS_Ks_AB = ULAS_K['KAperMag3']   + 1.84
 WISE_W1 = ascii.read(path+'WISE_W1_LC.dat')
 WISE_W2 = ascii.read(path+'WISE_W2_LC.dat')
 
+WISE_L1bs = ascii.read(path+'J110057_l1b.tbl')
+
 ## For WISE, we adopt 2.699 and 3.339 as the conversions to AB from W1 and W2 Vega magnitudes,
-WISE_W1_AB = WISE_W1['W1_vega'] + 2.699
-WISE_W2_AB = WISE_W2['W2_vega'] + 3.339
+WISE_W1_ABave = WISE_W1['W1_vega'] + 2.699
+WISE_W2_ABave = WISE_W2['W2_vega'] + 3.339
+WISE_W1_ABs   = WISE_L1bs['w1mpro'] + 2.699
+WISE_W2_ABs   = WISE_L1bs['w2mpro'] + 3.339
+
 
 
 ## SPECTRO-PHOTOMETRY
@@ -104,22 +132,29 @@ plt.rcParams.update({'font.size': 14})
 fig, ax = plt.subplots(figsize=(12.0, 8.0))
 
 
-
 ## Plotting the SPECTRA as vertical lines
 lw = 5.0
-plt.axvline(x=51908, linewidth=lw)
-plt.axvline(x=55302, linewidth=lw, linestyle='dotted', color='darkgoldenrod')
-plt.axvline(x=57809, linewidth=lw, linestyle='dashed', color='slategrey')
-#'-.'
+plt.axvline(x=51908, linewidth=lw, color='b')
+#plt.axvline(x=55302, linewidth=lw, linestyle='dotted', color='darkgoldenrod')
+plt.axvline(x=55302, linewidth=lw, linestyle='dotted', color='r')
+#plt.axvline(x=57809, linewidth=lw, linestyle='dashed', color='slategrey')
+plt.axvline(x=57809, linewidth=lw, linestyle='dashed', color='k')
+plt.axvline(x=58132, linewidth=lw, linestyle='dashed', color='g')
 
+## CRTS and LINEAR
 ls = 'solid'
 lw = 1.0
-## CRTS and LINEAR
-#ax.errorbar(CRTS['MJD'],   CRTS['mag'],   yerr=CRTS['mag_err'],   linestyle=ls,       linewidth=lw*1.5, color='black')
-#ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], linestyle='dashed', linewidth=lw*1.5, color='dimgray')
 ms = 5
 ax.errorbar(CRTS['MJD'],   CRTS['mag'],   yerr=CRTS['mag_err'],   fmt='o', linewidth=lw, ms=ms, color='black')
 ax.errorbar(LINEAR['MJD'], LINEAR['mag'], yerr=LINEAR['mag_err'], fmt='o', linewidth=lw, ms=ms, color='dimgray')
+
+## POSS from SuperCOSMOS
+ms = 12
+#ax.plot(UK_J_mjd, SSA_B_AB,  's', linewidth=lw, ms=ms, color='mediumblue')
+#ax.plot(POSS_mjd, SSA_R1_AB, 's', linewidth=lw, ms=ms, color='red')
+#ax.plot(UK_R_mjd, SSA_R2_AB, 's', linewidth=lw, ms=ms, color='red')
+#ax.plot(UK_I_mjd, SSA_I_AB,  's', linewidth=lw, ms=ms, color='teal')
+
 
 ## Pan-STARRS
 ms=10
@@ -128,6 +163,7 @@ ax.errorbar(PS_r['MJD'], PS_r['mag'], yerr=PS_r['mag_err'], fmt='d', linestyle=l
 ax.errorbar(PS_i['MJD'], PS_i['mag'], yerr=PS_i['mag_err'], fmt='d', linestyle=ls, ms=ms, linewidth=lw, color='teal')
 ax.errorbar(PS_z['MJD'], PS_z['mag'], yerr=PS_z['mag_err'], fmt='d', linestyle=ls, ms=ms, linewidth=lw, color='lightgrey')
 ax.errorbar(PS_y['MJD'], PS_y['mag'], yerr=PS_y['mag_err'], fmt='d', linestyle=ls, ms=ms, linewidth=lw, color='darkmagenta')
+
 
 ## SDSS "original photometry"
 ms = 14
@@ -169,15 +205,28 @@ ms = 10
 
 ## WISE W1/W2
 ms=16
-ax.errorbar(WISE_W1['MJD'], WISE_W1_AB, yerr=WISE_W1['W1_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='indigo')
-ax.errorbar(WISE_W2['MJD'], WISE_W2_AB, yerr=WISE_W2['W2_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='brown')
+#ax.errorbar(WISE_W1['MJD'], WISE_W1_ABave, yerr=WISE_W1['W1_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='indigo')
+#ax.errorbar(WISE_W2['MJD'], WISE_W2_ABave, yerr=WISE_W2['W2_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='brown')
+ms=4
+ax.errorbar(WISE_L1bs['mjd'], WISE_W1_ABs, yerr=WISE_L1bs['w1sigmpro'], fmt='o', ms=ms, color='indigo')
+ax.errorbar(WISE_L1bs['mjd'], WISE_W2_ABs, yerr=WISE_L1bs['w2sigmpro'], fmt='o', ms=ms, color='brown')
+
 
 
 ## Tidy up the figure
-xmin = 51100   #51259  ## 49200
+xmin = 34500   #  51100            ## 51259  ## 49200
+xmin = 49200            ## 51259  ## 49200
+xmin = 51100            ## 51259  ## 49200
 xmax = 58250
-ymin = 20.65   
-ymax = 16.65
+ymin = 19.85   # 21.05
+ymax = 15.10    #16.65
+
+## Just WISE LCs
+#xmin = 55000            ## 51259  ## 49200
+#xmax = 58250
+#ymin = 17.05   
+#ymax = 14.70    #16.65
+
 
 ax.set_xlim((xmin, xmax))
 #ax.set_xlim((54000, xmax))
@@ -192,28 +241,47 @@ ax.tick_params('y', direction='in')
 
 ## https://matplotlib.org/api/legend_api.html
 plt.legend([
-        'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
+            'SDSS','BOSS', 'Palomar', 'Palomar', 
+#        'SDSS spectrum','BOSS spectrum', 'Palomar spectrum', 'Palomar spectrum', 
 #    'SDSS spec u', 'SDSS spec g', 'SDSS spec r', 'SDSS spec i', 'SDSS spec z',
 #   'BOSS spec u', 'BOSS spec g', 'BOSS spec r', 'BOSS spec i', 'BOSS spec z',
 #   '', '', '', '', '',
  #   '', '', '', '', '',
 #    'SDSS spectrum','BOSS spectrum', 'Palomar spectrum',
+#            'UK-J', 'POSS-I E', 'UK-R', 'UK-I', 
             'CRTS', 'LINEAR',
-            'PanSTARRS g', 'PanSTARRS r', 'PanSTARRS i', 'PanSTARRS z', 'PanSTARRS y',
+#            'PanSTARRS g', 'PanSTARRS r', 'PanSTARRS i', 'PanSTARRS z', 'PanSTARRS y',
+            'PS g', 'PS r', 'PS i', 'PS z', 'PS y',
             'SDSS u', 'SDSS g',  'SDSS r', 'SDSS i', 'SDSS z',
             'DECaLS g', 'DECaLS r', 'DECaLS z',
 #            'ULAS Y', 'ULAS J', 'ULAS H', 'ULAS K',
             'WISE W1', 'WISE W2'],
-           loc="lower left", ncol=2, shadow=True, fancybox=True,
+#           loc="lower left", ncol=3, shadow=True, fancybox=True,
+           loc="upper left", ncol=3, shadow=True, fancybox=True,
            fontsize=12, frameon=True)
 
 plt.xlabel('MJD')
 plt.ylabel('magnitude (AB)')
-##plt.show()
 
+## A 4-length sequence of [left, bottom, width, height] quantities.
+im = plt.imread('Legacy_SDSS_zoom_4plot.jpeg')
+#newax = fig.add_axes([0.21, 0.69, 0.15, 0.18], anchor='NE')  ## top right
+newax = fig.add_axes([0.12, 0.12, 0.24, 0.19], anchor='NE') 
+newax.imshow(im)
+newax.axis('off')
+
+im = plt.imread('Legacy_DECaLS_DR3_zoom_4plot.jpeg')
+newax = fig.add_axes([0.33, 0.12, 0.24, 0.19], anchor='NE')
+newax.imshow(im)
+newax.axis('off')
+
+
+
+
+##plt.show()
 #fig.savefig("plot.pdf",)
 #fig.savefig("plot.eps",format='eps')
-plt.savefig('J110057_lc_201712_temp.png', format='png')
+plt.savefig('J110057_lc_201801_temp.png', format='png')
 #plt.savefig('bias_with_redshift_temp.png',format='png')
 plt.show()
 
