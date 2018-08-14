@@ -1,0 +1,68 @@
+A new physical interpretation of optical and infrared variability in quasars
+
+Variability in the quasar J1100-0053
+
+Changing-look quasars are a recently identified class of active
+galaxies in which the strong UV continuum and/or broad optical
+hydrogen emission lines associated with unobscured quasars either
+appear or disappear on timescales of months to years.  The physical
+processes responsible for this behaviour are still debated, but
+changes in the black hole accretion rate or accretion disk structure
+appear more likely than changes in obscuration. Here we report on four
+epochs of spectroscopy of SDSS J110057.70-005304.5, a quasar at a
+redshift of $z=0.378$ whose UV continuum and broad hydrogen emission
+lines have faded, and then returned over the past $\approx$20
+years. The change in this quasar was initially identified in the
+infrared, and an archival spectrum from 2010 shows an intermediate
+phase of the transition during which the flux below rest-frame
+$\approx$3400\AA\ has decreased by close to an order of
+magnitude. This combination is unique compared to previously published
+examples of changing-look quasars, and is best explained by dramatic
+changes in the innermost regions of the accretion disk. The optical
+continuum has been rising since mid-2016, leading to a prediction of a
+rise in hydrogen emission line flux in the next year. Increases in the
+infrared flux are beginning to follow, delayed by a $\sim$3 year
+observed timescale. If our model is confirmed, the physics of
+changing-look quasars are governed by processes at the innermost
+stable circular orbit (ISCO) around the black hole, and the structure
+of the innermost disk. The easily identifiable and monitored
+changing-look quasars would then provide a new probe and laboratory of
+the nuclear central engine.
+
+273
+
+
+
+
+catalogues < Astronomical Data bases	 Remove
+(galaxies:) quasars: individual:... < Galaxies	 Remove
+accretion, accretion discs < Physical Data and Processes	 Remove
+(galaxies:) quasars: emission lines < Galaxies	 Remove
+
+
+Saavik K Ford <sford@amnh.org>,
+Matthew Graham <mjg@caltech.edu>,
+Barry L McKernan <bmckernan@amnh.org>,
+daniel stern <daniel.k.stern@gmail.com>,
+Aaron Meisner <aaron.m.meisner@gmail.com>,
+"Roberto J. Assef" <roberto.assef@mail.udp.cl>,
+Arjun Dey <dey@noao.edu>,
+Andrew Drake <ajd@astro.caltech.edu>,
+Hyunsung Jun <hyunsungjun@gmail.com>,
+Dustin Lang <dstndstn@gmail.com>
+
+
+K. E. Saavik Ford$^{2,3,4}$,
+Matthew Graham$^{5}$,
+Barry McKernan$^{2,3,4}$,  
+Daniel Stern$^{6}$,
+Aaron M. Meisner$^{7,8}$,
+Roberto J. Assef$^{9}$,
+Arjun Dey$^{10}$,
+Andrew J. Drake$^{11}$, 
+Hyunsung D. Jun$^{12}$,
+Dustin Lang$^{13,14,15}$
+
+
+
+tar cvzf Ross_etal_J1100_MNRAS.tar *

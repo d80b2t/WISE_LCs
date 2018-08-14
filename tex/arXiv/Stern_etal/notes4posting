@@ -1,0 +1,34 @@
+
+
+
+License Statement
+https://arxiv.org/help/license
+
+Astrophysics; Astrophsyics of galaxies
+
+
+.zip of the LaTeX, figures, .bib etc. files
+
+
+Enter Metadata: Title, Authors, Abstract, Comments, etc.
+  *Title:
+  A Mid-IR Selected Changing-Look Quasar and Physical Scenarios for Abrupt AGN Fading
+
+  *Author(s): (first names first; do not use et al.; separate with commas or 'and'; see linked help)
+
+Daniel Stern, Barry McKernan, Matthew J. Graham, K. E. S. Ford, Nicholas P. Ross, Aaron M. Meisner, Roberto J. Assef, Mislav Balokovi\'{c}, Murray Brightman, Arjun Dey, Andrew Drake, S.~G. Djorgovski, Peter Eisenhardt, Hyunsung D. Jun
+
+  *Abstract:
+We report a new changing-look quasar, WISE~J105203.55+151929.5 at $z=0.303$, found by identifying highly mid-IR variable quasars in the {\it WISE}/{\it NEOWISE} data stream.  Compared to multi-epoch mid-IR photometry of a large sample of SDSS-confirmed quasars, WISE J1052+1519 is an extreme photometric outlier, fading by more than a factor of two at $3.4$ and $4.6 \mu$m since 2009. {\it Swift} target-of-opportunity observations in 2017 show even stronger fading in the soft X-rays compared to the {\it ROSAT} detection of this source in 1995, with at least a factor of fifteen decrease. We obtained second-epoch spectroscopy with the Palomar telescope in 2017 which, when compared with the 2006 archival SDSS spectrum, reveals that the broad H$\beta$ emission has vanished and that the quasar has become significantly redder.  The two most likely interpretations for this dramatic change are source fading or obscuration, where the latter is strongly disfavored by the mid-IR data.  We discuss various physical scenarios that could cause such changes in the quasar luminosity over this timescale, and favor changes in the innermost regions of the accretion disk that occur on the thermal and heating/cooling front timescales.  We discuss possible physical triggers that could cause these changes, and predict the multiwavelength signatures that could distinguish these physical scenarios.
+
+
+    Comments: (e.g.: 10 pages, 5 figures, conference or other essential info)
+    9 pages, 4 figures, submitted to MNRAS.
+    
+
+  Report number: (local report number, otherwise leave blank)
+  Journal reference: (full biblio info; only if already "published", otherwise leave blank)
+  DOI: (if known, otherwise leave blank)
+  ACM class: (optional; delimit multiple entries with semicolons, e.g. F.2.2; I.2.7, see system)
+  MSC class: (ams.org)
+

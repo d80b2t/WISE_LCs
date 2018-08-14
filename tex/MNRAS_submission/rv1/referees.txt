@@ -1,0 +1,110 @@
+
+Reviewer’s report: MN-18-1820-MJ, Ross et al
+
+This is an interesting paper. I apologize for the tardy report. I have been traveling for the past 10 days by unconventional means that have spared me limited energy or internet access.
+
+The phenomenology reported here is enough to justify publication. The theoretical interpretation is plausible in the large but could be tightened.
+
+
+1. Too much credit is given to Sirko & Goodman 2003. That paper was
+mainly concerned with the implications of self-gravity for the
+spectrum emitted by the outer parts of the disc r ≫ rg. Little if any
+consideration was given to the boundary conditions at the inner edge
+of the disc (zero vs. nonzero torque).
+
+       We can add more citations of other models. We're not actually
+       *using* Sirko & Goodman except as a guide to a semi-realistic
+       disk temperature structure. They're good at 100r_g and out,
+       which is relevant.
+
+
+2. Because the present authors are concerned with inner parts of the
+disc, they should be more careful in considering relativistic
+effects. In particular, the ISCO probably lies at r < 6GM/c2 = 3rS
+because AGN black holes have significant rotation (e.g., Reynolds 214,
+SSRv 183, 277; Capellupo et al. 2016, MN 460, 212). The specific
+binding energy at the ISCO is therefore probably larger than
+1-8/9≈0.057, so that even if there were no torque at the ISCO, the
+ratio of the bolometric luminosity to the monochromatic luminosity at
+any point in their spectra (e.g. λ = 5100 ̊A) would be larger than they
+suppose even in a steadily accreting thin disc. Naturally, however,
+the ISCO would not be expected to change on human timescales.
+
+    	 I'm actually not sure what the ref's point is with this
+    	 comment. We don't argue for major changes in the spin. You
+    	 can fit our continua with higher spin models. Indeed, see
+    	 attached mcd_gap_v3_4_b1 files, where I redid our Figure 3
+    	 for maximal spin with r_in=1.2 and efficiency=0.42 (I also
+    	 had to change the normalization, of course). I had to move
+    	 the suppression radius in when the disk inner radius moved in
+    	 for the model that justifies our 'bald statement' in item 4,
+    	 but otherwise they look quite similar to the non-spinning
+    	 case--we don't have leverage on the spin.
+
+
+3. Although I agree that a thermal or viscous instability is a more
+plausible interpretation of their data, the arguments given here
+against transient absorption/obscuration are not wholly convincing and
+could be improved. For the authors’ values of the black-hole mass (7 ×
+108 M⊙) and Eddington ratio (0.07), the rest- frame emission at λ ≤
+5100 ̊A comes from r ≤ 0.01 pc (≈ 225 rg , as they estimate). An
+obscuring cloud just large enough to block our view of this region,
+but in circular orbit at the sublimation radius (0.4 pc) would cross
+its own diameter in approximately six years, which is comparable to
+the time interval spanned by the spectroscopic observations (≈ 7.7
+yr). However, were the “UV collapse” caused by absorption, there would
+be other implications. The authors should determine what (non-grey)
+reddening law would be needed to explain the differences among the
+spectra, and whether, for any reasonable gas-to-dust ratio and
+turbulent broadening, the absorber would produce transient optical
+absorption lines (since the optical emission is obscured by only a
+factor ∼ 2); and finally, whether such a small absorber could affect
+the infrared flux (probably not).
+
+   	    Obviously, the ref needs to learn to read. Equally
+   	    obviously, we can't say that exactly but... can we say
+   	    'see section 3.2.2 where we describe the reddening law
+   	    required to fit the 2010 spectra (which also fits Guo)'?
+   	    And... their scenario might, just MIGHT work for us (I
+   	    mean, that's some wacky looking dust), but the physical
+   	    scenario won't work for Guo thanks to their short
+   	    timescale... and so we're done.
+
+
+4. The bald statement (p. 8, col. 2) “The 2010 spectrum can not be fit
+with...a simple MTB model with an alternate temperature profile”
+requires justification. Really? The continua cannot be fit even if
+Teff(r) is a completely free function? Why not? Of course no
+superposition of local blackbodies will explain the emission lines,
+but that is already a known limitation of thin-disc models for
+“ordinary” QSOs.
+
+       See the dotted line in Figure 3, which is a fit designed to
+       *TRY* to fit the turnover, with an arbitrary
+       normalization. I've screwed with T(r) too. Maybe I should plot
+       a single blackbody to make them happy? It's too fat. We could
+       improve the caption to highlight this.
+
+
+5. The authors are too quick to dismiss thermal instabilty along the
+lines of the works by Hameury, Lasota, and colleagues for dwarf novae
+and X-ray binaries. It is known that radiation-pressure-dominated
+discs are thermally unstable (Lightman & Eardley 1974; Jiang, Stone, &
+Davis 2013). Whereas the authors consider (and then dismiss in favour
+of cold absorbers) simple thermal instability in the “hot”
+direction—leading to an RIAF—it could equally go in the opposite
+direction, leading to a cold, low-M ̇ , gas-pressure-dominated state,
+since the growth rates of linear instabilities are independent of the
+sign of their initial perturbations. The thermal timescale (αΩ)−1 at
+225rg is ∼ 4 yr, in the right range to explain these
+observations. Admittedly, it is worth asking why all QSOs do not
+undergo propagating thermal instabilities of this sort. But perhaps
+they do: it would be interesting to compare the numbers of
+changing-look QSOs with what might be expected on such a model. To do
+this, however, would be beyond the scope of the present paper.
+
+      We could add this as an option if they want. The original idea
+      was the disk cools starting at the ISCO to explain phenomenology and
+      it's  thinner to account for longer propagation return. And I don't
+      think it could explain Guo because of the timescales.
+      

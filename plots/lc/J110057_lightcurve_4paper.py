@@ -205,11 +205,11 @@ ms = 10
 
 ## WISE W1/W2
 ms=16
-#ax.errorbar(WISE_W1['MJD'], WISE_W1_ABave, yerr=WISE_W1['W1_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='indigo')
-#ax.errorbar(WISE_W2['MJD'], WISE_W2_ABave, yerr=WISE_W2['W2_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='brown')
+ax.errorbar(WISE_W1['MJD'], WISE_W1_ABave, yerr=WISE_W1['W1_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='indigo')
+ax.errorbar(WISE_W2['MJD'], WISE_W2_ABave, yerr=WISE_W2['W2_unc'], fmt='o', ms=ms, linestyle=ls, linewidth=lw*2.5, color='brown')
 ms=4
-ax.errorbar(WISE_L1bs['mjd'], WISE_W1_ABs, yerr=WISE_L1bs['w1sigmpro'], fmt='o', ms=ms, color='indigo')
-ax.errorbar(WISE_L1bs['mjd'], WISE_W2_ABs, yerr=WISE_L1bs['w2sigmpro'], fmt='o', ms=ms, color='brown')
+#ax.errorbar(WISE_L1bs['mjd'], WISE_W1_ABs, yerr=WISE_L1bs['w1sigmpro'], fmt='o', ms=ms, color='indigo')
+#ax.errorbar(WISE_L1bs['mjd'], WISE_W2_ABs, yerr=WISE_L1bs['w2sigmpro'], fmt='o', ms=ms, color='brown')
 
 
 
@@ -258,22 +258,22 @@ plt.legend([
             'WISE W1', 'WISE W2'],
 #           loc="lower left", ncol=3, shadow=True, fancybox=True,
            loc="upper left", ncol=3, shadow=True, fancybox=True,
-           fontsize=12, frameon=True)
+           fontsize=16, frameon=True)
 
 plt.xlabel('MJD')
 plt.ylabel('magnitude (AB)')
 
 ## A 4-length sequence of [left, bottom, width, height] quantities.
-im = plt.imread('Legacy_SDSS_zoom_4plot.jpeg')
+#im = plt.imread('Legacy_SDSS_zoom_4plot.jpeg')
 #newax = fig.add_axes([0.21, 0.69, 0.15, 0.18], anchor='NE')  ## top right
-newax = fig.add_axes([0.12, 0.12, 0.24, 0.19], anchor='NE') 
-newax.imshow(im)
-newax.axis('off')
+#newax = fig.add_axes([0.12, 0.12, 0.24, 0.19], anchor='NE') 
+#newax.imshow(im)
+#newax.axis('off')
 
-im = plt.imread('Legacy_DECaLS_DR3_zoom_4plot.jpeg')
-newax = fig.add_axes([0.33, 0.12, 0.24, 0.19], anchor='NE')
-newax.imshow(im)
-newax.axis('off')
+#im = plt.imread('Legacy_DECaLS_DR3_zoom_4plot.jpeg')
+#newax = fig.add_axes([0.33, 0.12, 0.24, 0.19], anchor='NE')
+#newax.imshow(im)
+#newax.axis('off')
 
 
 
@@ -281,7 +281,8 @@ newax.axis('off')
 ##plt.show()
 #fig.savefig("plot.pdf",)
 #fig.savefig("plot.eps",format='eps')
-plt.savefig('J110057_lc_201801_temp.png', format='png')
+#plt.savefig('J110057_lc_201801temp.png', format='png')
+plt.savefig('J110057_lc_201801temp.pdf', format='pdf')
 #plt.savefig('bias_with_redshift_temp.png',format='png')
 plt.show()
 

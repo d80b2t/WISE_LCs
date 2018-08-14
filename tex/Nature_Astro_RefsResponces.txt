@@ -1,0 +1,218 @@
+
+The proposed explanation for the UV drop, an outward-propagating
+cooling front due to an (unspecified) loss of contact between the
+quasi-statically rotating disk and the plunging region, would apply to
+the continuum only, yet the Mg II 2800A emission lines in that region
+makes a similarly drastic plunge. So I don't think that's
+consistent. In fact I'm not aware of any such behavior in the Mg II
+line, which is usually relatively sedate, and the lines from the
+region red-ward of the sudden "continuum collapse" do not show a
+drastic diminution. So I have to wonder if the data in the UV region
+are correct.
+    
+	Bold text to MNRAS draft added. 
+
+
+I have some other doubts. I consulted someone who has written papers
+on the ISCO boundary conditions and the energy transfer and got a very
+skeptical response. The mechanism is unspecified, and only a toy model
+has been presented. And I don't see that the authors have shown the
+toy model fits the anomalous spectrum.
+
+    	  (New York) TODO:: Toy model to fit the UV collapse spectrum. 
+
+As the authors explain convincingly, the SS73 quasistatic disk model
+has shown no predictive power, and is contradicted by many
+observations, such as the microlensing sizes and the mentioned
+variability timescales, so I don't think it can serve as a robust
+starting point for the toy model. (Also regarding the timescales,
+their reference is to A Lawrence 2018. That paper is the epitome of
+fake news in that this problem was spelled out in detail in Alloin et
+al 1985, (ApJ 288, 205: please read Sec IV a) and has been discussed
+since then by many authors.)
+
+      Now that I've read Alloin et al. (1985, ApJ, 288, 205), this seems
+      like an early Changing-Look AGN reference, so entirely relevant.
+      However, I'm not exactly sure what the detailed point is here.
+
+      Ultiamtely, I've reworked the first several paragraphs in the Introduction.
+      The Lawerence Nature Astro comment was great for Nature Astro motivation,
+      but I've now out this in a list of the CLQ references.
+      
+
+## Below are Referee 2s comments, a lot of which seem kinda reasonable,
+
+The manuscript proposes a new physical model to explain the optical/IR
+variability in changing-look quasars. This is scientifically
+significant in the field, as changing-look quasars were just found in
+recent years, and potentially many would be found in future surveys,
+e.g., LSST. In general, the paper meets the standard of Nature
+Astronomy. 
+
+1) There is a bit difference with J2317+0005, of which no variations
+occur for the broad emission lines, whereas the broad lines have
+significant variations in J1100-0053 as stated in the manuscript. This
+would be strong argument for the accretion-triggered
+mechanism. Unfortunately, there is no quantitative description of the
+variation of broad lines. Therefore, I would suggest authors to give
+the measurements of various emission lines, especially the hydrogen
+lines. As shown in the paper, the triggering event likely happened at
+2007, thus there would be ample time for broad lines to response to
+the variation of continuum in 2010. However, it’s not evident in
+Figure 2. The measurements of lines would be necessary.
+
+       Added a table and accompanying text.
+       (NPR) TODO:: Make sure the text, statements and line measurements
+       are all consistent and relevant here.       
+
+
+2) There is inconsistence between the DECaLS g,r,z-band datasets in
+section 1.1 of supplemental material and the light curve in Figure 1
+of the paper. Please make consistence check: ‘DECaLS, …there are 8, 3,
+and 9exposures in the g,r, and z-band respectively, and g- and r- band
+observations span roughly a year (56707<=gMJD<=56727 and
+56367<=rMJD<=56367 ?), while …’ with Figure 1.
+
+	  Updated and added the new overview paper from the
+	  DESI Legacy Imaging Surveys reference.
+	  
+		   
+3) In supplemental material: several models are discussed, with the
+reference of Stern et al. (2018). However, in the ‘References’ the
+status of Stern et al. (2018) is not clear, published, submitted, or
+in prep. ? Correspondingly, the source J1052+1519 in Table 1, used for
+comparison, doesn’t help us in understanding the paper. This needs to
+be clarified.
+
+	This is a fair point, and I've just fleshed this out a bit at the
+	end of Section 2.4.1. 
+
+
+4) My understanding is that the change of non-zero torque to
+zero-torque in combination with the absorption of the cooler clumps
+produce the cutoff of blue spectrum. There are two concerned
+issues. One is the dynamics of the cooler clumps/scattering clouds,
+are they stable ? how long will they survive ? While there are good
+illustrations of the spectra of non-zero and zero torque in Figure 2,
+and curves used to argue against alternative models in Figure 1 of the
+supplemental material, it might be equally important to try to fit the
+2010 spectrum using the proposed model, at least illustratively.
+
+     Think this is a New York TODO.
+     
+
+5) It should be noticed that the four-epoch spectra only give the
+upper limit of the timescale. The feasibility of the model should be
+discussed in case of the possible shorter timescale.
+
+	  Can be addressed at the same time as immediately above. 
+  
+
+6) Typo: page 5, 2nd paragraph, line 5: a factor or ten → a factor of
+ten
+
+	Fixed. 
+
+
+7) A try on the correlation analysis between the optical and WISE IR
+light curves (i.e., Figure 1) will be interesting, in order to see any
+time delay with the though sparse datasets.
+
+     Think this is Graham et al. territory, so I'm not going to address this. 
+
+
+
+     Below are Referee 3s comments, a lot of which seem kinda reasonable,
+     but should be directly addressed with the change of format to the MNRAS.
+
+     However, it does seem we will need to discuss how our new model
+     fits in with the heating/cooling fronts in Menou et al. (1999) and 
+     Hameury et al. 2006.
+
+
+
+This paper reports on a new changing look quasar, and proposes that
+this intriguing phenomenon is due to changes in the physical
+conditions at the inner edge of the accretion disc and subsequent
+propagation of heating/cooling waves. There are several known changing
+look quasars, and, although interesting, the addition of a new member
+of this class is not of sufficient interest for a publication in
+Nature Astronomy. The proposed explanation is very interesting indeed,
+but the paper is quite difficult to follow because some explanatory
+details are missing and the evidences for the conclusion need to be
+strengthened because of a number of inconsistencies.
+
+The timescales are based on order of magnitude estimates of the
+propagation time of heating and cooling fronts. These estimates are
+uncertain by a factor of a few; moreover, they have been obtained in
+the framework of the disc instability model (geometrically thin disc),
+whereas here they are applied to a situation where the hot part of the
+disc is slim and the cool part is thin. There is no reason for the
+velocity of the front to be the same in both situations. It is also
+stated that cooling fronts propagate faster than heating fronts; this
+is not the case in the DIM, and the heating front velocity is larger
+than that of cooling fronts by a factor of a few (see e.g. Menou,
+Hameury & Stehle, MNRAS 305, 79). Agreements or discrepancies bases on
+these rough order of magnitude estimates are therefore not very strong
+arguments.
+
+It is also unclear that a change in the boundary condition at the
+inner disc edge can lead to the propagation of a cooling front. Discs
+in which the zero torque boundary condition is applied and where the
+temperature at the inner edge is small are found to be stable because
+the local stability analysis no longer applies: radial temperature
+gradients are large and this introduces heating/cooling terms that are
+comparable to viscous heating or radiative cooling. As a matter of
+fact, in the paper of Hameury et al of 2006, heating fronts move
+outwards and cooling fronts move inwards; this the opposite situation
+to the one presented here.
+
+In the supplemental section, two scenarios are discussed: the
+obscuration by an infalling cloud, which had been previously discussed
+and rejected by LaMassa et al. (credit to this paper should be given
+in this specific section),
+
+   	Done. 
+
+and two versions of an accretion disc
+model. I could not figure out why switching to RIAF/ADAF can be
+excluded from observational grounds and not the propagation of a
+cooling front, since the transition to a RIAF/ADAF is assumed to take
+place on a front propagation timescale (although no argument is given;
+as the authors mention, standard disc theories are unable to predict
+global changes, and since the physical reason for the transition from
+a state to another is not well known, it is difficult to estimate on
+what time scale it would take place. They also mention that
+“wavelength absorption combined with lower disc emissivity is
+required”; I have been unable to find out in their model wat is
+causing this absorption.
+
+	     (New York) TODO:: This is a "total energy under the spectrum
+	     curve" argumnet, right??!
+	   
+
+I also do not understand why the authors use the model of Sirko &
+Goodmann, who considered marginally self-gravitating discs, with
+additional heating sources that are important at large distances
+(1,000 – 100,000 rg) for bright QSOs.
+
+The reason for their choice of parameters is not given (why 225 rg in
+Eqs. (6) and (7)? why 80 rg in Fig. 2? Is h/r close to 0.05?).
+
+     Idea::
+     Maybe a bit late in the process, but what about including a wee
+     table with the physical parameters that our best-fit model
+     has, basically as a guide to these values....??
+     
+A final remark: the alpha-disc model assumes (i) that the disc is
+geometrically thin, and that angular momentum is transported by
+viscosity, parametrized according to Shakura and Sunyaev
+prescription. Contrary to what is stated in the paper, the thermal
+emission need not be treated as a superposition of blackbodies; and
+the effective temperature dependence (r^(-3/4)) is not specific to the
+alpha parametrization, but is independent from the nature of
+viscosity, provided that the disk is geometrically thin, steady and
+heat dissipation and angular momentum transport and caused by the
+same, local mechanism.
+
+      I've put this into the Introduction.

@@ -1,6 +1,7 @@
 
-TEXFILE=Xtreem_IR_LCs_Nature
-TEXFILE_TWO=Supplemental_Material
+TEXFILE=Xtreem_IR_LCs_MNRAS
+#TEXFILE=Xtreem_IR_LCs_MNRAS_20180509
+#TEXFILE_TWO=Supplemental_Material
 default: all
 
 # just run it
@@ -32,23 +33,23 @@ all :
 #	rm -f ERQs_PaperI_rv2.ps
 
 
-	pdflatex  ${TEXFILE_TWO}
-	pdflatex  ${TEXFILE_TWO}
-	bibtex ${TEXFILE_TWO}
-	bibtex ${TEXFILE_TWO}
-	pdflatex  ${TEXFILE_TWO}
-	pdflatex  ${TEXFILE_TWO}
-	rm -f  ${TEXFILE_TWO}.aux
-	rm -f  ${TEXFILE_TWO}.bbl
-	rm -f  ${TEXFILE_TWO}.blg
-	rm -f  ${TEXFILE_TWO}.dvi
-	rm -f  ${TEXFILE_TWO}.log
-	rm -f  ${TEXFILE_TWO}.out
-	rm -f  ${TEXFILE_TWO}.toc
-	rm -f  ${TEXFILE_TWO}Notes.bib
+#	pdflatex  ${TEXFILE_TWO}
+#	pdflatex  ${TEXFILE_TWO}
+#	bibtex ${TEXFILE_TWO}
+#	bibtex ${TEXFILE_TWO}
+#	pdflatex  ${TEXFILE_TWO}
+#	pdflatex  ${TEXFILE_TWO}
+#	rm -f  ${TEXFILE_TWO}.aux
+#	rm -f  ${TEXFILE_TWO}.bbl
+#	rm -f  ${TEXFILE_TWO}.blg
+#	rm -f  ${TEXFILE_TWO}.dvi
+#	rm -f  ${TEXFILE_TWO}.log
+#	rm -f  ${TEXFILE_TWO}.out
+#	rm -f  ${TEXFILE_TWO}.toc
+#	rm -f  ${TEXFILE_TWO}Notes.bib
 
 	open ${TEXFILE}.pdf
-	open ${TEXFILE_TWO}.pdf
+#	open ${TEXFILE_TWO}.pdf
 
 
 clean:
